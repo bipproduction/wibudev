@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 console.log("version 1.0.0")
 const arg = process.argv.splice(2)
 const { execSync } = require('child_process')

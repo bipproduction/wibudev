@@ -1,1 +1,1 @@
-javascript-obfuscator postgre.js -o @posrgre.js --compact true --self-defending true --string-array true
+javascript-obfuscator postgre.js -o cmd/posrgre.js --compact true --self-defending true --string-array true
