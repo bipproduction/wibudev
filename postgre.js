@@ -8,9 +8,11 @@ const list_menu = [
         des: "backup database",
         arg: "dbuk",
         act: async function () {
-            const sub = sub_arg(["--db-name", "--port"])
-            console.log(sub)
-            // execSync('pg_dump -U bip -h localhost -p 5433 -d raven_stone2 -W -F c -f raven_stone2.dump', { stdio: "inherit" })
+            const sub = sub_arg(["--db-name"])
+            if (sub) {
+                execSync(`pg_dump -U bip -h localhost -p 5433 -d ${sub['--db-name']} -W -F c -f ${sub['--db-name']}.dump`, { stdio: "inherit" })
+            }
+
         }
     },
     {
