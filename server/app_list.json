@@ -1,0 +1,12 @@
+[
+    {
+        "id": "raven-stone2",
+        "name": "raven-stone2_3000",
+        "port": "3000"
+    },
+    {
+        "id": "hipmi",
+        "name": "hipmi_3003",
+        "port": "3003"
+    }
+]
