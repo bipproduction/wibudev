@@ -6,18 +6,21 @@ const list_menu = [
     {
         id: "raven-stone2",
         type: "server",
+        port: 3000,
         category: "build",
         act: fun_build
     },
     {
         id: "raven-stone2",
         type: "server",
+        port: 3000,
         category: "log",
         act: fun_log
     },
     {
         id: "auto-push",
         type: "local",
+        port: null,
         category: "git",
         act: fun_auto_push
 
@@ -33,14 +36,14 @@ function help() {
 *   - raven-stone2
 *   - hipmi
 *
-* Method:
+* Type:
 *   - server
 *   - local
 *
-* Type: 
+* Category: 
 *  - build
-*   - log
-*   - push
+*  - log
+*  - push
 *
 * Example:
 *  - curl -s -o- http://localhost:3000 | node - server build raven-stone2
@@ -77,7 +80,7 @@ main()
 // --------- FUN -----------
 
 async function fun_log() {
-    http.get(`http://localhost:3000/log/${this.id}`, (res) => {
+    http.get(`http://localhost:3000/log/${this.id}_${this.port}`, (res) => {
         res.on("data", (data) => {
             console.log(data.toString())
         })
@@ -104,4 +107,17 @@ async function fun_auto_push() {
     child.stderr.on("data", data => {
         console.log(data.toString())
     })
+}
+
+function groupBy(array, key) {
+    return array.reduce((result, currentItem) => {
+        const keyValue = currentItem[key];
+        if (!result[keyValue]) {
+            result[keyValue] = [];
+        }
+
+        result[keyValue].push(currentItem);
+
+        return result;
+    }, {});
 }

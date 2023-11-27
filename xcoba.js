@@ -1,30 +1,40 @@
-const fs = require('fs');
-const acorn = require('acorn');
-const walk = require('acorn-walk');
-
-// Ganti 'path/to/file.js' dengan path ke file JavaScript yang ingin Anda analisis
-const filePath = './bin/cmd.js';
-
-// Baca isi file
-const code = fs.readFileSync(filePath, 'utf-8');
-
-// Parsing kode menggunakan Acorn
-const ast = acorn.parse(code, { ecmaVersion: 'latest' });
-
-// Variabel untuk menyimpan fungsi-fungsi yang ditemukan
-const functions = [];
-
-// Gunakan Acorn Walk untuk menemukan fungsi-fungsi
-walk.simple(ast, {
-    FunctionDeclaration(node) {
-        functions.push(node.params);
+const list_menu = [
+    {
+        id: "raven-stone2",
+        type: "server",
+        category: "build",
+        act: ""
     },
-    // FunctionExpression(node) {
-    //     if (node.id) {
-    //         functions.push(node.id.name);
-    //     }
-    // },
-});
+    {
+        id: "raven-stone2",
+        type: "server",
+        category: "log",
+        act: ""
+    },
+    {
+        id: "auto-push",
+        type: "local",
+        category: "git",
+        act: ""
 
-// Tampilkan nama fungsi yang ditemukan
-console.log(functions);
+    }
+]
+
+function groupBy(array, key) {
+    return array.reduce((result, currentItem) => {
+        const keyValue = currentItem[key];
+        if (!result[keyValue]) {
+            result[keyValue] = [];
+        }
+
+        result[keyValue].push(currentItem);
+
+        return result;
+    }, {});
+}
+
+function main() {
+    console.log(groupBy(list_menu, "type"))
+}
+
+main()
