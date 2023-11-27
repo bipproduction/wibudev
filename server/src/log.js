@@ -23,5 +23,5 @@ module.exports = async function (req, res) {
             child.kill()
         }
         res.end()
-    }, 5000)
+    }, 10000)
 }

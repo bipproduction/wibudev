@@ -16,9 +16,9 @@ const list_menu = [
         act: fun_log
     },
     {
-        id: "auto_push",
+        id: "auto-push",
         type: "local",
-        category: "push",
+        category: "git",
         act: fun_auto_push
 
     }
@@ -26,22 +26,26 @@ const list_menu = [
 
 function help() {
     console.log(`
-    MENU
-    --------------
-    App: 
-        - raven-stone2
-        - hipmi
-
-    Method:
-        - server
-            - type: 
-                - build
-                - log
-        - local
-    
-    Example:
-        - curl -s -o- http://localhost:3000 | node - server build raven-stone2
-    `)
+========================================================
+* MENU
+========================================================
+* App: 
+*   - raven-stone2
+*   - hipmi
+*
+* Method:
+*   - server
+*   - local
+*
+* Type: 
+*  - build
+*   - log
+*   - push
+*
+* Example:
+*  - curl -s -o- http://localhost:3000 | node - server build raven-stone2
+========================================================   
+`)
 }
 
 async function main() {
@@ -80,6 +84,7 @@ async function fun_log() {
     })
 }
 
+
 async function fun_build() {
     http.get(`http://localhost:3000/build/${this.id}`, (res) => {
         res.on("data", (data) => {
@@ -87,6 +92,7 @@ async function fun_build() {
         })
     })
 }
+
 
 async function fun_auto_push() {
     const currentBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
