@@ -31,6 +31,11 @@ async function main() {
         res.sendFile(path.join(__dirname, "./../bin_ok/install.js"))
     })
 
+    app.post("/build", (req, res) => {
+        if (req.protocol === "http") return res.send("hanya untuk lingkup server")
+        execSync(`git stash && git pull origin main && node generate.js && pm2 restart wibudev_3004`, { stdio: "inherit" })
+        res.send("SUCCESS")
+    })
 
     app.listen(sub['--port'], () => {
         console.log(`Server berjalan di port ${sub['--port']}`.green);
