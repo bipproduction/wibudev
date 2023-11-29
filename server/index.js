@@ -36,7 +36,9 @@ async function main() {
         const child = exec(`git stash && git pull origin main && node generate.js && pm2 restart wibudev_3004`)
         child.stdout.pipe(res)
         child.stderr.pipe(res)
-        res.send("SUCCESS")
+        console.log(`
+        SUCCESS
+        `.green)
     })
 
     app.listen(sub['--port'], () => {
