@@ -11,13 +11,16 @@ const list_audience = require('./../assets/audience.json')
 const help = `\n
 HELP:
 
+Install:
+    curl -s -o- -N -X POST https://wibude.wibudev.com/cmd/install | node
+  
 Emotion Generator:
-  auto generate emotion sesuai dengan nilai akhir yang diinginkan , value setiap emotionnya akan menyesuaikan secara proposional
-  curl -s -o- -N -X POST https://wibude.wibudev.com/cmd/emotion-generator | node - --positive 60 --negative 30 --neutral 10 --file jokowi.csv
+    auto generate emotion sesuai dengan nilai akhir yang diinginkan , value setiap emotionnya akan menyesuaikan secara proposional
+    curl -s -o- -N -X POST https://wibude.wibudev.com/cmd/emotion-generator | node - --positive 60 --negative 30 --neutral 10 --file jokowi.csv
 
 Push Auto:
-  push perubahan project dilocal secara otomatis ke server sesuai branch yang sedang digunakan
-  curl -s -o- -N -X POST https://wibudev.wibudev.com/cmd/git | node - --push-auto
+    push perubahan project dilocal secara otomatis ke server sesuai branch yang sedang digunakan
+    curl -s -o- -N -X POST https://wibudev.wibudev.com/cmd/git | node - --push-auto
 
 `
 async function main() {
@@ -49,20 +52,6 @@ async function main() {
         const child = exec(`git stash && git pull origin main && yarn install && node generate.js && pm2 restart wibudev_3004`)
         child.stdout.pipe(res)
         child.stderr.pipe(res)
-
-        // child.stderr.on("data", (data) => {
-        //     console.log("std error".red, data)
-        //     res.write(data.toString())
-        // })
-
-        // child.stdout.on("data", (data) => {
-        //     res.write(data.toString())
-        // })
-
-        // child.on("error", (data) => {
-        //     console.log("error", data.toString())
-        //     res.write("child error")
-        // })
 
         child.on("close", (a) => {
             res.end("SUCCESS")

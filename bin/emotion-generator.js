@@ -4,7 +4,6 @@ const arg = process.argv.splice(2)
 const fs = require('fs')
 const { fetch } = require('cross-fetch')
 
-
 const TYPE_ITEM = {
     id: null,
     idCandidate: null,
@@ -133,7 +132,7 @@ contoh --positive 50 --negative 40 --neutral 10 --file jokowi.csv -- lock-aud 10
 `)
 }
 
-async function main() {
+async function emotion_generator() {
     const list_audience = await fetch('https://wibudev.wibudev.com/assets/list-audience').then((v) => v.json()).then((v) => v)
 
     const require = {
@@ -191,7 +190,7 @@ async function main() {
     // console.log(_unparse)
     fs.writeFileSync(`manipulate_${sub['--file']}`, _unparse)
     console.log("success")
-
 }
 
-main()
+emotion_generator()
+
