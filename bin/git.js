@@ -5,21 +5,30 @@ const _ = require('lodash')
 const currentBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
 require('colors')
 
+const list_menu = [
+    {
+        id: "--push-auto",
+        des: "push otomatis ke github sesui dengan branch terpakai",
+        fun: push_auto
+    },
+    {
+        id: "--help",
+        des: "memunculkan menu bantuan",
+        fun: help
+    }
+];
+
 function help() {
     console.log(`\n
 HELP GIT
 ----------
+${list_menu.map((v) => v.id + "\t" + v.des).join('\n\n')}
 
 `.yellow)
 }
 
 
-const list_menu = [
-    {
-        id: "push-auto",
-        fun: push_auto
-    }
-];
+
 
 ; (() => {
     if (arg.length === 0) return help()
