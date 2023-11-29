@@ -41,6 +41,7 @@ ${list_menu.map((v) => v.id + "\t" + v.des).join('\n\n')}
 function push_auto() {
     try {
         execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch}`, { stdio: "inherit" })
+        execSync(`curl -X POST https://wibudev.wibudev.com/build`, { stdio: "inherit" })
         console.log("success".green)
     } catch (error) {
         console.log("telah error")
