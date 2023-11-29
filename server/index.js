@@ -7,7 +7,7 @@ const fs = require("fs")
 const path = require('path')
 require("colors")
 
-execSync(`node ${path.join(__dirname, "./../generate.js")}`, { stdio: "inherit" })
+// execSync(`node ${path.join(__dirname, "./../generate.js")}`, { stdio: "inherit" })
 
 async function main() {
     const sub = sub_arg(['--port'], arg)
