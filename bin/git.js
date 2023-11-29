@@ -47,6 +47,6 @@ async function push_auto() {
         })
         console.log("success".green)
     } catch (error) {
-        console.log("telah error")
+        console.log("telah error".red)
     }
 }
