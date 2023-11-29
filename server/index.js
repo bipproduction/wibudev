@@ -6,8 +6,7 @@ const app = express();
 const fs = require("fs")
 const path = require('path')
 require("colors")
-
-// execSync(`node ${path.join(__dirname, "./../generate.js")}`, { stdio: "inherit" })
+const list_audience = require('./../assets/audience.json')
 
 async function main() {
     const sub = sub_arg(['--port'], arg)
@@ -41,6 +40,10 @@ async function main() {
             res.end("SUCCESS")
         })
 
+    })
+
+    app.get('/assets/list-audience', (req, res) => {
+        res.json(list_audience)
     })
 
     app.listen(sub['--port'], () => {

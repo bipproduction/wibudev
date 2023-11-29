@@ -1,10 +1,11 @@
-const root = require('child_process').execSync('npm root -g').toString().trim()
+const root = require('child_process').execSync('npm root -g').toString().trim();
 const papa = require(`${root}/papaparse`)
 const _ = require(`${root}/lodash`)
 const { fstat } = require('fs')
 const arg = process.argv.splice(2)
 const fs = require('fs')
 const path = require('path')
+const list_audience = require('./../assets/audience.json')
 
 const TYPE_ITEM = {
     id: null,
@@ -58,8 +59,8 @@ ${list_prop.join("\n")}
     return prop
 }
 
-function perhitungan(param, data, total) {
-
+function perhitungan(param, data) {
+    const total = +list_audience.find((v) => +v.idProvinsi === +data.idProvinsi && +v.idKabkot === +data.idKabkot).value
     const result = {}
     result.positive = (param.positive / 100) * total;
     result.negative = (param.negative / 100) * total;
@@ -127,7 +128,6 @@ HELP:
 --negative  number
 --neutral   number
 --file      nama file format csv
---lock-aud  lock audience
 
 contoh --positive 50 --negative 40 --neutral 10 --file jokowi.csv -- lock-aud 100000
 
@@ -139,8 +139,7 @@ function main() {
         "--positive": null,
         "--negative": null,
         "--neutral": null,
-        "--file": null,
-        "--lock-aud": null
+        "--file": null
     }
     if (arg.length === 0) return help()
     /**

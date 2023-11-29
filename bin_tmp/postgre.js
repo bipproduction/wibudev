@@ -1,5 +1,4 @@
-const root = require('child_process').execSync('npm root -g').toString().trim()
-console.log("version 1.0.0")
+const root = require('child_process').execSync('npm root -g').toString().trim();
 const arg = process.argv.splice(2)
 const { execSync } = require('child_process')
 

@@ -1,4 +1,3 @@
-const root = require('child_process').execSync('npm root -g').toString().trim()
 const { execSync } = require('child_process')
 function main() {
     try {

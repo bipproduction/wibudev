@@ -1,5 +1,4 @@
 const arg = process.argv.splice(2)
-const root = require('child_process').execSync('npm root -g').toString().trim()
 const { execSync } = require('child_process');
 const _ = require('lodash')
 const currentBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
@@ -42,17 +41,7 @@ ${list_menu.map((v) => v.id + "\t" + v.des).join('\n\n')}
 async function push_auto() {
     try {
         execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch} `, { stdio: "inherit" })
-
-
-        await fetch('https://wibudev.wibudev.com/build', { method: "POST" }).then(async (v) => {
-            if (v.status === 200) {
-                console.log("BUILD ON SERVER SUCCESS".cyan)
-            } else {
-                console.log("BUILD ON SERVER ERROR".yellow)
-            }
-        })
-
-        console.log("success".green)
+        
     } catch (error) {
         console.log("telah error".red, error)
     }

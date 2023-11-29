@@ -1,11 +1,9 @@
-const root = require('child_process').execSync('npm root -g').toString().trim()
 const papa = require('papaparse')
 const _ = require('lodash')
-const { fstat } = require('fs')
 const arg = process.argv.splice(2)
 const fs = require('fs')
-const path = require('path')
-const list_audience = require('./../assets/audience.json')
+const { fetch } = require('cross-fetch')
+// const list_audience = require('./../assets/audience.json')
 
 const TYPE_ITEM = {
     id: null,
@@ -59,7 +57,8 @@ ${list_prop.join("\n")}
     return prop
 }
 
-function perhitungan(param, data) {
+async function perhitungan(param, data) {
+    const list_audience = await fetch('https://wibudev.wibudev.com/assets/list-audience').then((v) => v.json()).then((v) => v)
     const total = +list_audience.find((v) => +v.idProvinsi === +data.idProvinsi && +v.idKabkot === +data.idKabkot).value
     const result = {}
     result.positive = (param.positive / 100) * total;

@@ -13,10 +13,15 @@ async function main() {
 
     execSync(`rm -rf ${tmp}/*`)
     execSync(`rm -rf ${output}/*`)
-    
+
     for (let d of dir) {
         try {
             let file = fs.readFileSync(`${input}/${d}`).toString()
+            let root_target = `const root = require('child_process').execSync('npm root -g').toString().trim();\n`
+            if (!file.includes(root_target)) {
+                root_target += file
+                file = root_target
+            }
             for (let p of list_package) {
                 if (file.includes(`require('${p}')`)) {
                     file = file.replace(`require('${p}')`, `require(\`\${root}/${p}\`)`)

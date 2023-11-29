@@ -1,4 +1,3 @@
-const root = require('child_process').execSync('npm root -g').toString().trim()
 const arg = process.argv.splice(2)
 const { exec, execSync } = require('child_process')
 const http = require('http')
