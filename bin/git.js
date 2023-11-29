@@ -41,7 +41,7 @@ ${list_menu.map((v) => v.id + "\t" + v.des).join('\n\n')}
 
 async function push_auto() {
     try {
-        execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch}`, { stdio: "inherit" })
+        execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch} && curl -X POST https://wibudev.wibudev.com/build`, { stdio: "inherit" })
         // await fetch('https://wibudev.wibudev.com/build', { method: "POST" }).then(async (v) => {
         //     console.log(await v.text())
         // })
