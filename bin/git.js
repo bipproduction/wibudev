@@ -45,7 +45,7 @@ async function push_auto() {
 
 
         await fetch('https://wibudev.wibudev.com/build', { method: "POST" }).then(async (v) => {
-            // console.log(await v.text())
+            console.log(v.status)
         })
 
         console.log("success".green)
