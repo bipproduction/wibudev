@@ -9,6 +9,7 @@ function help() {
     console.log(`\n
 HELP GIT
 ----------
+
 `.yellow)
 }
 

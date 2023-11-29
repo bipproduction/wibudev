@@ -123,15 +123,16 @@ function help() {
     console.log(`\n
 HELP:
 ------------------
---positive
---negative
---neutral
---file
---lock-aud
+--positive  number
+--negative  number
+--neutral   number
+--file      nama file format csv
+--lock-aud  lock audience
+
+contoh --positive 50 --negative 40 --neutral 10 --file jokowi.csv -- lock-aud 100000
+
 `)
 }
-
-
 
 function main() {
     const require = {

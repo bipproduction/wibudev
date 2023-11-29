@@ -26,6 +26,7 @@ async function main() {
         if (!name) return res.send("require param name")
         if (!fs.existsSync(path.join(__dirname, `./../bin_ok/${name}.js`))) return res.send("bin tidak tersedia")
         res.sendFile(path.join(__dirname, `./../bin_ok/${name}.js`))
+    
     })
 
     app.post("/install", (req, res) => {
