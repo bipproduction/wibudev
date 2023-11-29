@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+const root = require('child_process').execSync('npm root -g').toString().trim()
 console.log("version 1.0.0")
 const arg = process.argv.splice(2)
 const { execSync } = require('child_process')
@@ -73,3 +73,6 @@ async function main() {
 }
 
 main()
+
+// pg_dump -U bip -h localhost -p 5433 -d raven_v2 -W -F c -f raven_v2.dump
+// pg_restore -U bip -h localhost -p 5433 -d raven_v2 -W -c -v raven_v2.dump
