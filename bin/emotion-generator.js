@@ -3,7 +3,7 @@ const _ = require('lodash')
 const arg = process.argv.splice(2)
 const fs = require('fs')
 const { fetch } = require('cross-fetch')
-// const list_audience = require('./../assets/audience.json')
+
 
 const TYPE_ITEM = {
     id: null,
@@ -57,9 +57,9 @@ ${list_prop.join("\n")}
     return prop
 }
 
-async function perhitungan(param, data) {
-    const list_audience = await fetch('https://wibudev.wibudev.com/assets/list-audience').then((v) => v.json()).then((v) => v)
-    const total = +list_audience.find((v) => +v.idProvinsi === +data.idProvinsi && +v.idKabkot === +data.idKabkot).value
+function perhitungan(param, data, list_audience) {
+
+    const total = list_audience.find((v) => +v.idProvinsi === +data.idProvinsi && +v.idKabkot === +data.idKabkot).value
     const result = {}
     result.positive = (param.positive / 100) * total;
     result.negative = (param.negative / 100) * total;
@@ -108,7 +108,7 @@ async function perhitungan(param, data) {
     }
 
     const nil_neutral = {
-        "undecided": _.random((94 / 100) * _.round(result.neutral), (99 / 100) * _.round(result.neutral))
+        "undecided": _.round(_.random((94 / 100) * _.round(result.neutral), (99 / 100) * _.round(result.neutral)))
     }
 
     var hasil_nil = { ...nil_positive, ...nil_neutral, ...nil_negative }
@@ -133,7 +133,9 @@ contoh --positive 50 --negative 40 --neutral 10 --file jokowi.csv -- lock-aud 10
 `)
 }
 
-function main() {
+async function main() {
+    const list_audience = await fetch('https://wibudev.wibudev.com/assets/list-audience').then((v) => v.json()).then((v) => v)
+
     const require = {
         "--positive": null,
         "--negative": null,
@@ -165,15 +167,18 @@ function main() {
      */
     const hasil = []
     for (let fj of file_json) {
-        const gen = perhitungan(param, fj, 3000)
+        const gen = perhitungan(param, fj, list_audience)
         hasil.push(gen)
     }
+
+
 
     const _positive = +_.sum([_.sumBy(hasil, (v) => v.confidence), _.sumBy(hasil, (v) => v.supportive), _.sumBy(hasil, (v) => v.positive)])
     const _negative = +_.sum([_.sumBy(hasil, (v) => v.unsupportive), _.sumBy(hasil, (v) => v.uncomfortable), _.sumBy(hasil, (v) => v.negative), _.sumBy(hasil, (v) => v.dissapproval)])
     const _neutral = +_.sum([_.sumBy(hasil, (v) => v.undecided)])
 
     const _total = _.sum([_positive, _negative, _neutral])
+
 
     const _per = {
         positive: _.round((_positive / _total) * 100, 2),

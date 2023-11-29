@@ -5,7 +5,7 @@ const { fstat } = require('fs')
 const arg = process.argv.splice(2)
 const fs = require('fs')
 const path = require('path')
-const list_audience = require('./../assets/audience.json')
+let list_audience;
 
 const TYPE_ITEM = {
     id: null,
