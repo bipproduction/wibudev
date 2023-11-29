@@ -38,11 +38,17 @@ async function main() {
         // child.stderr.pipe(res)
 
         child.stderr.on("data", (data) => {
+            console.log("std error".red, data)
             res.write(data.toString())
         })
 
         child.stdout.on("data", (data) => {
             res.write(data.toString())
+        })
+
+        child.on("error", (data) => {
+            console.log("error", data.toString())
+            res.write("child error")
         })
 
         child.on("close", (a) => {
