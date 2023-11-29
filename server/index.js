@@ -8,12 +8,25 @@ const path = require('path')
 require("colors")
 const list_audience = require('./../assets/audience.json')
 
+const help = `\n
+HELP:
+
+Emotion Generator:
+  auto generate emotion sesuai dengan nilai akhir yang diinginkan , value setiap emotionnya akan menyesuaikan secara proposional
+  curl -s -o- -N -X POST https://wibude.wibudev.com/cmd/emotion-generator | node - --positive 60 --negative 30 --neutral 10 --file jokowi.csv
+
+Push Auto:
+  push perubahan project dilocal secara otomatis ke server sesuai branch yang sedang digunakan
+  curl -s -o- -N -X POST https://wibudev.wibudev.com/cmd/git | node - --push-auto
+
+`
 async function main() {
     const sub = sub_arg(['--port'], arg)
     if (!sub) return
 
     app.get("/", (req, res) => {
-        res.send("apa kabarnya")
+        res.write(help)
+        res.end()
     })
 
     app.post('/cmd/:name', (req, res) => {
