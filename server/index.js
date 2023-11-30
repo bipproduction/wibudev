@@ -22,6 +22,8 @@ Push Auto:
     push perubahan project dilocal secara otomatis ke server sesuai branch yang sedang digunakan
     curl -s -o- -N -X POST https://wibudev.wibudev.com/cmd/git | node - --push-auto
 
+== version 1.0.3 ==
+
 `
 async function main() {
     const sub = sub_arg(['--port'], arg)
