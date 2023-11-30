@@ -43,11 +43,6 @@ async function main() {
 
     })
 
-    app.post("/install", (req, res) => {
-        console.log("install")
-        res.sendFile(path.join(__dirname, "./../bin_ok/install.js"))
-    })
-
     app.post("/build", (req, res) => {
         if (execSync(`hostname`).toString().trim() !== "srv442857") return res.send("hanya untuk lingkup server")
         // execSync(`git stash && git pull origin main && yarn install && node generate.js && pm2 restart wibudev_3004`, { stdio: "inherit" })

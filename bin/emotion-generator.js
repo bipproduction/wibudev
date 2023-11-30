@@ -3,6 +3,7 @@ const _ = require('lodash')
 const arg = process.argv.splice(2)
 const fs = require('fs')
 const { fetch } = require('cross-fetch')
+require('colors')
 
 const TYPE_ITEM = {
     id: null,
@@ -189,7 +190,7 @@ async function emotion_generator() {
     const _unparse = papa.unparse(hasil, { header: true })
     // console.log(_unparse)
     fs.writeFileSync(`manipulate_${sub['--file']}`, _unparse)
-    console.log("success")
+    console.log(`success file tersimpan dengan nama manipulate_${sub['--file']}`.green)
 }
 
 emotion_generator()

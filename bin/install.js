@@ -1,6 +1,6 @@
 const { execSync } = require('child_process')
 const host_name = require("child_process").execSync('hostname').toString().trim()
-const list_package = ["papaparse", "lodash", "colors", "cross-fetch", "moment", "ip"]
+const list_package = ["papaparse", "lodash", "colors", "cross-fetch", "moment", "ip", "prompts"]
 
 function main() {
     try {
