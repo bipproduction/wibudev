@@ -1,6 +1,7 @@
 const root = require('child_process').execSync('npm root -g').toString().trim()
 const fs = require('fs')
 const path = require('path')
+const _ = require('lodash')
 
 const list_package = ["papaparse"]
 
@@ -24,5 +25,3 @@ async function coba(){
     const data = await list_audience.json()
     console.log(data)
 }
-
-coba()

@@ -6,7 +6,7 @@ require('colors')
 
 const list_menu = [
     {
-        id: "--push-auto",
+        id: "push-auto",
         des: "push otomatis ke github sesui dengan branch terpakai",
         fun: push_auto
     },
