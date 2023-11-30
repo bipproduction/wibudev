@@ -1,0 +1,13 @@
+```js
+const apa = "ini"
+module.export = apa
+
+function nama(){
+    console.log("namanya)
+}
+
+nama()
+```
+
+apakah function nama akan tereksekusi jika variable apa dipanggil dari file lain?
+

@@ -1,11 +1,12 @@
 const { execSync } = require('child_process')
+const host_name = require("child_process").execSync('hostname').toString().trim()
+const list_package = ["papaparse", "lodash", "colors", "cross-fetch", "moment", "ip"]
+
 function main() {
     try {
-        execSync("npm i -g papaparse")
-        execSync("npm i -g lodash")
-        execSync("npm i -g colors")
-        execSync("npm i -g cross-fetch")
-        execSync("npm i -g moment")
+        for (let p of list_package) {
+            execSync(`npm i -g ${p}`)
+        }
         console.log("success")
     } catch (error) {
         console.log("kegagalan dalam install ... hub developer")

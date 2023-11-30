@@ -20,8 +20,3 @@ function main() {
 
 }
 
-async function coba(){
-    const list_audience = await fetch('https://wibudev.wibudev.com/assets/list-audience')
-    const data = await list_audience.json()
-    console.log(data)
-}
