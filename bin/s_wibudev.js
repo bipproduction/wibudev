@@ -53,7 +53,7 @@ function create_server_app() {
         ['--app-name']: null
     }
 
-    const url = host_name === config.server.host_name ? `${config.env.prod.protocol}://${config.env.prod.host}/assets/sub-arg` : `${config.env.dev.protocol}://${config.env.dev.host}:${config.env.dev.port}/assets/sub-arg`
+    const url = host_name === config.server.host_name ? `${config.env.prod.protocol}://${config.env.prod.host}/assets/sub_arg.js` : `${config.env.dev.protocol}://${config.env.dev.host}:${config.env.dev.port}/assets/sub-arg`
     const sub_text = execSync(`curl -s -o- ${url}`).toString().trim()
     eval(sub_text)
 
