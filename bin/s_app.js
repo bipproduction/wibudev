@@ -8,7 +8,7 @@ const list_menu = [
     {
         id: "server_available",
         arg: "server-available",
-        a: "sa",
+        des: "menampilkan list server",
         fun: server_available
     }
 ]
@@ -18,7 +18,7 @@ function help() {
 SERVER APP:
 version: 1.0.0
 --------------
-
+${list_menu.map((v) => v.arg + "\t" + v.des).join(('\n'))}
     
     `.cyan)
 }
@@ -29,7 +29,7 @@ async function server_app() {
     `.yellow)
 
     if (_.isEmpty(arg)) return help()
-    const app = list_menu.find((v) => v.arg === arg[0] || v.a === arg[0])
+    const app = list_menu.find((v) => v.arg === arg[0])
     if (!app) return help()
     app.fun()
 }

@@ -1,16 +1,19 @@
-const { fetch } = require('cross-fetch');
-require('colors')
-; (async () => {
-    await fetch('https://wibudev.wibudev.com/build', { method: "POST" }).then(async (v) => {
-        if (v.status === 200) {
-            const text = await v.text()
-            console.log(text.gray)
-            console.log("BUILD ON SERVER SUCCESS".cyan)
+require('colors');
+const { exec } = require('child_process');
 
-        } else {
-            console.log("BUILD ON SERVER ERROR".yellow)
-        }
+function s_build() {
+    const child = exec('curl -s -o- -N -X POST https://wibudev.wibudev.com/build')
+    child.stderr.on("data", (data) => {
+        console.log(`[error]\t${data}`.yellow)
     })
 
-    console.log("success".green)
-})()
+    child.stdout.on("data", (data) => {
+        console.log(`[data]\t${data}`.gray)
+    })
+
+    child.on("close", () => {
+        console.log("[END]".cyan)
+    })
+}
+
+s_build()
