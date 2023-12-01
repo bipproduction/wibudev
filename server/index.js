@@ -44,14 +44,18 @@ async function main() {
     })
 
     app.post("/build", (req, res) => {
-        if (execSync(`hostname`).toString().trim() !== "srv442857") return res.send("hanya untuk lingkup server")
-        const child = exec(`git stash && git pull origin main && yarn install && node generator.js && pm2 restart wibudev_3004`)
-        child.stdout.pipe(res)
-        child.stderr.pipe(res)
+        try {
+            if (execSync(`hostname`).toString().trim() !== "srv442857") return res.send("hanya untuk lingkup server")
+            const child = exec(`git stash && git pull origin main && yarn install && node generator.js && pm2 restart wibudev_3004`)
+            child.stdout.pipe(res)
+            child.stderr.pipe(res)
 
-        child.on("close", (a) => {
-            res.end("SUCCESS")
-        })
+            child.on("close", (a) => {
+                res.end("SUCCESS")
+            })
+        } catch (error) {
+            res.end(error)
+        }
 
     })
 
