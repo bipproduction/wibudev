@@ -4,7 +4,6 @@ require('colors')
 const { execSync } = require('child_process')
 const host_name = execSync('hostname').toString().trim()
 const path = require('path')
-const config = require('../assets/config')
 
 const list_menu = [
     {
@@ -47,6 +46,10 @@ server_app()
 // === FUN ===
 
 function create_server_app() {
+    const config = JSON.parse(execSync(`curl -s -o- https://wibudev.wibudev.com/assets/config`).toString().trim())
+    console.log(config)
+
+    return
     const prop = {
         ['--server-name']: null,
         ['--port']: null,
