@@ -63,9 +63,15 @@ async function main() {
         res.json(list_audience)
     })
 
-    app.get('/assets/sub-arg', (req, res) => {
-        res.sendFile(path.join(__dirname, './../assets/sub_arg.js'))
+    app.get('/assets/:name', (req, res) => {
+        try {
+            const name = req.params.name
+            res.sendFile(path.join(__dirname, `./../assets/${name}.js`))
+        } catch (error) {
+            res.status(404).end("404 | NOT FOUND")
+        }
     })
+
 
     app.listen(sub['--port'], () => {
         console.log(`Server berjalan di port ${sub['--port']}`.green);

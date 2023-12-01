@@ -4,7 +4,7 @@ require('colors')
 const { execSync } = require('child_process')
 const host_name = execSync('hostname').toString().trim()
 const path = require('path')
-const config = require('../config')
+const config = require('../assets/config')
 
 const list_menu = [
     {
