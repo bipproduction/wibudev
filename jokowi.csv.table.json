@@ -1,0 +1,166 @@
+{
+  "columns": [
+    {
+      "minWidth": 40,
+      "download": false,
+      "formatter": "rowSelection",
+      "titleFormatter": "rowSelection",
+      "resizable": true,
+      "headerSort": false,
+      "width": 53
+    },
+    {
+      "field": "id",
+      "title": "id",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 207
+    },
+    {
+      "field": "idCandidate",
+      "title": "idCandidate",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 135
+    },
+    {
+      "field": "idProvinsi",
+      "title": "idProvinsi",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 120
+    },
+    {
+      "field": "idKabkot",
+      "title": "idKabkot",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 115
+    },
+    {
+      "field": "candidate",
+      "title": "candidate",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 121
+    },
+    {
+      "field": "provinsi",
+      "title": "provinsi",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 108
+    },
+    {
+      "field": "kabkot",
+      "title": "kabkot",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 169
+    },
+    {
+      "field": "date",
+      "title": "date",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 86
+    },
+    {
+      "field": "time",
+      "title": "time",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "string",
+      "headerSort": true,
+      "width": 86
+    },
+    {
+      "field": "confidence",
+      "title": "confidence",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 130
+    },
+    {
+      "field": "supportive",
+      "title": "supportive",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 126
+    },
+    {
+      "field": "positive",
+      "title": "positive",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 108
+    },
+    {
+      "field": "undecided",
+      "title": "undecided",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 126
+    },
+    {
+      "field": "unsupportive",
+      "title": "unsupportive",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 142
+    },
+    {
+      "field": "uncomfortable",
+      "title": "uncomfortable",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 152
+    },
+    {
+      "field": "negative",
+      "title": "negative",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 113
+    },
+    {
+      "field": "dissapproval",
+      "title": "dissapproval",
+      "minWidth": 40,
+      "resizable": true,
+      "sorter": "number",
+      "headerSort": true,
+      "width": 139
+    }
+  ]
+}

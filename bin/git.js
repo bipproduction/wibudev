@@ -19,7 +19,8 @@ const list_menu = [
 
 function help() {
     console.log(`\n
-HELP GIT
+GIT APP
+version: 1.0.0
 ----------
 ${list_menu.map((v) => v.id + "\t" + v.des).join('\n\n')}
 

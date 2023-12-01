@@ -1,0 +1,92 @@
+{
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "idCandidate",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "idProvinsi",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "idKabkot",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "candidate",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "provinsi",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "kabkot",
+      "type": "string",
+      "format": "default"
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "format": "default"
+    },
+    {
+      "name": "time",
+      "type": "time",
+      "format": "%H:%M"
+    },
+    {
+      "name": "confidence",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "supportive",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "positive",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "undecided",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "unsupportive",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "uncomfortable",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "negative",
+      "type": "integer",
+      "format": "default"
+    },
+    {
+      "name": "dissapproval",
+      "type": "integer",
+      "format": "default"
+    }
+  ],
+  "missingValues": [
+    ""
+  ]
+}
