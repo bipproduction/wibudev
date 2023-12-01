@@ -43,7 +43,7 @@ function server_available() {
         const ls_available = execSync(`ls /etc/nginx/sites-enabled`).toString().trim()
         const sp = ls_available.split("\n").map((v) => ({
             "name": v,
-            "port": v.split('_')[1]
+            "port": +(v.split('_')[1])
         }))
 
         console.table(sp)
