@@ -32,9 +32,9 @@ ${list_menu.map((v) => v.arg + "\t" + v.des).join(('\n'))}
 }
 
 async function server_app() {
-    // if (host_name !== "srv442857") return console.log(`
-    // app ini hanya bisa berjalan di server
-    // `.yellow)
+    if (host_name !== "srv442857") return console.log(`
+    app ini hanya bisa berjalan di server
+    `.yellow)
 
     if (_.isEmpty(arg)) return help()
     const app = list_menu.find((v) => v.arg === arg[0])
