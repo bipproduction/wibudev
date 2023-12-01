@@ -1,4 +1,4 @@
-{
+const config = {
     "env": {
         "prod": {
             "protocol": "https",
@@ -16,3 +16,5 @@
         "app_name": "wibudev_3004"
     }
 }
+
+module.exports = config

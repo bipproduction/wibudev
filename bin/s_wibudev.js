@@ -3,8 +3,8 @@ const _ = require('lodash')
 require('colors')
 const { execSync } = require('child_process')
 const host_name = execSync('hostname').toString().trim()
-const config = require('./../config.json')
 const path = require('path')
+const config = require('../config')
 
 const list_menu = [
     {
