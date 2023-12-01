@@ -63,6 +63,10 @@ async function main() {
         res.json(list_audience)
     })
 
+    app.get('/assets/sub-arg', (req, res) => {
+        res.sendFile(path.join(__dirname, './../assets/sub_arg.js'))
+    })
+
     app.listen(sub['--port'], () => {
         console.log(`Server berjalan di port ${sub['--port']}`.green);
     });
