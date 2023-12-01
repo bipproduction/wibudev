@@ -66,7 +66,7 @@ async function main() {
     app.get('/assets/:name', (req, res) => {
         try {
             const name = req.params.name
-            res.sendFile(path.join(__dirname, `./../assets/${name}.js`))
+            res.sendFile(path.join(__dirname, `./../assets/${name}`))
         } catch (error) {
             res.status(404).end("404 | NOT FOUND")
         }
