@@ -7,7 +7,7 @@ const host_name = execSync('hostname').toString().trim()
 const list_menu = [
     {
         id: "server_available",
-        arg: "server-available",
+        arg: "ser-ava",
         des: "menampilkan list server",
         fun: server_available
     }
