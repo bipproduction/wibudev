@@ -41,7 +41,14 @@ server_app()
 function server_available() {
     try {
         const ls_available = execSync(`ls /etc/nginx/sites-enabled`).toString().trim()
-        console.log(ls_available)
+        const sp = ls_available.split("\n").map((v) => ({
+            "name": v,
+            "port": v.split('_')[1]
+        }))
+
+        console.table(sp)
+        console.log("MAX PORT: ", _.maxBy(sp, (v) => v.port))
+
     } catch (error) {
         console.log
     }
