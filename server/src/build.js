@@ -51,30 +51,4 @@ module.exports = async function (req, res) {
 async function prosesnya(childProcess, res) {
     childProcess.stdout.pipe(res);
     childProcess.stderr.pipe(res);
-
-    // childProcess.stdout.on('data', async (data) => {
-    //     await new Promise(r => setTimeout(function () {
-    //         console.log(data.green)
-    //         res.write(data.toString());
-    //         r()
-    //     }, 1000))
-    // });
-
-    // childProcess.stderr.on('data', async (data) => {
-    //     res.write("\n== STD_ERROR ==\n")
-    //     console.log(data.yellow)
-
-    // });
-
-    // childProcess.stdout.on('error', async (data) => {
-    //     res.write("\n== ERROR ==\n")
-    //     console.log(data.red)
-    // });
-
-    // childProcess.on('close', async (code) => {
-    //     res.write("\n== CLOSE ==\n")
-    //     console.log(`-- Proses selesai dengan kode keluar: ${code}`.gray);
-    //     await kill_proccess(childProcess, res)
-    //     res.end("CLOSE 2")
-    // });
 }

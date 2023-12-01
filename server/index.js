@@ -46,7 +46,7 @@ async function main() {
     app.post("/build", (req, res) => {
         if (execSync(`hostname`).toString().trim() !== "srv442857") return res.send("hanya untuk lingkup server")
         // execSync(`git stash && git pull origin main && yarn install && node generate.js && pm2 restart wibudev_3004`, { stdio: "inherit" })
-        const child = exec(`git stash && git pull origin main && yarn install && node generate.js && pm2 restart wibudev_3004`)
+        const child = exec(`git stash && git pull origin main && yarn install && node generator.js && pm2 restart wibudev_3004`)
         child.stdout.pipe(res)
         child.stderr.pipe(res)
 
