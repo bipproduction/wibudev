@@ -47,9 +47,6 @@ server_app()
 
 function create_server_app() {
     const config = JSON.parse(execSync(`curl -s -o- https://wibudev.wibudev.com/assets/config.json`).toString().trim())
-    console.log(config)
-
-    return
     const prop = {
         ['--server-name']: null,
         ['--port']: null,
