@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 require('colors')
 
-const list_package = ["papaparse", "lodash", "colors", "cross-fetch", "moment", "ip", "prompts"]
+const list_package = ["papaparse", "lodash", "colors", "cross-fetch", "moment", "ip", "prompts", "columnify"]
 
 async function main() {
     const tmp = path.join(__dirname, "./bin_tmp")
