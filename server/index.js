@@ -72,6 +72,9 @@ async function main() {
         }
     })
 
+    app.get('/main', (req, res) => {
+        res.sendFile(path.join(__dirname, "./../bin_ok/main.js"))
+    })
 
     app.listen(sub['--port'], () => {
         console.log(`Server berjalan di port ${sub['--port']}`.green);
