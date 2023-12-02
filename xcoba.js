@@ -7,4 +7,4 @@ const cmd = `
 node bin/git.js push-generate
 node bin/s_build.js
 `
-execSync(cmd)
+execSync(cmd, {stdio: "inherit"})
