@@ -6,29 +6,11 @@ const app = express();
 const fs = require("fs")
 const path = require('path')
 require("colors")
-const list_audience = require('./../assets/audience.json')
 const _ = require('lodash')
 const { box } = require('teeti')
 const hostname = execSync(`hostname`).toString().trim()
 const is_dev = hostname !== "srv442857"
 
-// const help = `\n
-// HELP:
-
-// Install:
-//     curl -s -o- -N -X POST https://wibude.wibudev.com/cmd/install | node
-
-// Emotion Generator:
-//     auto generate emotion sesuai dengan nilai akhir yang diinginkan , value setiap emotionnya akan menyesuaikan secara proposional
-//     curl -s -o- -N -X POST https://wibude.wibudev.com/cmd/emotion-generator | node - --positive 60 --negative 30 --neutral 10 --file jokowi.csv
-
-// Push Auto:
-//     push perubahan project dilocal secara otomatis ke server sesuai branch yang sedang digunakan
-//     curl -s -o- -N -X POST https://wibudev.wibudev.com/cmd/git | node - --push-auto
-
-// == version 1.0.3 ==
-
-// `
 async function server() {
     const sub = sub_arg(['--port'], arg)
     if (!sub) return
@@ -103,17 +85,6 @@ async function server() {
         child.stdout.pipe(res)
         child.stderr.pipe(res)
     })
-
-
-
-    // app.get('/assets/:name', (req, res) => {
-    //     try {
-    //         const name = req.params.name
-    //         res.sendFile(path.join(__dirname, `./../assets/${name}`))
-    //     } catch (error) {
-    //         res.status(404).end("404 | NOT FOUND")
-    //     }
-    // })
 
     app.get('/list-app', (req, res) => {
         const dir = fs.readdirSync(path.join(__dirname, "./../bin_ok"))
