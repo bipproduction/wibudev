@@ -14,6 +14,16 @@ async function main() {
     execSync(`rm -rf ${tmp}/*`)
     execSync(`rm -rf ${output}/*`)
 
+    for (let r of dir) {
+        let file = fs.readFileSync(`${input}/${r}`).toString()
+        const versionMatch = file.match(/Version: .*/);
+        const version_text = versionMatch[0].split(": ")[1]
+        const version_value = version_generator(version_text)
+        const version_result = `Version: ${version_value}`
+        file = file.replace(versionMatch[0], version_result)
+        fs.writeFileSync(`${input}/${r}`, file)
+    }
+
     for (let d of dir) {
         try {
             let file = fs.readFileSync(`${input}/${d}`).toString()
@@ -44,5 +54,18 @@ async function main() {
         }
     }
 }
+
+/**
+ * 
+ * @param {string} ver 
+ * @returns string
+ */
+function version_generator(ver) {
+    if (!ver) throw new Error("ver tidak boleh kosong")
+    const v = ver.split('.').map(Number)
+    v[2]++;
+    return v.join(".")
+}
+
 
 main()

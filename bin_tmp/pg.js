@@ -1,5 +1,4 @@
 const root = require('child_process').execSync('npm root -g').toString().trim();
-const { address } = require("ip")
 const arg = process.argv.splice(2)
 require(`${root}/makuro/node_modules/colors`)
 const moment = require(`${root}/makuro/node_modules/moment`)
@@ -18,7 +17,7 @@ const list_menu = [
     {
         arg: "restore",
         des: "restore database",
-        req: ["--db-name [nama database]","--file [nama file]"],
+        req: ["--db-name [nama database]", "--file [nama file]"],
         fun: restore
     },
     {
@@ -32,7 +31,7 @@ const list_menu = [
 function help() {
     console.log(`\n
 MAKURO PG APP:
-Version: 1.0.0
+Version: 1.0.1
 
 ${box(columnify(list_menu.map((v) => ({ ..._.omit(v, ['fun']) }))))}
 

@@ -11,8 +11,8 @@ eval(execSync(`curl -s -o- ${host}/fun/sub_arg`).toString().trim())
 
 function help() {
     console.log(`
-${"MAKURO BUILD APP".green}
-${"Version: 1.0.0".gray}
+MAKURO BUILD APP
+Version: 1.0.1
 
 require: ${"--app"}
 ${columnify(list_server.filter((v) => v.type === "nextjs").map((v, k) => ({ no: k + 1, name: v.name }))).gray}

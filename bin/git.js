@@ -17,7 +17,7 @@ const list_menu = [
 function help() {
     console.log(`\n
 MAKURO GIT APP
-version: 1.0.0
+Version: 1.0.1
 
 ${colum(list_menu.map((v) => ({ ..._.omit(v, ['fun']) })), { showHeaders: true, columnSplitter: "   " }).trim()}
 `.cyan)

@@ -6,37 +6,22 @@ const currentBranch = execSync('git branch --show-current').toString().trim();
 require(`${root}/makuro/node_modules/colors`)
 const path = require('path')
 const colum = require(`${root}/makuro/node_modules/columnify`)
-const { box } = require('teeti')
 
 const list_menu = [
     {
         arg: ["-pa", "--push-auto"],
         des: "push otomatis ke github sesui dengan branch terpakai",
         fun: push_auto
-    },
-    // {
-    //     arg: ["-pg", "--push-generate"],
-    //     des: "push otomatis dan genearte file bin",
-    //     fun: git_push_generate
-    // },
-    // {
-    //     arg: ['-h', '--help'],
-    //     des: "memunculkan menu bantuan",
-    //     fun: help
-    // }
+    }
 ];
 
 function help() {
-    const tbl = list_menu.map((v) => ({
-        ...v.arg,
-        ...v.des
-    }))
     console.log(`\n
 MAKURO GIT APP
-version: 1.0.0
+Version: 1.0.1
 
 ${colum(list_menu.map((v) => ({ ..._.omit(v, ['fun']) })), { showHeaders: true, columnSplitter: "   " }).trim()}
-`)
+`.cyan)
 
 }
 
@@ -63,10 +48,5 @@ async function git_push_generate() {
 }
 
 async function push_auto() {
-    try {
-        execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch} `, { stdio: "inherit" })
-    } catch (error) {
-        console.log("GIT APP ERROR!".red)
-        console.log(box(`${error}`.yellow))
-    }
+    execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch} `, { stdio: "inherit" })
 }
