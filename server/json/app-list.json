@@ -47,7 +47,7 @@
         "id": "wibudev_3004",
         "name": "wibudev",
         "port": "3004",
-        "type": "nextjs",
+        "type": "node",
         "branch": "main",
         "script": {
             "run": "pm2 start \"node index.js --port 3004\" --name wibudev_3004",

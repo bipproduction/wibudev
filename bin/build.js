@@ -8,7 +8,6 @@ require('colors')
 
 eval(execSync(`curl -s -o- ${host}/fun/sub_arg`).toString().trim())
 
-
 function help() {
     console.log(`
 ${"MAKURO BUILD APP".green}
@@ -34,7 +33,7 @@ ${columnify(list_server.filter((v) => v.type === "nextjs").map((v, k) => ({ no: 
     if (!app || app === undefined) return help()
 
     const body = {
-        ['--app-name']: app.name
+        ['--app']: app.name
     }
 
     const prm = _.flatten(_.keys(body).map((v) => [v, body[v]])).join('/')

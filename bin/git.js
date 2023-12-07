@@ -13,16 +13,16 @@ const list_menu = [
         des: "push otomatis ke github sesui dengan branch terpakai",
         fun: push_auto
     },
-    {
-        arg: ["-pg", "--push-generate"],
-        des: "push otomatis dan genearte file bin",
-        fun: git_push_generate
-    },
-    {
-        arg: ['-h', '--help'],
-        des: "memunculkan menu bantuan",
-        fun: help
-    }
+    // {
+    //     arg: ["-pg", "--push-generate"],
+    //     des: "push otomatis dan genearte file bin",
+    //     fun: git_push_generate
+    // },
+    // {
+    //     arg: ['-h', '--help'],
+    //     des: "memunculkan menu bantuan",
+    //     fun: help
+    // }
 ];
 
 function help() {

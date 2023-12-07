@@ -32,7 +32,7 @@ const TYPE_APP = {
     /**
      * @type {TYPE_APP}
      */
-    const app = list_app.find((v) => v.name === sub['--app-name'])
+    const app = list_app.find((v) => v.name === sub['--app'])
     const dir = path.join(__dirname, `./../../../${app.name}`)
 
     console.log("try to build")
@@ -44,6 +44,7 @@ yarn install
 ${app.type === "nextjs" ? "npx prisma db push && yarn build" : true}
 ${app.script.restart}
 `
-    execSync(cmd, { stdio: "inherit" })
+    // execSync(cmd, { stdio: "inherit" })
+    console.log(cmd)
 
 })()
