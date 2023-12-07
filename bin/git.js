@@ -20,7 +20,7 @@ MAKURO GIT APP
 version: 1.0.0
 
 ${colum(list_menu.map((v) => ({ ..._.omit(v, ['fun']) })), { showHeaders: true, columnSplitter: "   " }).trim()}
-`)
+`.cyan)
 
 }
 
