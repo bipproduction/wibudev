@@ -1,5 +1,5 @@
 const arg = process.argv.splice(2)
-const { execSync, exec } = require('child_process');
+const { execSync } = require('child_process');
 const _ = require('lodash')
 const currentBranch = execSync('git branch --show-current').toString().trim();
 require('colors')
@@ -62,8 +62,10 @@ async function git_push_generate() {
 }
 
 async function push_auto() {
-    const child = exec(`git add -A && git commit -m "auto push" && git push origin ${currentBranch} `)
-    child.stderr.on("data", console.log)
-    child.stdout.on("error", console.log)
-    child.on("error", console.log)
+    try {
+        execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch} `, { stdio: "inherit" })
+    } catch (error) {
+        console.log("GIT APP ERROR!".red)
+        console.log(box(`${error}`.yellow))
+    }
 }
