@@ -4,35 +4,36 @@ require('colors')
 const moment = require('moment')
 const _ = require('lodash')
 const { execSync } = require('child_process')
+const { box } = require('teeti')
+const columnify = require("columnify")
 
 const list_menu = [
     {
-        id: "dump",
         arg: "dump",
         des: "backup database",
-        req: "--db-name [nama database]",
+        req: ["--db-name [nama database]"],
         fun: dump
     },
     {
-        id: "restore",
         arg: "restore",
         des: "restore database",
-        req: "--db-name [nama database], --file [nama file]",
+        req: ["--db-name [nama database]","--file [nama file]"],
         fun: restore
     },
     {
-        id: "sql",
         arg: "sql",
         des: "melakukan kegiatan query",
-        req: "--query [test query], --db-name [nama database]",
+        req: ["--query [test query]", "--db-name [nama database]"],
         fun: sql
     }
 ]
 
 function help() {
     console.log(`\n
-HELP:
-${list_menu.map((v) => "  " + v.arg + "\n\tReq: " + v.req).join('\n\n')}
+MAKURO PG APP:
+Version: 1.0.0
+
+${box(columnify(list_menu.map((v) => ({ ..._.omit(v, ['fun']) }))))}
 
 `)
 }

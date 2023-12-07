@@ -1,25 +1,26 @@
 const root = require('child_process').execSync('npm root -g').toString().trim();
 const arg = process.argv.splice(2)
 const { execSync } = require('child_process');
-const _ = require(`${root}/lodash`)
-const currentBranch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
-require(`${root}/colors`)
+const _ = require(`${root}/makuro/node_modules/lodash`)
+const currentBranch = execSync('git branch --show-current').toString().trim();
+require(`${root}/makuro/node_modules/colors`)
 const path = require('path')
-const colum = require(`${root}/columnify`)
+const colum = require(`${root}/makuro/node_modules/columnify`)
+const {box} = require('teeti')
 
 const list_menu = [
     {
-        arg: "push-auto",
+        arg: ["-pa", "--push-auto"],
         des: "push otomatis ke github sesui dengan branch terpakai",
         fun: push_auto
     },
     {
-        arg: "push-generate",
+        arg: ["-pg", "--push-generate"],
         des: "push otomatis dan genearte file bin",
         fun: git_push_generate
     },
     {
-        arg: "--help",
+        arg: ['-h', '--help'],
         des: "memunculkan menu bantuan",
         fun: help
     }
@@ -31,18 +32,18 @@ function help() {
         ...v.des
     }))
     console.log(`\n
-GIT APP
+MAKURO GIT APP
 version: 1.0.0
 
-${colum(list_menu.map((v) => ({ ..._.omit(v, ['fun']) })), { showHeaders: true, columnSplitter: "   " })}
-`.yellow)
+${box(colum(list_menu.map((v) => ({ ..._.omit(v, ['fun']) })), { showHeaders: true, columnSplitter: "   " }).trim())}
+`)
 
 }
 
 
 async function git() {
     if (arg.length === 0) return help()
-    const app = list_menu.find((v) => v.arg === arg[0])
+    const app = list_menu.find((v) => v.arg.includes(arg[0]))
     if (!app) return help()
     app.fun()
 }

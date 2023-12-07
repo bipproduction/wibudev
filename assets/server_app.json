@@ -1,0 +1,30 @@
+[
+    {
+        "name": "io_3003",
+        "script": "node ./io/index.js"
+    },
+    {
+        "name": "raven-stone2_3000",
+        "script": "cd ./raven-stone2 && yarn start --port 3000"
+    },
+    {
+        "name": "wa-server_3001",
+        "script": "node ./wa-server/index.js"
+    },
+    {
+        "name": "webhook_3002",
+        "script": "node ./webhook/index.js"
+    },
+    {
+        "name": "wibudev_3004",
+        "script": "cd ./wibudev && yarn start --port 3004"
+    },
+    {
+        "name": "test-raven-stone2_3005",
+        "script": "cd ./test-raven-stone2 && yarn start --port 3005"
+    },
+    {
+        "name": "test-raven-stone2_3005",
+        "script": "cd ./test-raven-stone2 && yarn start --port 3005"
+    }
+]

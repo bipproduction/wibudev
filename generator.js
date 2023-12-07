@@ -24,7 +24,7 @@ async function main() {
             }
             for (let p of list_package) {
                 if (file.includes(`require('${p}')`)) {
-                    file = file.replace(`require('${p}')`, `require(\`\${root}/${p}\`)`)
+                    file = file.replace(`require('${p}')`, `require(\`\${root}/makuro/node_modules/${p}\`)`)
                 }
             }
 

@@ -1,10 +1,10 @@
 const root = require('child_process').execSync('npm root -g').toString().trim();
-const papa = require(`${root}/papaparse`)
-const _ = require(`${root}/lodash`)
+const papa = require(`${root}/makuro/node_modules/papaparse`)
+const _ = require(`${root}/makuro/node_modules/lodash`)
 const arg = process.argv.splice(2)
 const fs = require('fs')
-const { fetch } = require(`${root}/cross-fetch`)
-require(`${root}/colors`)
+const { fetch } = require(`${root}/makuro/node_modules/cross-fetch`)
+require(`${root}/makuro/node_modules/colors`)
 
 const TYPE_ITEM = {
     id: null,

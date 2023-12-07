@@ -1,7 +1,7 @@
 const root = require('child_process').execSync('npm root -g').toString().trim();
 const { execSync } = require('child_process')
 const host_name = require("child_process").execSync('hostname').toString().trim()
-const list_package = ["papaparse", "lodash", "colors", "cross-fetch", "moment", "ip", "prompts", "columnify"]
+const list_package = ["papaparse", "lodash", "colors", "cross-fetch", "moment", "ip", "prompts", "columnify", "teeti"]
 
 function main() {
     try {

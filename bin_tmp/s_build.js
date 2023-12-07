@@ -1,5 +1,5 @@
 const root = require('child_process').execSync('npm root -g').toString().trim();
-require(`${root}/colors`);
+require(`${root}/makuro/node_modules/colors`);
 const { exec } = require('child_process');
 
 function s_build() {

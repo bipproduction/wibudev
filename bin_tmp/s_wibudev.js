@@ -1,7 +1,7 @@
 const root = require('child_process').execSync('npm root -g').toString().trim();
 const arg = process.argv.splice(2)
-const _ = require(`${root}/lodash`)
-require(`${root}/colors`)
+const _ = require(`${root}/makuro/node_modules/lodash`)
+require(`${root}/makuro/node_modules/colors`)
 const { execSync } = require('child_process')
 const host_name = execSync('hostname').toString().trim()
 const path = require('path')
