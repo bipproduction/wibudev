@@ -66,6 +66,6 @@ async function push_auto() {
         execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch} `, { stdio: "inherit" })
     } catch (error) {
         console.log("GIT APP ERROR!".red, error)
-        console.log(`${error}`.yellow)
+        console.log(box(`${error}`.yellow))
     }
 }
