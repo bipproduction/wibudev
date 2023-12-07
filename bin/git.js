@@ -63,6 +63,6 @@ async function git_push_generate() {
 
 async function push_auto() {
     const child = exec(`git add -A && git commit -m "auto push" && git push origin ${currentBranch} `)
-    child.stderr.pipe(console.log)
-    child.stdout.pipe(console.log)
+    child.stderr.on("data", console.log)
+    child.stdout.on("error", console.log)
 }
