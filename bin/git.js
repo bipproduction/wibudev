@@ -15,10 +15,6 @@ const list_menu = [
 ];
 
 function help() {
-    const tbl = list_menu.map((v) => ({
-        ...v.arg,
-        ...v.des
-    }))
     console.log(`\n
 MAKURO GIT APP
 version: 1.0.0
