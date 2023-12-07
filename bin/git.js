@@ -5,24 +5,13 @@ const currentBranch = execSync('git branch --show-current').toString().trim();
 require('colors')
 const path = require('path')
 const colum = require('columnify')
-const { box } = require('teeti')
 
 const list_menu = [
     {
         arg: ["-pa", "--push-auto"],
         des: "push otomatis ke github sesui dengan branch terpakai",
         fun: push_auto
-    },
-    // {
-    //     arg: ["-pg", "--push-generate"],
-    //     des: "push otomatis dan genearte file bin",
-    //     fun: git_push_generate
-    // },
-    // {
-    //     arg: ['-h', '--help'],
-    //     des: "memunculkan menu bantuan",
-    //     fun: help
-    // }
+    }
 ];
 
 function help() {
