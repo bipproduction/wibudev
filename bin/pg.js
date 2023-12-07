@@ -30,7 +30,7 @@ const list_menu = [
 function help() {
     console.log(`\n
 MAKURO PG APP:
-Version: 1.0.1
+Version: 1.0.2
 
 ${box(columnify(list_menu.map((v) => ({ ..._.omit(v, ['fun']) }))))}
 
