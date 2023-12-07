@@ -12,11 +12,12 @@ eval(execSync(`curl -s -o- ${host}/fun/sub_arg`).toString().trim())
 function help() {
     console.log(`
 MAKURO BUILD APP
-Version: 1.0.2
+Version: 1.0.3
 
-require: ${"--app"}
-${columnify(list_server.filter((v) => v.type === "nextjs").map((v, k) => ({ name: v.name })), {showHeaders: false}).gray}
-`)
+require: --app
+--------------
+${columnify(list_server.filter((v) => v.type === "nextjs").map((v, k) => ({ name: v.name })), {showHeaders: false})}
+`.gray)
 }
 
 ; (() => {

@@ -11,7 +11,7 @@ eval(execSync(`curl -s -o- ${host}/fun/sub_arg`).toString().trim())
 function help() {
     console.log(`
 MAKURO BUILD APP
-Version: 1.0.2
+Version: 1.0.3
 
 require: --app
 --------------
