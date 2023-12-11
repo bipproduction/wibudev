@@ -3,6 +3,7 @@ const fs = require('fs')
 const path = require('path')
 require('colors')
 
+
 const list_package = ["papaparse", "lodash", "colors", "cross-fetch", "moment", "ip", "prompts", "columnify"]
 
 async function main() {
@@ -37,6 +38,8 @@ async function main() {
                     file = file.replace(`require('${p}')`, `require(\`\${root}/makuro/node_modules/${p}\`)`)
                 }
             }
+
+
 
             fs.writeFileSync(`${tmp}/${d}`, file, "utf-8")
         } catch (error) {

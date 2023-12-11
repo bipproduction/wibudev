@@ -1,0 +1,7 @@
+{
+    "is_dev": true,
+    "host": {
+        "local": "http://localhost:3004",
+        "server": "https://wibudev.wibudev.com"
+    }
+}

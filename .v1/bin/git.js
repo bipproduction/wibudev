@@ -2,7 +2,7 @@ const arg = process.argv.splice(2)
 const { execSync } = require('child_process');
 const _ = require('lodash')
 const currentBranch = execSync('git branch --show-current').toString().trim();
-require('colors')
+const color = require('colors')
 const path = require('path')
 const colum = require('columnify')
 

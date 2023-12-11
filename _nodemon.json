@@ -1,0 +1,5 @@
+{
+    "exec": "node generate.js && node index.js",
+    "ignore": ["server/app/out"]
+
+}

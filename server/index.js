@@ -1,101 +1,110 @@
-const express = require('express');
-const { execSync, exec } = require('child_process');
-const sub_arg = require('../sub_arg');
-const arg = process.argv.splice(2)
-const app = express();
-const fs = require("fs")
+const arg = process.argv.splice(2);
+const _ = require('lodash');
+const express = require('express')
+const app = express()
+const fs = require('fs')
 const path = require('path')
-require("colors")
-const _ = require('lodash')
-const { box } = require('teeti')
-const hostname = execSync(`hostname`).toString().trim()
-const is_dev = hostname !== "srv442857"
+require('colors')
+const { PrismaClient } = require('@prisma/client')
+const prisma = new PrismaClient()
+const list_app = require('./json/app.json');
+const { execSync } = require('child_process');
+const curent_app = list_app.find((v) => v.name === "wibudev")
+const _404 = path.join(__dirname, "./src/_404.js")
+const body_parser = require('body-parser')
+const JavaScriptObfuscator = require('javascript-obfuscator');
 
-async function server() {
-    const sub = sub_arg(['--port'], arg)
-    if (!sub) return
+app.use(express.text());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-    app.get("/", (req, res) => {
-        res.write("MAKURO APP")
-        res.end()
-    })
+app.post('/apa', (req, res) => {
+    res.send(req.body)
+})
 
-    app.post('/cmd/:name', (req, res) => {
-        const name = req.params.name
-        const fl = is_dev ? path.join(__dirname, `./../bin/${name}.js`) : path.join(__dirname, `./../bin_ok/${name}.js`)
-        if (!name) return res.send("require param name")
-        if (!fs.existsSync(fl)) return res.sendFile(path.join(__dirname, "./../assets/not_found.js"))
-        res.sendFile(fl)
+app.get('/auth/:id', async (req, res) => {
+    const id = +req.params.id
+    const user = await prisma.user.findUnique({ where: { id } })
+    if (!user) return res.json({ auth: false })
+    return res.json({ auth: true })
+})
 
-    })
+app.post('/login', async (req, res) => {
+    const body = req.body
+    const user = await prisma.user.findUnique({ where: { email: body.email } })
+    if (!user || user.email !== body.email || user.password !== body.password) return res.json({ success: false })
+    res.json({ success: true, userId: user.id })
+})
 
-    app.post("/build", (req, res) => {
-        try {
-            if (execSync(`hostname`).toString().trim() !== "srv442857") return res.send("hanya untuk lingkup server")
-            const child = exec(`git stash && git pull origin main && yarn install && pm2 restart wibudev_3004`)
-            child.stdout.pipe(res)
-            child.stderr.pipe(res)
+app.post('/app', (req, res) => {
+    res.sendFile(path.join(__dirname, "./app/index.js"))
+})
 
-            child.on("close", (a) => {
-                res.end("SUCCESS")
-            })
-        } catch (error) {
-            res.end(error)
+app.post('/app/:name', (req, res) => {
+    const { dep_list } = req.body
+    const { name } = req.params
+
+    const path_dir = path.join(__dirname, "./app/src")
+    const dir = fs.readdirSync(path_dir)
+    const file = dir.find((v) => v === `${name}.js`)
+    if (!file) return res.status(404).sendFile(_404)
+    let f = fs.readFileSync(`${path_dir}/${file}`).toString().trim()
+
+    res.send(encrypt(f, dep_list))
+
+})
+
+app.post('/svr/:name', (req, res) => {
+    const name = req.params.name
+    if (!name) return res.status(404).send('404 | not found')
+    const body = req.body
+    const pt = path.join(__dirname, "./svr")
+    const dir = fs.readdirSync(pt)
+    const fl = dir.find((v) => v === `${name}.js`)
+    if (!fl) return res.status(404).send("404 | not found")
+    const child = execSync(`node ${pt}/${name}.js ${_.flatten(_.entries(body)).join(" ")}`).toString().trim()
+    res.status(200).send(child)
+})
+
+app.post('/json/:name', (req, res) => {
+    const { name } = req.params
+    const path_dir = path.join(__dirname, "./json")
+    if (!fs.existsSync(`${path_dir}/${name}.json`)) return res.status(404).end("404 | not found")
+    const json = JSON.parse(fs.readFileSync(`${path_dir}/${name}.json`))
+    res.status(200).json(json)
+})
+
+app.use((req, res) => {
+    res.status(404).write("404 | not found")
+    res.end()
+})
+
+app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port))
+
+
+// == fun
+
+function encrypt(f, dep_list) {
+    // menambahkan root require
+    let root_target = `const root = require('child_process').execSync('npm root -g').toString().trim();\n`
+    if (!f.includes(root_target)) {
+        root_target += f
+        f = root_target
+    }
+
+    for (let p of dep_list) {
+        if (f.includes(`require('${p}')`)) {
+            f = f.replace(`require('${p}')`, `require(\`\${root}/makuro/node_modules/${p}\`)`)
         }
-
-    })
-
-    app.get("/fun/:name", (req, res) => {
-        const name = req.params.name
-        if (!name) return res.status(404).send("not found | 404")
-        const ada = fs.existsSync(path.join(__dirname, `./fun/${name}.js`))
-        if (!ada) return res.status(404).send("not found | 404")
-        res.sendFile(path.join(__dirname, `./fun/${name}.js`))
-    })
-
-    app.get("/json/:name", (req, res) => {
-        const name = req.params.name
-        if (!name) return res.status(404).send("not found | 404")
-        const ada = fs.existsSync(path.join(__dirname, `./json/${name}.json`))
-        if (!ada) return res.status(404).send("not found | 404")
-        const fl = JSON.parse(fs.readFileSync(path.join(__dirname, `./json/${name}.json`)).toString().trim())
-        res.json(fl)
-    })
-
-    app.get("/val/:name", (req, res) => {
-        const name = req.params.name
-        if (!name) return res.status(404).send("not found | 404")
-        const ada = fs.existsSync(path.join(__dirname, `./val/${name}.js`))
-        if (!ada) return res.status(404).send("not found | 404")
-        const data = JSON.parse(execSync(`node ${path.join(__dirname, `./val/${name}.js`)}`).toString().trim())
-        res.json(data)
-    })
-
-    app.get('/svr/:name', (req, res) => {
-        const name = req.params.name
-        const arg = !_.isEmpty(req.query) ? req.query.arg.split('/').join(' ') : null
-
-        const ada = fs.existsSync(path.join(__dirname, `./src/${name}.js`))
-        if (!ada) {
-            res.status(404).send(`${box("not available | 404")}\n`)
-            return res.end()
-        }
-
-        const child = exec(`node ${path.join(__dirname, `./svr/${name}.js ${arg ?? ''}`)}`)
-        child.stdout.pipe(res)
-        child.stderr.pipe(res)
-    })
-
-    app.get('/list-app', (req, res) => {
-        const dir = fs.readdirSync(path.join(__dirname, "./../bin_ok"))
-        res.json(dir.map((v) => v.replace(".js", "")))
-    })
-
-    app.listen(sub['--port'], () => {
-        console.log(`Server berjalan di port ${sub['--port']}`.green);
-    });
-
+    }
+    return JavaScriptObfuscator.obfuscate(f, {
+        compact: !![],
+        controlFlowFlattening: !![],
+        controlFlowFlatteningThreshold: 0x1,
+        numbersToExpressions: !![],
+        simplify: !![],
+        stringArrayShuffle: !![],
+        splitStrings: !![],
+        stringArrayThreshold: 0x1
+    }).getObfuscatedCode()
 }
-
-module.exports = server
-
