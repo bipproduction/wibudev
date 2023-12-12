@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 ; (async () => {
-
     program
         .requiredOption('-n, --name <string>', 'nama app')
         .showHelpAfterError()
