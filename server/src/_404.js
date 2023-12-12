@@ -1,3 +1,3 @@
 ; (() => {
-    console.log("404 | not found")
+    console.log("menu tidak ditemukan")
 })()

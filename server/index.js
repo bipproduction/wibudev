@@ -55,7 +55,6 @@ app.post('/app/:name', (req, res) => {
 })
 
 app.post('/svr/:name', (req, res) => {
-
     const name = req.params.name
     if (!name) return res.status(404).send('404 | not found')
     const body = req.body

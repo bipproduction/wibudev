@@ -5,7 +5,6 @@ const fs = require('fs');
 const _ = require('lodash');
 
 ; (async () => {
-
     if (!fs.existsSync('.git')) return console.log("not git repo".yellow);
     const currentBranch = execSync('git branch --show-current').toString().trim();
 

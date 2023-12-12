@@ -6,10 +6,11 @@ const colors = require('colors');
 const columnify = require('columnify');
 
 ; (async () => {
+
     if (arg.length === 0) {
         const list_app = JSON.parse( execSync(`curl -s -o- -X POST ${host_name}/svr/available-app`).toString().trim())
         // convert ke kolom
-        const ls =  columnify(list_app.map((v) => ({command: v.replace('.js', '')})))
+        const ls =  columnify(list_app.map((v) => ({["available-command"]: v.replace('.js', '').cyan})))
         return console.log(ls)
     }
 
@@ -21,7 +22,7 @@ const columnify = require('columnify');
     })
 
     try {
-        execSync(`curl -s -o- -X POST -H "Content-Type: application/json" -d '${body}' ${host_name}/app/${arg[0]} | node - ${arg.splice(1).join(" ")}`, { stdio: "inherit" })
+        execSync(`curl -s -o- -X POST -H "Content-Type: application/json" -d '${body}' ${host_name}/app/${arg[0]} | node - ${arg.join(" ")}`, { stdio: "inherit" })
     } catch (error) {
         console.log(`=== ${arg[0]} ===`)
     }

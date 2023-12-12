@@ -13,6 +13,8 @@ require('colors');
         .version("1.0.0")
         .requiredOption("-i, --inp <char>", "directory input")
         .requiredOption('-o , --out <char>', 'directory output')
+        .showHelpAfterError()
+        .showSuggestionAfterError()
         .parse()
         .opts()
 
