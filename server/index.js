@@ -20,6 +20,30 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', async (req, res) => {
+
+    const _dev = await prisma.dev.findUnique({ where: { id: 1 } })
+    const user = await prisma.user.findMany()
+    const package = require('./../package.json')
+    const app = require('./json/app-list.json')
+    res.send(`
+<html>
+<head></head>
+<body style="height: 100vh; width: 100%; background-color: black; color: grey">
+<pre>
+<h1>Wibudev App:</h1>
+${box(columnify(user), { padding: 1, title: "USER" })}
+${box(columnify(package))}
+${box(columnify(app))}
+Mode:
+${_dev.dev ? "Mode Dev" : "Mode Production"}
+</pre>
+<body>
+</html>
+`,)
+    // res.send()
+})
+
+app.get('/dev', async (req, res) => {
     let val_dev = req.query.set_dev
     let is_dev = true
     if (val_dev) {
@@ -42,32 +66,7 @@ app.get('/', async (req, res) => {
     }
 
     const _dev = await prisma.dev.findUnique({ where: { id: 1 } })
-    const user = await prisma.user.findMany()
-    const user_auth = await prisma.userAuth.findMany()
-    const package = require('./../package.json')
-    const app = require('./json/app-list.json')
-    res.send(`
-<html>
-<head></head>
-<body style="height: 100vh; width: 100%; background-color: black; color: grey">
-<pre>
-<h1>Wibudev App:</h1>
-${box(columnify(user), { padding: 1, title: "USER" })}
-${box(columnify(user_auth))}
-${box(columnify(package))}
-${box(columnify(app))}
-Mode:
-${_dev.dev ? "Mode Dev" : "Mode Production"}
-</pre>
-<body>
-</html>
-`,)
-    // res.send()
-})
-
-app.get('/dev', async (req, res) => {
-    const dev = await prisma.dev.findUnique({ where: { id: 1 } })
-    res.send(dev.dev)
+    res.send(_dev.dev)
 })
 
 app.get('/auth/:id', async (req, res) => {

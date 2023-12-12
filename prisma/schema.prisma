@@ -27,3 +27,10 @@ model Dev {
   id  Int     @id @default(1)
   dev Boolean @default(true)
 }
+
+model Config {
+  id         Int     @id @default(1)
+  dev        Boolean @default(true)
+  url_local  String  @default("http://localhost:3004")
+  url_server String  @default("https://wibudev.wibudev.com")
+}
