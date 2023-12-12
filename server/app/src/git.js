@@ -27,8 +27,8 @@ const _ = require('lodash');
 
     if (opt.pushAuto) {
         const branch = opt.branch ?? currentBranch
-        execSync(`git add -A && git commit -m "push auto" && git pus`)
-        return console.log("ini adalah push auto")
+        execSync(`git add -A && git commit -m "push auto" && git push origin ${branch}`, { stdio: "inherit" })
+        return console.log("push auto success branch ", branch.green)
     }
 
 })();
