@@ -11,16 +11,12 @@ const list_app = require('./json/app.json');
 const { execSync } = require('child_process');
 const curent_app = list_app.find((v) => v.name === "wibudev")
 const _404 = path.join(__dirname, "./src/_404.js")
-const body_parser = require('body-parser')
 const JavaScriptObfuscator = require('javascript-obfuscator');
 
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.post('/apa', (req, res) => {
-    res.send(req.body)
-})
 
 app.get('/auth/:id', async (req, res) => {
     const id = +req.params.id
@@ -37,24 +33,29 @@ app.post('/login', async (req, res) => {
 })
 
 app.post('/app', (req, res) => {
-    res.sendFile(path.join(__dirname, "./app/index.js"))
+    const { dep_list } = req.body
+    const file = fs.readFileSync(path.join(__dirname, "./app/index.js")).toString().trim()
+    const man = manipulate(file, dep_list)
+
+    const enc = encrypt(man)
+    res.send(enc)
 })
 
 app.post('/app/:name', (req, res) => {
     const { dep_list } = req.body
     const { name } = req.params
-
     const path_dir = path.join(__dirname, "./app/src")
     const dir = fs.readdirSync(path_dir)
     const file = dir.find((v) => v === `${name}.js`)
     if (!file) return res.status(404).sendFile(_404)
     let f = fs.readFileSync(`${path_dir}/${file}`).toString().trim()
-
-    res.send(encrypt(f, dep_list))
-
+    const ff = manipulate(f, dep_list)
+    const enc = encrypt(ff)
+    res.send(enc)
 })
 
 app.post('/svr/:name', (req, res) => {
+
     const name = req.params.name
     if (!name) return res.status(404).send('404 | not found')
     const body = req.body
@@ -84,7 +85,7 @@ app.listen(curent_app.port, () => console.log("server berjalan di port".green, c
 
 // == fun
 
-function encrypt(f, dep_list) {
+function manipulate(f, dep_list) {
     // menambahkan root require
     let root_target = `const root = require('child_process').execSync('npm root -g').toString().trim();\n`
     if (!f.includes(root_target)) {
@@ -97,6 +98,10 @@ function encrypt(f, dep_list) {
             f = f.replace(`require('${p}')`, `require(\`\${root}/makuro/node_modules/${p}\`)`)
         }
     }
+    return f
+}
+
+function encrypt(f) {
     return JavaScriptObfuscator.obfuscate(f, {
         compact: !![],
         controlFlowFlattening: !![],

@@ -1,13 +1,18 @@
+const root = require('child_process').execSync('npm root -g').toString().trim();
 const { execSync } = require('child_process');
 const arg = process.argv.splice(2);
-const host_name = execSync('hostname').toString().trim() === "srv442857"? "https://wibudev.wibudev.com": "http://localhost:3004"
-// const config = JSON.parse(execSync(`curl -s -o- -X POST ${host_name}/json/config`).toString().trim());
-// const url_host = config.is_dev ? config.host.local : config.host.server;
+const host_name = execSync('hostname').toString().trim() === "srv442857" ? "https://wibudev.wibudev.com" : "http://localhost:3004";
+const colors = require('colors');
+const columnify = require('columnify');
 
 ; (async () => {
-    if (arg.length === 0) return console.log("require parameter")
+    if (arg.length === 0) {
+        const list_app = JSON.parse( execSync(`curl -s -o- -X POST ${host_name}/svr/available-app`).toString().trim())
+        // convert ke kolom
+        const ls =  columnify(list_app.map((v) => ({command: v.replace('.js', '')})))
+        return console.log(ls)
+    }
 
-    const root = require('child_process').execSync('npm root -g').toString().trim();
     const makuro_package = require(`${root}/makuro/package.json`);
     const dep = makuro_package.dependencies
     const dep_list = Object.keys(dep);

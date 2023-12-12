@@ -1,9 +1,8 @@
-require('colors');
+const colors = require('colors');
 const { program } = require('commander');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const _ = require('lodash');
-require('colors');
 
 ; (async () => {
 
@@ -11,39 +10,25 @@ require('colors');
     const currentBranch = execSync('git branch --show-current').toString().trim();
 
     program
-        .command("cmd <command>")
-        .option('-b, --branch <branch>', "branch")
-        .action(function (a, b, c) {
-
-            switch (a) {
-                case "branch":
-                    console.log(currentBranch.green)
-                    break
-                case "push-auto":
-                    const branch = b.branch ?? currentBranch
-                    execSync(`git add -A && git commit -m "push auto" && git push origin ${branch}`, { stdio: "inherit" })
-                    break
-                default: console.log("no option")
-            }
-        })
+        .option('-b, --branch [nama]', 'show branch')
+        .option('-pa, --push-auto', 'melakukan kegiatan push git auto')
         .showHelpAfterError()
-        .parse();
+        .showSuggestionAfterError()
+        .parse()
 
     const opt = program.opts()
+    if (_.isEmpty(opt)) {
+        return program.help()
+    }
 
-    // if (opt.current) {
-    //     console.log("current branch", currentBranch.green)
-    //     return
-    // }
+    if (opt.branch === true) {
+        return console.log("curent branch is", currentBranch.green)
+    }
 
-    // if (opt.pushAuto) {
-    //     const branch = opt.branch ?? currentBranch
-    //     execSync(`git add -A && git commit -m "push auto" && git push origin ${branch}`)
-    //     return
-    // }
-
-
-
-
+    if (opt.pushAuto) {
+        const branch = opt.branch ?? currentBranch
+        execSync(`git add -A && git commit -m "push auto" && git pus`)
+        return console.log("ini adalah push auto")
+    }
 
 })();
