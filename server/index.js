@@ -12,11 +12,63 @@ const { execSync } = require('child_process');
 const curent_app = list_app.find((v) => v.name === "wibudev")
 const _404 = path.join(__dirname, "./src/_404.js")
 const JavaScriptObfuscator = require('javascript-obfuscator');
+const columnify = require('columnify');
+const { box } = require('teeti')
 
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get('/', async (req, res) => {
+    let val_dev = req.query.set_dev
+    let is_dev = true
+    if (val_dev) {
+        val_dev = val_dev === "true"
+        console.log(val_dev)
+        const dev = await prisma.dev.upsert({
+            where: {
+                id: 1
+            },
+            create: {
+                dev: val_dev
+            },
+            update: {
+                dev: val_dev
+            }
+        })
+
+        is_dev = dev.dev
+
+    }
+
+    const _dev = await prisma.dev.findUnique({ where: { id: 1 } })
+    const user = await prisma.user.findMany()
+    const user_auth = await prisma.userAuth.findMany()
+    const package = require('./../package.json')
+    const app = require('./json/app-list.json')
+    res.send(`
+<html>
+<head></head>
+<body style="height: 100vh; width: 100%; background-color: black; color: grey">
+<pre>
+<h1>Wibudev App:</h1>
+${box(columnify(user), { padding: 1, title: "USER" })}
+${box(columnify(user_auth))}
+${box(columnify(package))}
+${box(columnify(app))}
+Mode:
+${_dev.dev ? "Mode Dev" : "Mode Production"}
+</pre>
+<body>
+</html>
+`,)
+    // res.send()
+})
+
+app.get('/dev', async (req, res) => {
+    const dev = await prisma.dev.findUnique({ where: { id: 1 } })
+    res.send(dev.dev)
+})
 
 app.get('/auth/:id', async (req, res) => {
     const id = +req.params.id

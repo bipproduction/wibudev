@@ -22,3 +22,8 @@ model UserAuth {
   id     Int @id @default(1)
   userId Int
 }
+
+model Dev {
+  id  Int     @id @default(1)
+  dev Boolean @default(true)
+}
