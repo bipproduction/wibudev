@@ -117,6 +117,18 @@ app.post('/svr/:name', (req, res) => {
     child.stderr.pipe(res)
 })
 
+app.post('/val/:name', async (req, res) => {
+    const name = req.params.name
+    const body = req.body
+    const p = path.join(__dirname, "./val")
+    const dir = fs.readdirSync(p)
+    const fl = dir.find((v) => v.replace(".js", "") === name)
+    if (!fl) return res.status(404).send(box("404 | not found"))
+    const app = await require(`${p}/${fl}`)(body)
+    res.status(200).send(app)
+
+})
+
 app.post('/json/:name', (req, res) => {
     const { name } = req.params
     const path_dir = path.join(__dirname, "./json")

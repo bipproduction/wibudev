@@ -3,10 +3,15 @@ const _ = require('lodash');
 const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
-const config = JSON.parse(execSync(`curl -s -o- -X POST https://wibudev`))
-const url_host = execSync('hostname').toString().trim() === "srv442857" ? "https://wibudev.wibudev.com" : "http://localhost:3004";
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
-; (() => {
+// const config = JSON.parse(execSync(`curl -s -o- -X POST https://wibudev`))
+// const url_host = execSync('hostname').toString().trim() === "srv442857" ? "https://wibudev.wibudev.com" : "http://localhost:3004";
+
+; (async () => {
+    const config = await prisma.config.findUnique({ where: { id: 1 } })
+    const url_host = config.dev ? config.url_local: config.url_server
     program
         .version("1.0.0")
         .requiredOption('-n, --name <string>', 'nama app [hipmi, ninox ...]')

@@ -1,8 +1,9 @@
 const { program } = require('commander');
 const { execSync } = require('child_process');
 const { PrismaClient } = require('@prisma/client');
+const columnify = require('columnify');
 const prisma = new PrismaClient();
-require('colors');
+const color = require('colors');
 
 ; (async () => {
 
@@ -14,9 +15,9 @@ require('colors');
 
     const opt = program.opts()
     const config = await prisma.config.findUnique({ where: { id: 1 } })
-    const url_host =  config.url_server
+    const url_host = config.url_server
     const dev = opt.set === "true"
     const apa = execSync(`curl -s -o- -X POST -H "Content-Type: application/json" -d '{"-s": ${dev}}' POST ${url_host}/svr/config`).toString().trim()
-    console.log(apa)
+    console.log(columnify(JSON.parse(apa)))
 
 })()

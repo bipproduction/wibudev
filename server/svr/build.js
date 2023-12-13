@@ -19,5 +19,5 @@ const colors = require('colors');
     const dir = path.join(__dirname, `./../../../${name}`)
     const ada = fs.existsSync(dir)
     if (!ada) return console.log("no project dir")
-    execSync(`git stash && git pull origin ${app.branch} && yarn install && npx prisma db push && yarn build && pm2 restart ${app.id}`, { stdio: "inherit" })
+    execSync(`pwd && git stash && git pull origin ${app.branch} && yarn install && npx prisma db push && yarn build && pm2 restart ${app.id}`, { stdio: "inherit" })
 })()
