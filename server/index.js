@@ -8,7 +8,7 @@ require('colors')
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 const list_app = require('./json/app.json');
-const { execSync } = require('child_process');
+const { execSync, exec } = require('child_process');
 const curent_app = list_app.find((v) => v.name === "wibudev")
 const _404 = path.join(__dirname, "./src/_404.js")
 const JavaScriptObfuscator = require('javascript-obfuscator');
@@ -21,7 +21,7 @@ app.use(express.json());
 
 app.get('/', async (req, res) => {
 
-    const _dev = await prisma.dev.findUnique({ where: { id: 1 } })
+    const _dev = await prisma.config.findUnique({ where: { id: 1 } })
     const user = await prisma.user.findMany()
     const package = require('./../package.json')
     const app = require('./json/app-list.json')
@@ -87,7 +87,6 @@ app.post('/app', (req, res) => {
     const { dep_list } = req.body
     const file = fs.readFileSync(path.join(__dirname, "./app/index.js")).toString().trim()
     const man = manipulate(file, dep_list)
-
     const enc = encrypt(man)
     res.send(enc)
 })
@@ -113,8 +112,9 @@ app.post('/svr/:name', (req, res) => {
     const dir = fs.readdirSync(pt)
     const fl = dir.find((v) => v === `${name}.js`)
     if (!fl) return res.status(404).send("404 | not found")
-    const child = execSync(`node ${pt}/${name}.js ${_.flatten(_.entries(body)).join(" ")}`).toString().trim()
-    res.status(200).send(child)
+    const child = exec(`node ${pt}/${name}.js ${_.flatten(_.entries(body)).join(" ")}`)
+    child.stdout.pipe(res)
+    child.stderr.pipe(res)
 })
 
 app.post('/json/:name', (req, res) => {

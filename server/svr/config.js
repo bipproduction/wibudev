@@ -11,6 +11,7 @@ const prisma = new PrismaClient();
         .parse()
 
     const opt = program.opts()
+
     if (_.isEmpty(opt)) {
         const config = await prisma.config.findUnique({ where: { id: 1 } })
         console.log(JSON.stringify(config))
@@ -22,7 +23,7 @@ const prisma = new PrismaClient();
         return
     }
 
-    if (opt.set === "true") {
+    if (opt.set) {
         const dev = opt.set === "true"
 
         const set_config = await prisma.config.upsert({

@@ -3,6 +3,7 @@ const _ = require('lodash');
 const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
+const config = JSON.parse(execSync(`curl -s -o- -X POST https://wibudev`))
 const url_host = execSync('hostname').toString().trim() === "srv442857" ? "https://wibudev.wibudev.com" : "http://localhost:3004";
 
 ; (() => {
