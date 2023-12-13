@@ -11,7 +11,7 @@ const prisma = new PrismaClient();
 
 ; (async () => {
     const config = await prisma.config.findUnique({ where: { id: 1 } })
-    const url_host = config.dev ? config.url_local: config.url_server
+    const url_host = config.dev ? config.url_local : config.url_server
     program
         .version("1.0.0")
         .requiredOption('-n, --name <string>', 'nama app [hipmi, ninox ...]')
@@ -25,6 +25,6 @@ const prisma = new PrismaClient();
     const body = JSON.stringify({
         ['-n']: name
     })
-    execSync(`curl -s -o- -X POST -H "Content-type: application/json" -d '${body}' ${url_host}/svr/build`, { stdio: "inherit" })
+    execSync(`curl -s -o- -N -X POST -H "Content-type: application/json" -d '${body}' ${url_host}/svr/build`, { stdio: "inherit" })
 
 })()    
