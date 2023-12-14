@@ -3,14 +3,12 @@ const { execSync } = require('child_process');
 const arg = process.argv.splice(2);
 const colors = require('colors');
 const columnify = require('columnify');
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
 
 ; (async () => {
-    // const config = await prisma.config.findUnique({ where: { id: 1 } });
-    const host_name =  "https://wibudev.wibudev.com"
+    const config = JSON.parse(execSync(`curl -s -o- -X POST https://wibudev.wibudev.com/val/config`))
+    const host_name = config.dev ? config.url_local : config.url_server;
     if (arg.length === 0) {
-        const list_app = JSON.parse(execSync(`curl -s -o- -X POST ${host_name}/svr/available-app`).toString().trim())
+        const list_app = JSON.parse(execSync(`curl -s -o- -X POST ${host_name}/val/available-app`).toString().trim())
         const ls = columnify(list_app.map((v) => ({ ["available-command"]: v.replace('.js', '').cyan })))
         return console.log(`${ls}`)
     }
