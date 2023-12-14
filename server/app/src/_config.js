@@ -15,7 +15,7 @@ const _ = require('lodash')
     const opt = program.opts()
     if(_.isEmpty(opt)) return program.help()
 
-    const config = JSON.parse(execSync('https://wibudev.wibudev.com/'))
+    const config = JSON.parse(execSync('curl -s -o- -X POST https://wibudev.wibudev.com/val/config'))
     const url_host = config.url_server
 
     if (opt.get) {
