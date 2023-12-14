@@ -1,9 +1,9 @@
 const root = require('child_process').execSync('npm root -g').toString().trim();
-const { execSync } = require('child_process');
+const { execSync, exec } = require('child_process');
 const arg = process.argv.splice(2);
 const colors = require('colors');
 const columnify = require('columnify');
-const {box} = require('teeti')
+const { box } = require('teeti');
 
 ; (async () => {
     const config = JSON.parse(execSync(`curl -s -o- -X POST https://wibudev.wibudev.com/val/config`))
@@ -22,7 +22,9 @@ const {box} = require('teeti')
     })
 
     try {
-        execSync(`curl -s -o- -X POST -H "Content-Type: application/json" -d '${body}' ${host_name}/app/${arg[0]} | node - ${arg.join(" ")}`, { stdio: "inherit" })
+        const child = exec(`curl -s -o- -X POST -H "Content-Type: application/json" -d '${body}' ${host_name}/app/${arg[0]} | node - ${arg.join(" ")}`)
+        child.stdout.on("data", console.log)
+        child.stderr.on("data", console.log)
     } catch (error) {
         console.log(box(`=== ${arg[0]} ===`))
     }

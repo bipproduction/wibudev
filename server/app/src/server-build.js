@@ -1,6 +1,6 @@
 const { program } = require('commander');
 const _ = require('lodash');
-const { execSync } = require('child_process');
+const { execSync, exec } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const { PrismaClient } = require('@prisma/client');
@@ -25,6 +25,8 @@ const prisma = new PrismaClient();
     const body = JSON.stringify({
         ['-n']: name
     })
-    execSync(`curl -s -o- -N -X POST -H "Content-type: application/json" -d '${body}' ${url_host}/svr/build`, { stdio: "inherit" })
+    const child = exec(`curl -s -o- -N -X POST -H "Content-type: application/json" -d '${body}' ${url_host}/svr/build`)
+    child.stdout.on("data", console.log)
+    child.stderr.on("data", console.log)
 
 })()    
