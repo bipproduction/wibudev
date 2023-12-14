@@ -1,8 +1,6 @@
 const { program } = require('commander');
 const { execSync } = require('child_process');
-const { PrismaClient } = require('@prisma/client');
 const columnify = require('columnify');
-const prisma = new PrismaClient();
 const color = require('colors');
 const _ = require('lodash')
 
@@ -17,7 +15,7 @@ const _ = require('lodash')
     const opt = program.opts()
     if(_.isEmpty(opt)) return program.help()
 
-    const config = await prisma.config.findUnique({ where: { id: 1 } })
+    const config = JSON.parse(execSync('https://wibudev.wibudev.com/'))
     const url_host = config.url_server
 
     if (opt.get) {

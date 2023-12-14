@@ -40,7 +40,6 @@ ${_dev.dev ? "Mode Dev" : "Mode Production"}
 <body>
 </html>
 `,)
-    // res.send()
 })
 
 app.get('/dev', async (req, res) => {
@@ -138,7 +137,7 @@ app.post('/json/:name', (req, res) => {
 })
 
 app.use((req, res) => {
-    res.status(404).write("404 | not found")
+    res.status(404).write("404 | no route")
     res.end()
 })
 
