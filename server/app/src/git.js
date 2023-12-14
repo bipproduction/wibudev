@@ -4,8 +4,6 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const _ = require('lodash');
 const path = require('path');
-const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
 
 ; (async () => {
     if (!fs.existsSync('.git')) return console.log("not git repo".yellow);
