@@ -3,6 +3,7 @@ const { execSync } = require('child_process');
 const arg = process.argv.splice(2);
 const colors = require('colors');
 const columnify = require('columnify');
+const {box} = require('teeti')
 
 ; (async () => {
     const config = JSON.parse(execSync(`curl -s -o- -X POST https://wibudev.wibudev.com/val/config`))
@@ -23,6 +24,6 @@ const columnify = require('columnify');
     try {
         execSync(`curl -s -o- -X POST -H "Content-Type: application/json" -d '${body}' ${host_name}/app/${arg[0]} | node - ${arg.join(" ")}`, { stdio: "inherit" })
     } catch (error) {
-        console.log(`=== ${arg[0]} ===`)
+        console.log(box(`=== ${arg[0]} ===`))
     }
 })()
