@@ -5,6 +5,7 @@ const list_app = require('./ast/apps.json');
 const curent_app = list_app.find((v) => v.name === "wibudev");
 const path = require('path')
 const fs = require('fs')
+const _ = require('lodash')
 
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
@@ -28,8 +29,19 @@ app.get('/fun/:name', (req, res) => {
 })
 
 app.get("/config", (req, res) => {
-    const config = require('./ast/config.json')
-    res.json(config)
+    const q = req.query
+    let config = require('./ast/config.json')
+
+    if (!_.isEmpty(q)) {
+        if (q.set_dev) {
+            const url = q.set_dev === true ? "http://localhost:3004" : "https://wibudev.wibudev.com"
+            config.url = url
+            console.log()
+            fs.writeFileSync(path.join(__dirname, "./ast/config.json"), JSON.stringify(config, null, 2), "utf-8")
+        }
+    }
+
+    res.json(require('./ast/config.json'))
 })
 
 app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port));
