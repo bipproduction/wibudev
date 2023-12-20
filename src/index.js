@@ -31,17 +31,18 @@ app.get('/fun/:name', (req, res) => {
 
 app.get("/config", (req, res) => {
     const q = req.query
-    let config = require('./ast/config.json')
-
     if (!_.isEmpty(q)) {
+        let config = require('./ast/config.json')
         if (q.host_name !== "") {
             config.host_name = q.host_name
             console.log(config)
             fs.writeFileSync(path.join(__dirname, "./ast/config.json"), JSON.stringify(config, null, 2), "utf-8")
         }
     }
-
-    res.json(require('./ast/config.json'))
+    const c = require('./ast/config.json')
+    const bin = fs.readdirSync(path.join(__dirname, "./fun/bin")).map((v) => v.replace(".js", ""))
+    c.bin = bin
+    res.json(c)
 })
 
 app.post('/auth/:param?', (req, res) => {
