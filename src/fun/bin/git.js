@@ -18,6 +18,7 @@ module.exports = async function (param) {
         execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch}`)
         return console.log(box("SUCCESS").green)
     }
+    
 
     if (args._[1] === "pull") {
 
