@@ -43,6 +43,31 @@ app.get("/config", (req, res) => {
     res.json(require('./ast/config.json'))
 })
 
-app.post('/users')
+app.post('/auth/:param?', (req, res) => {
+    const param = req.params.param
+    const body = req.body
+
+    if (param === "register") {
+        if (!body.host_name) return res.json({
+            success: false,
+            message: "no hostname"
+        })
+        const config = require('./ast/config.json')
+        if (config.users.includes(body.host_name)) return res.json({
+            success: false,
+            message: "user sudah terdaftar"
+        })
+
+        config.users.push(body.host_name)
+        fs.writeFileSync(path.join(__dirname, "./ast/config.json"), JSON.stringify(config, null, 2), "utf-8")
+
+        return res.json({
+            success: true,
+            message: "pendaftaran user success"
+        })
+    }
+
+    res.send("AUTH")
+})
 
 app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port));

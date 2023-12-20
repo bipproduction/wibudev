@@ -1,6 +1,10 @@
 {
-    "url_dev": "http://localhost:3004",
-    "url_pro": "https://wibudev.wibudev.com",
-    "host_name": "bips-MacBook-Air.local",
-    "users": []
+  "url_dev": "http://localhost:3004",
+  "url_pro": "https://wibudev.wibudev.com",
+  "host_name": "bips-MacBook-Air.local",
+  "users": [
+    "malik",
+    "mali",
+    "bips-MacBook-Air.local"
+  ]
 }

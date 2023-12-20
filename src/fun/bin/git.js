@@ -19,7 +19,6 @@ module.exports = async function (param) {
         return
     }
 
-    console.log(args)
     yargs.showHelp()
 
 
