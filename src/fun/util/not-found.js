@@ -3,9 +3,9 @@ const { hideBin } = require('yargs/helpers')
 require('colors')
 
 module.exports = async function (param) {
-    console.log(param)
+    const com = param.bin.map((v) => [v])
     yargs(hideBin(process.argv))
-        .command(['git'])
+        .command([...com])
         .version("1.0.0")
         .showHelp()
 }
