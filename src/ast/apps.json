@@ -6,7 +6,7 @@
         "type": "node",
         "branch": "main",
         "script": {
-            "run": "pm2 start \"node index.js --port 3003\" --name io_3003",
+            "start": "pm2 start \"node index.js --port 3003\" --name io_3003",
             "restart": "pm2 restart io_3003"
         }
     },
@@ -17,7 +17,7 @@
         "type": "nextjs",
         "branch": "build",
         "script": {
-            "run": "pm2 start \"yarn start --port 3000\" --name raven-stone2_3000",
+            "start": "pm2 start \"yarn start --port 3000\" --name raven-stone2_3000",
             "restart": "pm2 restart raven-stone2_3000"
         }
     },
@@ -28,7 +28,7 @@
         "type": "node",
         "branch": "build",
         "script": {
-            "run": "pm2 start \"node index.js --port 3001\" --name wa-server_3001",
+            "start": "pm2 start \"node index.js --port 3001\" --name wa-server_3001",
             "restart": "pm2 restart wa-server_3001"
         }
     },
@@ -39,7 +39,7 @@
         "type": "node",
         "branch": "main",
         "script": {
-            "run": "pm2 start \"node index.js --port 3002\" --name webhook_3002",
+            "start": "pm2 start \"node index.js --port 3002\" --name webhook_3002",
             "restart": "pm2 restart webhook_3002"
         }
     },
@@ -50,7 +50,7 @@
         "type": "node",
         "branch": "main",
         "script": {
-            "run": "pm2 start \"node index.js --port 3004\" --name wibudev_3004",
+            "start": "pm2 start \"node .\" --name wibudev_3004",
             "restart": "pm2 restart wibudev_3004"
         }
     },
@@ -61,7 +61,7 @@
         "type": "nextjs",
         "branch": "test",
         "script": {
-            "run": "pm2 start \"yarn start --port 3005\" --name test-ravescriptn-stone2_3005",
+            "start": "pm2 start \"yarn start --port 3005\" --name test-ravescriptn-stone2_3005",
             "restart": "pm2 restart test-raven-stone2_3005"
         }
     },
@@ -72,7 +72,7 @@
         "type": "nextjs",
         "branch": "build",
         "script": {
-            "run": "pm2 start \"yarn start --port 3006\" --name grp_3006",
+            "start": "pm2 start \"yarn start --port 3006\" --name grp_3006",
             "restart": "pm2 restart grp_3006"
         }
     },
@@ -83,7 +83,7 @@
         "type": "nextjs",
         "branch": "test",
         "script": {
-            "run": "pm2 start \"yarn start --port 3007\" --name test-hipmi__3007",
+            "start": "pm2 start \"yarn start --port 3007\" --name test-hipmi__3007",
             "restart": "pm2 restart test-hipmi_3007"
         }
     },
@@ -94,7 +94,7 @@
         "type": "nextjs",
         "branch": "test",
         "script": {
-            "run": "pm2 start \"yarn start --port 3008\" --name test-ninox_3008",
+            "start": "pm2 start \"yarn start --port 3008\" --name test-ninox_3008",
             "restart": "pm2 restart test-ninox_3008"
         }
     }

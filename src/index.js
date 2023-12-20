@@ -5,7 +5,8 @@ const list_app = require('./ast/apps.json');
 const curent_app = list_app.find((v) => v.name === "wibudev");
 const path = require('path')
 const fs = require('fs')
-const _ = require('lodash')
+const _ = require('lodash');
+const { exec } = require('child_process');
 
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
@@ -68,6 +69,22 @@ app.post('/auth/:param?', (req, res) => {
     }
 
     res.send("AUTH")
+})
+
+app.post('/svr/:param?', async (req, res) => {
+    const _param = req.params.param ?? null
+    const _body = req.body
+
+    const _pt = path.join(__dirname, "./svr")
+    const _dir = fs.readdirSync(_pt)
+    const _file = _dir.find((v) => v.replace(".js", "") === _param)
+    if (!_file) {
+        return res.end("404 | file not found")
+    }
+
+    const child = exec(`node ${_pt}/${_file} ${_.flatten(_.entries(_body)).join(" ")}`)
+    child.stdout.pipe(res)
+    child.stderr.pipe(res)
 })
 
 app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port));

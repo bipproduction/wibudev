@@ -1,4 +1,10 @@
 const _ = require('lodash')
-const apa = {"nama": "malik"}
 
-console.log()
+const nama = {
+    name: "malik",
+    alamat: "denpasar"
+}
+
+
+console.log(_.flatten(_.entries(nama)))
+
