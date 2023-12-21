@@ -27,7 +27,7 @@ module.exports = async function (param) {
         if (!arg.hostName) return console.log(box("require host-name").yellow)
         const res = await fetch(`${param.url_pro}/config?host_name=${arg.hostName}`)
         const data = await res.json()
-        console.log(box( data.host_name).green)
+        console.log(box(data.host_name).green)
         return
     }
 
