@@ -15,8 +15,13 @@ module.exports = async function (param) {
 
     if (args._[1] === "push") {
         // loading.stop()
-        execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch}`)
-        return console.log(box("SUCCESS").green)
+        try {
+            execSync(`git add -A && git commit -m "auto push" && git push origin ${currentBranch}`, { stdio: "inherit" })
+            return console.log(box("SUCCESS").green)
+        } catch (error) {
+            return console.log(box("GAGAL").yellow)
+        }
+
     }
 
 
