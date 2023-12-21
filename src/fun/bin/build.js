@@ -1,13 +1,16 @@
 const yargs = require('yargs')
 const { fetch } = require('cross-fetch')
+require('colors')
 module.exports = async function (param) {
     const arg = yargs
-        .scriptName('biold')
+        .scriptName('build')
         .option("name", {
+            description: "nama dari project",
             alias: "n",
             string: true,
             demandOption: true
         })
+        .version("1.0.0")
         .parse()
 
     const response = await fetch(`${param.url}/svr/build`, {
@@ -21,7 +24,7 @@ module.exports = async function (param) {
     })
 
     response.body.on("data", (data) => {
-        console.log(data.toString())
+        console.log(data.toString().gray)
     })
 
 

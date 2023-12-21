@@ -7,5 +7,6 @@ module.exports = async function (param) {
     yargs(hideBin(process.argv))
         .command([...com])
         .version("1.0.0")
+        .epilog("Beberapa Menu Masih Dalam Pengembangran".cyan)
         .showHelp()
 }

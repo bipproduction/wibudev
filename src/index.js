@@ -40,7 +40,7 @@ app.get("/config", (req, res) => {
         }
     }
     const c = require('./ast/config.json')
-    const bin = fs.readdirSync(path.join(__dirname, "./fun/bin")).map((v) => v.replace(".js", ""))
+    const bin = fs.readdirSync(path.join(__dirname, "./fun/bin")).filter((v) => !_.startsWith("_")).map((v) => v.replace(".js", ""))
     c.bin = bin
     res.json(c)
 })

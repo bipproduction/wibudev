@@ -20,6 +20,7 @@ module.exports = async (param) => {
             demandOption: true,
             string: true
         })
+        .showVersion()
         .epilog("pastikan nama database dan filenya benar bisa berakibat fatal !")
         .parse()
 
