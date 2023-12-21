@@ -88,4 +88,14 @@ app.post('/svr/:param?', async (req, res) => {
     child.stderr.pipe(res)
 })
 
+app.get('/db-download/:name?', (req, res) => {
+    const name = req.params.name
+    if (!name || name === "") return res.send("require name")
+    const pt = path.join(__dirname, "./db_backup")
+    const dr = fs.readdirSync(pt)
+    const fl = dr.find((v) => v === name)
+    if (!fl) return res.send("no file availabele")
+    res.sendFile(`${pt}/${fl}`)
+})
+
 app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port));
