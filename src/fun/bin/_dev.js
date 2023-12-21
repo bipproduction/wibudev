@@ -10,7 +10,7 @@ module.exports = async function (param) {
 
     const arg = yargs
         .command("list-app", "ini list app")
-        .command('set-dev', "set developer")
+        .command('set-host', "set developer")
         .option('host-name', {
             alias: "h",
             string: true
@@ -23,7 +23,7 @@ module.exports = async function (param) {
         return
     }
 
-    if (arg._[1] === "set-dev") {
+    if (arg._[1] === "set-host") {
         if (!arg.hostName) return console.log(box("require host-name").yellow)
         const res = await fetch(`${param.url_pro}/config?host_name=${arg.hostName}`)
         const data = await res.json()
@@ -31,6 +31,6 @@ module.exports = async function (param) {
         return
     }
 
-    // yargs.showHelp()
+    yargs.showHelp()
 }
 
