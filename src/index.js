@@ -39,9 +39,12 @@ app.get("/config", (req, res) => {
             fs.writeFileSync(path.join(__dirname, "./ast/config.json"), JSON.stringify(config, null, 2), "utf-8")
         }
     }
+
     const c = require('./ast/config.json')
     const bin = fs.readdirSync(path.join(__dirname, "./fun/bin")).filter((v) => !_.startsWith("_")).map((v) => v.replace(".js", ""))
+    const apps = require("./ast/apps.json")
     c.bin = bin
+    c.apps = apps
     res.json(c)
 })
 
