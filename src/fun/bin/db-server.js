@@ -6,7 +6,7 @@ const { execSync } = require('child_process')
 module.exports = async function (param) {
     const arg = yargs
         .command("list", "melihat list yang tersedia di server")
-        // .command("import", "")
+        .scriptName("db-server")
         .command("export", "export database dari posgre dan ditempatkan pada list")
         .command("download", "mendownload hasil dari export")
         .option("db-name", {

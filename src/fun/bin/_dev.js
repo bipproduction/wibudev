@@ -9,6 +9,7 @@ module.exports = async function (param) {
     const apps = param.apps.map((v) => ({ ..._.omit(v, ['script']) }))
 
     const arg = yargs
+        .scriptName("_dev")
         .command("list-app", "ini list app")
         .command('set-host', "set developer")
         .option('host-name', {

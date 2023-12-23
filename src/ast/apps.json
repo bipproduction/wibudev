@@ -97,5 +97,16 @@
             "start": "pm2 start \"yarn start --port 3008\" --name test-ninox_3008",
             "restart": "pm2 restart test-ninox_3008"
         }
+    },
+    {
+        "id": "surya-ai_3009",
+        "name": "suryaai",
+        "port": "3009",
+        "type": "node",
+        "branch": "main",
+        "script": {
+            "start": "pm2 start \"node .\" --name surya-ai_3009",
+            "restart": "pm2 restart surya-ai_3009"
+        }
     }
 ]
