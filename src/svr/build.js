@@ -1,5 +1,5 @@
 const yargs = require('yargs');
-const { execSync } = require('child_process');
+const { execSync, exec } = require('child_process');
 const path = require('path');
 
 ; (async () => {
@@ -42,7 +42,12 @@ ${app.script.restart}
 `
     }
 
-    execSync(cmd, { stdio: "inherit" })
-
+    const child = exec(cmd)
+    child.stdout.on("data", (data) => {
+        console.log(data)
+    })
+    child.stderr.on("data", (data) => {
+        console.log(data)
+    })
 
 })()

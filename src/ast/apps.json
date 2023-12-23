@@ -100,7 +100,7 @@
     },
     {
         "id": "surya-ai_3009",
-        "name": "suryaai",
+        "name": "surya-ai",
         "port": "3009",
         "type": "node",
         "branch": "main",
