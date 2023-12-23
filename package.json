@@ -1,6 +1,6 @@
 {
   "name": "wibudev",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "repository": "https://github.com/bipproduction/wibudev.git",
   "author": "bipproduction <bip.production.js@gmail.com>",
