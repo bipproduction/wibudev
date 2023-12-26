@@ -6,7 +6,10 @@ module.exports = async function () {
     const lines = ls.trim().split('\n');
     const serverJson = _.flattenDeep(_.chain(lines)
         .map(line => line.split(/\s+/))
-        .map((v) => v)
+        .map((v) => ({
+            "name": v,
+            "port": v[0].split("_")[1]
+        }))
         .value());
 
     return serverJson
