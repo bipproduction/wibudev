@@ -35,7 +35,7 @@ module.exports = async function (param) {
     }
 
     if (arg._[1] === "list-server") {
-       
+        
     }
 
     yargs.showHelp()

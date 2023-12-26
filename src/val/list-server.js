@@ -1,5 +1,4 @@
 const { execSync } = require('child_process');
-const columnify = require('columnify');
 const _ = require('lodash');
 
 module.exports = async function () {
@@ -10,8 +9,6 @@ module.exports = async function () {
         .map(([key, ...values]) => ({ [key]: values }))
         .reduce(_.merge)
         .value();
-
-    console.log(serverJson)
 
     return serverJson
 }
