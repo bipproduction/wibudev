@@ -5,7 +5,6 @@ const yargs = require('yargs');
 ; (async () => {
     const arg = yargs
         .scriptName('log')
-        .command('show')
         .options('name', {
             alias: 'n',
             string: true,
@@ -13,7 +12,7 @@ const yargs = require('yargs');
         })
         .argv
 
-    if (arg._[0] === "show") {
+    if (arg.name) {
         const app = require('./../ast/apps.json')
         const a = app.find((v) => v.name === arg.name)
         if (!a) return console.log("no app available")

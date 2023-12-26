@@ -5,8 +5,8 @@ const { fetch } = require('cross-fetch');
     const arg = yargs
         .scriptName('log')
         .command('show')
-        .options('name', {
-            alias: "name",
+        .option('name', {
+            alias: "n",
             string: true,
             demandOption: true
         })
