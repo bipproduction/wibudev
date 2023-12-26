@@ -3,6 +3,7 @@ const yargs = require('yargs')
 const _ = require('lodash')
 const { fetch } = require('cross-fetch')
 const { box } = require('teeti')
+const { execSync } = require('child_process')
 require('colors')
 
 module.exports = async function (param) {
@@ -12,6 +13,7 @@ module.exports = async function (param) {
         .scriptName("_dev")
         .command("list-app", "ini list app")
         .command('set-host', "set developer")
+        .command('list-server', 'melihat list server')
         .option('host-name', {
             alias: "h",
             string: true
@@ -30,6 +32,18 @@ module.exports = async function (param) {
         const data = await res.json()
         console.log(box(data.host_name).green)
         return
+    }
+
+    if (arg._[1] === "list-server") {
+        const ls = execSync('ls /etc/nginx/sites-enabled')
+        const lines = ls.trim().split('\n');
+        const serverJson = _.chain(lines)
+            .map(line => line.split(/\s+/))
+            .map(([key, ...values]) => ({ [key]: values }))
+            .reduce(_.merge)
+            .value();
+
+        console.log(columnify(serverJson))
     }
 
     yargs.showHelp()

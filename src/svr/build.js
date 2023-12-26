@@ -1,5 +1,5 @@
 const yargs = require('yargs');
-const { execSync, exec } = require('child_process');
+const { exec } = require('child_process');
 const path = require('path');
 
 ; (async () => {

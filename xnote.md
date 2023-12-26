@@ -17,10 +17,8 @@
    2. 10M+
 6. 
 
+const list_server = `
+default   io_3003	     surya-ai_3009    test-ninox_3008	      wa-server_3001  wibudev_3004
+grp_3006  raven-stone2_3000  test-hipmi_3007  test-raven-stone3_3005  webhook_3002`
 
-
-
-- kumpulkan nomer hp dapet uang
-- berikan review restorant dapet uang
-- berikan foto tempat wisata dapet uang
-- 
+rubah variable string diatas menjadi json
