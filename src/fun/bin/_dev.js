@@ -5,6 +5,7 @@ const { fetch } = require('cross-fetch')
 const { box } = require('teeti')
 const { execSync } = require('child_process')
 require('colors')
+const loading = require('loading-cli')('loading ...').start()
 
 module.exports = async function (param) {
     const apps = param.apps.map((v) => ({ ..._.omit(v, ['script']) }))
@@ -22,11 +23,13 @@ module.exports = async function (param) {
         .argv
 
     if (arg._[1] === "list-app") {
+        loading.stop()
         console.log(columnify(apps).gray)
         return
     }
 
     if (arg._[1] === "set-host") {
+        loading.stop()
         if (!arg.hostName) return console.log(box("require host-name").yellow)
         const res = await fetch(`${param.url_pro}/config?host_name=${arg.hostName}`)
         const data = await res.json()
@@ -35,12 +38,14 @@ module.exports = async function (param) {
     }
 
     if (arg._[1] === "list-server") {
+        loading.stop()
         const res = await fetch('https://wibudev.wibudev.com/val/list-server')
         const data = await res.json()
         console.log(columnify(_.sortBy(data.data, "port")))
         return
     }
 
+    loading.stop()
     yargs.showHelp()
 }
 

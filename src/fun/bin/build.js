@@ -1,6 +1,7 @@
 const yargs = require('yargs')
 const { fetch } = require('cross-fetch')
 require('colors')
+const loading = require('loading-cli')('loading ...').start()
 module.exports = async function (param) {
     const arg = yargs
         .scriptName('build')
@@ -24,6 +25,7 @@ module.exports = async function (param) {
     })
 
     response.body.on("data", (data) => {
+        loading.stop()
         console.log(data.toString().gray)
     })
 

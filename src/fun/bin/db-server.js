@@ -3,6 +3,7 @@ const { fetch } = require('cross-fetch');
 const { box } = require('teeti')
 require('colors')
 const { execSync } = require('child_process')
+const loading = require('loading-cli')('loading ...').start()
 module.exports = async function (param) {
     const arg = yargs
         .command("list", "melihat list yang tersedia di server")
@@ -22,6 +23,7 @@ module.exports = async function (param) {
         .parse()
 
     if (arg._[1] === "list") {
+        loading.stop()
         const res = await fetch(`${param.url}/svr/db-server`, {
             method: "POST",
             headers: {
@@ -33,6 +35,7 @@ module.exports = async function (param) {
         })
 
         res.body.on("data", (data) => {
+            loading.stop()
             console.log(data.toString())
         })
 
@@ -41,12 +44,14 @@ module.exports = async function (param) {
     }
 
     if (arg._[1] === "import") {
+        loading.stop()
         if (!arg.dbName || !arg.fileName) return console.log(box("require db-name && file-name").yellow)
 
         return
     }
 
     if (arg._[1] === "export") {
+        loading.stop()
         if (!arg.dbName || !arg.fileName) return console.log(box("require db-name && file-name").yellow)
         const res = await fetch(`${param.url}/svr/db-server`, {
             method: "POST",
@@ -61,6 +66,7 @@ module.exports = async function (param) {
         })
 
         res.body.on("data", (data) => {
+            loading.stop()
             console.log(data.toString())
         })
 
@@ -68,12 +74,14 @@ module.exports = async function (param) {
     }
 
     if (arg._[1] === "download") {
+        loading.stop()
         if (!arg.fileName) return console.log(box("require file-name"))
         execSync(`curl ${param.url}/db-download/${arg.fileName} --output ${arg.fileName}`, { stdio: "inherit" })
         console.log(box(`file save as ${arg.fileName}`).green)
         return
     }
 
+    loading.stop()
     yargs.showHelp()
 
 }

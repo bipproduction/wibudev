@@ -1,6 +1,7 @@
 const yargs = require('yargs')
 const { fetch } = require('cross-fetch')
 const { box } = require('teeti')
+const loading = require('loading-cli')('loading ...').start()
 module.exports = async (param) => {
     const arg = yargs
         .command("register <string>", "untuk mendaftar")
@@ -13,8 +14,11 @@ module.exports = async (param) => {
         .parse()
 
     if (arg._[1] === "register") {
-
-        if (!(arg.hostName ?? null)) return yargs.showHelp()
+        loading.stop()
+        if (!(arg.hostName ?? null)) {
+            loading.stop()
+            return yargs.showHelp()
+        }
 
         const kirim = await fetch(`${param.url}/auth/register`, {
             method: "POST",
@@ -31,5 +35,6 @@ module.exports = async (param) => {
         return console.log(box(res.message).yellow)
     }
 
+    loading.stop()
     yargs.showHelp()
 }
