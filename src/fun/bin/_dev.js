@@ -15,6 +15,7 @@ module.exports = async function (param) {
         .command("list-app", "ini list app")
         .command('set-host', "set developer")
         .command('list-server', 'melihat list server')
+        .command('runing-app', 'melihat app yang sedang berjalan')
         .option('host-name', {
             alias: "h",
             string: true
@@ -40,6 +41,14 @@ module.exports = async function (param) {
     if (arg._[1] === "list-server") {
         loading.stop()
         const res = await fetch('https://wibudev.wibudev.com/val/list-server')
+        const data = await res.json()
+        console.log(columnify(_.sortBy(data.data, "port")))
+        return
+    }
+
+    if (arg._[1] === "runing-app") {
+        loading.stop()
+        const res = await fetch('https://wibudev.wibudev.com/svr/runing-app')
         const data = await res.json()
         console.log(columnify(_.sortBy(data.data, "port")))
         return
