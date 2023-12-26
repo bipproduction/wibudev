@@ -6,6 +6,7 @@ module.exports = async function () {
     const lines = ls.trim().split('\n');
     const serverJson = _.chain(lines)
         .map(line => line.split(/\s+/))
+        .map(([key, ...values]) => ({ [key]: key }))
         .reduce(_.merge)
         .value();
 
