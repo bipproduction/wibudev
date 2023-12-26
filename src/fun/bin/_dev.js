@@ -4,7 +4,7 @@ const _ = require('lodash')
 const { fetch } = require('cross-fetch')
 const { box } = require('teeti')
 const { execSync } = require('child_process')
-const pm2_app = require("../../models/pm2_app")
+// const pm2_app = require("../../models/pm2_app")
 require('colors')
 const loading = require('loading-cli')('loading ...').start()
 
@@ -51,9 +51,7 @@ module.exports = async function (param) {
         loading.stop()
         const res = await fetch('https://wibudev.wibudev.com/val/runing-app')
 
-        /**
-         * @type {pm2_app[]}
-         */
+        
         const data = (await res.json()).data
         console.log(columnify(data.map((v, k) => ({ no: k + 1, name: v.name, status: v.pm2_env.status }))))
         return
