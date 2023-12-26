@@ -35,15 +35,7 @@ module.exports = async function (param) {
     }
 
     if (arg._[1] === "list-server") {
-        const ls = execSync('ls /etc/nginx/sites-enabled').toString().trim()
-        const lines = ls.trim().split('\n');
-        const serverJson = _.chain(lines)
-            .map(line => line.split(/\s+/))
-            .map(([key, ...values]) => ({ [key]: values }))
-            .reduce(_.merge)
-            .value();
-
-        console.log(columnify(serverJson))
+       
     }
 
     yargs.showHelp()
