@@ -108,5 +108,16 @@
             "start": "pm2 start \"node .\" --name surya-ai_3009",
             "restart": "pm2 restart surya-ai_3009"
         }
+    },
+    {
+        "id": "chat_3010",
+        "name": "chat",
+        "port": "3010",
+        "type": "nextjs",
+        "branch": "chat",
+        "script": {
+            "start": "pm2 start \"yarn start --port 3010\" --name chat_3010",
+            "restart": "pm2 restart chat_3010"
+        }
     }
 ]
