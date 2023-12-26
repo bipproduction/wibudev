@@ -10,7 +10,7 @@ module.exports = async function () {
             "name": v[0],
             "port": v[0].split("_")[1]
         }))
-        .value());
+        .value()).filter((v) => v.name !== "default");
 
     return serverJson
 }
