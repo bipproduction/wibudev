@@ -35,7 +35,9 @@ module.exports = async function (param) {
     }
 
     if (arg._[1] === "list-server") {
-        
+        const res = await fetch('https://wibudev.wibudev.com/val/list-server')
+        const data = await res.json()
+        console.log(data)
     }
 
     yargs.showHelp()
