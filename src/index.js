@@ -87,7 +87,6 @@ app.post('/svr/:param?', async (req, res) => {
     }
 
     const child = exec(`node ${_pt}/${_file} ${_.flatten(_.entries(_body)).join(" ")}`)
-    await new Promise(r => setTimeout(r, 1000))
     child.stdout.pipe(res)
     child.stderr.pipe(res)
 })
@@ -100,6 +99,20 @@ app.get('/db-download/:name?', (req, res) => {
     const fl = dr.find((v) => v === name)
     if (!fl) return res.send("no file availabele")
     res.sendFile(`${pt}/${fl}`)
+})
+
+app.get('/val/:name?', (req, res) => {
+    const name = req.params.name
+    if (!name || name === "") return res.json({ success: false, message: 404, data: null })
+    const _pt = path.join(__dirname, "./val")
+    const ada = fs.existsSync(`${_pt}/${name}.js`)
+    if (!ada) return res.json({ success: false, message: "no file", data: null })
+    const fl = require(`${_pt}/${name}.js`)
+    res.json({
+        success: true,
+        message: "success",
+        data: fl
+    })
 })
 
 app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port));

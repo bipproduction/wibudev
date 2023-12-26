@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 const columnify = require('columnify');
 const _ = require('lodash');
 
-; (async () => {
+module.exports = async function () {
     const ls = execSync('ls /etc/nginx/sites-enabled').toString().trim()
     const lines = ls.trim().split('\n');
     const serverJson = _.chain(lines)
@@ -10,6 +10,6 @@ const _ = require('lodash');
         .map(([key, ...values]) => ({ [key]: values }))
         .reduce(_.merge)
         .value();
-
-    console.log(columnify(serverJson))
-})()
+        
+    return serverJson
+}
