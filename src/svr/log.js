@@ -2,7 +2,10 @@ const { exec } = require('child_process');
 const path = require('path');
 const { box } = require('teeti');
 const yargs = require('yargs');
+const loading = require('loading-cli')("loading ...").start();
+
 ; (async () => {
+
     const arg = yargs
         .scriptName('log')
         .option('name', {
@@ -21,14 +24,17 @@ const yargs = require('yargs');
             child.stdout.on("data", console.log)
             child.stderr.on("data", console.log)
             await new Promise(r => setTimeout(r, 1000))
+            loading.stop()
             child.kill()
         } catch (error) {
+            loading.stop()
             console.log("errornya adalah", error)
             child.kill()
         }
         return
     }
 
+    loading.stop()
     console.log(box("SERVER"))
     yargs.showHelp()
 })()
