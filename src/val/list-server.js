@@ -4,10 +4,10 @@ const _ = require('lodash');
 module.exports = async function () {
     const ls = execSync('ls /etc/nginx/sites-enabled').toString().trim()
     const lines = ls.trim().split('\n');
-    const serverJson = _.chain(lines)
+    const serverJson = _.flattenDeep(_.chain(lines)
         .map(line => line.split(/\s+/))
         .map((v) => v)
-        .value();
+        .value());
 
     return serverJson
 }
