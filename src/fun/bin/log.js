@@ -1,5 +1,6 @@
 const yargs = require('yargs');
 const { fetch } = require('cross-fetch');
+const loading = require('loading-cli')('loading ...').start()
 
 module.exports = async function () {
     const arg = yargs
@@ -23,10 +24,12 @@ module.exports = async function () {
             })
         })
         res.body.on("data", (data) => {
+            loading.stop()
             console.log(data.toString())
         })
         return
     }
 
+    loading.stop()
     yargs.showHelp()
 }
