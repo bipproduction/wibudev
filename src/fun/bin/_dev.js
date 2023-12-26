@@ -48,7 +48,7 @@ module.exports = async function (param) {
 
     if (arg._[1] === "runing-app") {
         loading.stop()
-        const res = await fetch('https://wibudev.wibudev.com/svr/runing-app')
+        const res = await fetch('https://wibudev.wibudev.com/val/runing-app')
         const data = await res.json()
         console.log(columnify(_.sortBy(data.data, "port")))
         return
