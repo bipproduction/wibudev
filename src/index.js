@@ -108,7 +108,7 @@ app.get('/val/:name?', (req, res) => {
     const ada = fs.existsSync(`${_pt}/${name}.js`)
     if (!ada) return res.json({ success: false, message: "no file", data: null })
     const fl = require(`${_pt}/${name}.js`)
-    res.json({
+    return res.json({
         success: true,
         message: "success",
         data: fl

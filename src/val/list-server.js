@@ -10,6 +10,8 @@ module.exports = async function () {
         .map(([key, ...values]) => ({ [key]: values }))
         .reduce(_.merge)
         .value();
-        
+
+    console.log(serverJson)
+
     return serverJson
 }
