@@ -13,18 +13,18 @@ const yargs = require('yargs');
         .argv
 
     if (arg.name) {
+        const app = require('./../ast/apps.json')
+        const a = app.find((v) => v.name === arg.name)
+        if (!a) return console.log("no app available")
+        const child = exec(`pm2 log ${a.id}`)
         try {
-            const app = require('./../ast/apps.json')
-            const a = app.find((v) => v.name === arg.name)
-            if (!a) return console.log("no app available")
-            const child = exec(`pm2 log ${a.id}`)
             child.stdout.on("data", console.log)
             child.stderr.on("data", console.log)
-
             await new Promise(r => setTimeout(r, 5000))
             child.kill()
         } catch (error) {
             console.log("errornya adalah", error)
+            child.kill()
         }
         return
     }
