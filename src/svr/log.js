@@ -20,7 +20,7 @@ const yargs = require('yargs');
         try {
             child.stdout.on("data", console.log)
             child.stderr.on("data", console.log)
-            await new Promise(r => setTimeout(r, 5000))
+            await new Promise(r => setTimeout(r, 1000))
             child.kill()
         } catch (error) {
             console.log("errornya adalah", error)

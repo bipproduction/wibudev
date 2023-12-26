@@ -1,10 +1,10 @@
 const yargs = require('yargs');
 const { fetch } = require('cross-fetch');
 
-; (async () => {
+module.exports = async function () {
     const arg = yargs
         .scriptName('log')
-        .command('show')
+        .command('show', "munculkan log")
         .option('name', {
             alias: "n",
             string: true,
@@ -29,4 +29,4 @@ const { fetch } = require('cross-fetch');
     }
 
     yargs.showHelp()
-})()
+}
