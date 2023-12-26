@@ -41,7 +41,7 @@ app.get("/config", (req, res) => {
     }
 
     const c = require('./ast/config.json')
-    const bin = fs.readdirSync(path.join(__dirname, "./fun/bin")).filter((v) => !_.startsWith(v,"_")).map((v) => v.replace(".js", ""))
+    const bin = fs.readdirSync(path.join(__dirname, "./fun/bin")).filter((v) => !_.startsWith(v, "_")).map((v) => v.replace(".js", ""))
     const apps = require("./ast/apps.json")
     c.bin = bin
     c.apps = apps
@@ -87,6 +87,7 @@ app.post('/svr/:param?', async (req, res) => {
     }
 
     const child = exec(`node ${_pt}/${_file} ${_.flatten(_.entries(_body)).join(" ")}`)
+    await new Promise(r => setTimeout(r, 1000))
     child.stdout.pipe(res)
     child.stderr.pipe(res)
 })
