@@ -1,5 +1,6 @@
 const { exec } = require('child_process');
 const path = require('path');
+const { box } = require('teeti');
 const yargs = require('yargs');
 ; (async () => {
     const arg = yargs
@@ -25,5 +26,6 @@ const yargs = require('yargs');
         return
     }
 
+    console.log(box("SERVER"))
     yargs.showHelp()
 })()
