@@ -96,12 +96,12 @@ app.post('/svr2/:name?', (req, res) => {
     const body = req.body
     const _pt = path.join(__dirname, "./svr2")
     const _dir = fs.readdirSync(_pt)
-    const _file = _dir.find((v) => v.replace(".js", "") === name)
-    if (!_file) {
+    const file = _dir.find((v) => v.replace(".js", "") === name)
+    if (!file) {
         return res.end("404 | file not found")
     }
 
-    const fun = require(`${_pt}/${name}.js`)
+    const fun = require(`${_pt}/${file}`)
     const run = fun(body)
     run.pipe(res)
 })
