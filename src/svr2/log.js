@@ -5,8 +5,8 @@ module.exports = function (param) {
         stdout: child.stdout,
         stderr: child.stderr,
         pipe: function (res) {
-            child.stdout(res)
-            child.stderr(res)
+            child.stdout.pipe(res)
+            child.stderr.pipe(res)
         }
     }
 }
