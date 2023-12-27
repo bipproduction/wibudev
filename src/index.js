@@ -91,6 +91,21 @@ app.post('/svr/:param?', async (req, res) => {
     child.stderr.pipe(res)
 })
 
+app.post('/svr2/:name?', (req, res) => {
+    const name = req.params.name ?? null
+    const body = req.body
+    const _pt = path.join(__dirname, "./svr2")
+    const _dir = fs.readdirSync(_pt)
+    const _file = _dir.find((v) => v.replace(".js", "") === name)
+    if (!_file) {
+        return res.end("404 | file not found")
+    }
+
+    const fun = require(`${_pt}/${name}.js`)
+    const run = fun(body)
+    run.pipe(res)
+})
+
 app.get('/db-download/:name?', (req, res) => {
     const name = req.params.name
     if (!name || name === "") return res.send("require name")
