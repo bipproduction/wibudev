@@ -102,8 +102,8 @@ app.post('/svr2/:name?', (req, res) => {
     }
 
     const fun = require(`${_pt}/${file}`)(body)
-    fun.stdout.on("data", res.write)
-    fun.stderr.on("data", res.write)
+    fun.stdout.on("data", (data) => res.write(data.toString()))
+    fun.stderr.on("data", (data) => res.write(data.toString()))
     // fun.onKill(res.end)
 })
 
