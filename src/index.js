@@ -102,7 +102,7 @@ app.post('/svr2/:name?', (req, res) => {
     }
 
     const fun = require(`${_pt}/${file}`)
-    fun(res, body)
+    fun(body, res.write, res.write, res.end)
 })
 
 app.get('/db-download/:name?', (req, res) => {

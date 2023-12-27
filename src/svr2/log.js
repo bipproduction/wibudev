@@ -1,16 +1,16 @@
 const { exec } = require('child_process')
-module.exports = function (res, param) {
+module.exports = function (param, stdout, stderr, onKill) {
     const child = exec('pm2 log test-raven-stone2_3005')
 
     child.stdout.on("data", (data) => {
-        res.write(data.toSting())
+        stdout(data.toString())
     })
     child.stderr.on("data", (data) => {
-        res.write(data.toString())
+        stderr(data.toString())
     })
 
     setTimeout(() => {
         child.kill()
-        res.end()
+        onKill()
     }, 5000)
 }
