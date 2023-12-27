@@ -101,7 +101,9 @@ app.post('/svr2/:name?', (req, res) => {
         return res.end("404 | file not found")
     }
 
-    res.end("apa kabarnya")
+    const fun = require(`${_pt}/${file}`)(body)
+    fun.stdout.pipe(res)
+    fun.stderr.pipe(res)
 })
 
 app.get('/db-download/:name?', (req, res) => {
