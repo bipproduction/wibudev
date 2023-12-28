@@ -23,7 +23,7 @@ module.exports = function (param) {
     // const child = exec('pm2 log test-raven-stone2_3005')
     return {
         stdout(val) {
-            val(list_app)
+            val(JSON.stringify(list_app))
             // child.stdout.on("data", data => val(data.toString()))
         },
         stderr(val) {
