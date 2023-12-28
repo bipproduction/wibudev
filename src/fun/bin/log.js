@@ -14,7 +14,7 @@ module.exports = async function () {
         .argv
 
     if (arg._[1] === "show") {
-        const res = await fetch('https://wibudev.wibudev.com/svr/log', {
+        const res = await fetch('https://wibudev.wibudev.com/svr2/log', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

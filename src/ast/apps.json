@@ -5,6 +5,7 @@
         "port": "3003",
         "type": "node",
         "branch": "main",
+        "studio_port": "5003",
         "script": {
             "start": "pm2 start \"node index.js --port 3003\" --name io_3003",
             "restart": "pm2 restart io_3003"
@@ -16,6 +17,7 @@
         "port": "3000",
         "type": "nextjs",
         "branch": "build",
+        "studio_port": "5000",
         "script": {
             "start": "pm2 start \"yarn start --port 3000\" --name raven-stone2_3000",
             "restart": "pm2 restart raven-stone2_3000"
@@ -27,6 +29,7 @@
         "port": "3001",
         "type": "node",
         "branch": "build",
+        "studio_port": "5001",
         "script": {
             "start": "pm2 start \"node index.js --port 3001\" --name wa-server_3001",
             "restart": "pm2 restart wa-server_3001"
@@ -38,6 +41,7 @@
         "port": "3002",
         "type": "node",
         "branch": "main",
+        "studio_port": "5002",
         "script": {
             "start": "pm2 start \"node index.js --port 3002\" --name webhook_3002",
             "restart": "pm2 restart webhook_3002"
@@ -49,6 +53,7 @@
         "port": "3004",
         "type": "node",
         "branch": "main",
+        "studio_port": "5004",
         "script": {
             "start": "pm2 start \"node .\" --name wibudev_3004",
             "restart": "pm2 restart wibudev_3004"
@@ -60,6 +65,7 @@
         "port": "3005",
         "type": "nextjs",
         "branch": "test",
+        "studio_port": "5005",
         "script": {
             "start": "pm2 start \"yarn start --port 3005\" --name test-ravescriptn-stone2_3005",
             "restart": "pm2 restart test-raven-stone2_3005"
@@ -71,6 +77,7 @@
         "port": "3006",
         "type": "nextjs",
         "branch": "build",
+        "studio_port": "5006",
         "script": {
             "start": "pm2 start \"yarn start --port 3006\" --name grp_3006",
             "restart": "pm2 restart grp_3006"
@@ -82,6 +89,7 @@
         "port": "3007",
         "type": "nextjs",
         "branch": "test",
+        "studio_port": "5007",
         "script": {
             "start": "pm2 start \"yarn start --port 3007\" --name test-hipmi__3007",
             "restart": "pm2 restart test-hipmi_3007"
@@ -93,6 +101,7 @@
         "port": "3008",
         "type": "nextjs",
         "branch": "test",
+        "studio_port": "5008",
         "script": {
             "start": "pm2 start \"yarn start --port 3008\" --name test-ninox_3008",
             "restart": "pm2 restart test-ninox_3008"
@@ -104,6 +113,7 @@
         "port": "3009",
         "type": "node",
         "branch": "main",
+        "studio_port": "5009",
         "script": {
             "start": "pm2 start \"node .\" --name surya-ai_3009",
             "restart": "pm2 restart surya-ai_3009"
@@ -115,6 +125,7 @@
         "port": "3010",
         "type": "nextjs",
         "branch": "chat",
+        "studio_port": "5010",
         "script": {
             "start": "pm2 start \"yarn start --port 3010\" --name chat_3010",
             "restart": "pm2 restart chat_3010"
