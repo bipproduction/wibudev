@@ -19,11 +19,13 @@ module.exports = function (param) {
     }
 
     const list_app = require(`${path.join(__dirname, "./../ast/apps.json")}`)
+    const app = list_app.find((v) => v.name === name)
+
 
     // const child = exec('pm2 log test-raven-stone2_3005')
     return {
         stdout(val) {
-            val(JSON.stringify(list_app))
+            val(JSON.stringify(app))
             // child.stdout.on("data", data => val(data.toString()))
         },
         stderr(val) {
