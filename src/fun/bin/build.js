@@ -24,6 +24,7 @@ module.exports = async function (param) {
         }
     })
 
+    
     response.body.on("data", (data) => {
         loading.stop()
         console.log(data.toString().gray)

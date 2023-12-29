@@ -51,6 +51,4 @@ ${app.script.restart}
         console.log(data.toString())
     })
 
-
-
 })()
