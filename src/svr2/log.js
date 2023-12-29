@@ -1,9 +1,6 @@
 const { spawn } = require('child_process');
 const path = require('path');
 
-/**
- * @type {import('child_process').ChildProcess}
- */
 let child;
 
 module.exports = function (param) {
@@ -16,6 +13,7 @@ module.exports = function (param) {
         child = spawn('echo', ['app tidak tersedia']);
         return child;
     }
+
 
     if (!child || child.exitCode !== null) {
         child = spawn('pm2', ['log', app.id]);
