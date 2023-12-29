@@ -6,7 +6,7 @@ const curent_app = list_app.find((v) => v.name === "wibudev");
 const path = require('path')
 const fs = require('fs')
 const _ = require('lodash');
-const { exec } = require('child_process');
+const { exec, spawn } = require('child_process');
 
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
@@ -86,7 +86,7 @@ app.post('/svr/:param?', async (req, res) => {
         return res.end("404 | file not found")
     }
 
-    const child = exec(`node ${_pt}/${_file} ${_.flatten(_.entries(_body)).join(" ")}`)
+    const child = spawn('/bin/sh', ['-c', `node ${_pt}/${_file} ${_.flatten(_.entries(_body)).join(" ")}`])
     child.stdout.pipe(res)
     child.stderr.pipe(res)
 })
@@ -103,7 +103,7 @@ app.post('/svr2/:name?', (req, res) => {
 
     res.setHeader('Content-Type', 'text/plain');
     res.setHeader('Cache-Control', 'no-cache');
-    
+
     const child = require(`${_pt}/${file}`)(body)
     child.stdout.pipe(res)
     child.stderr.pipe(res)

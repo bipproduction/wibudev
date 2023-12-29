@@ -45,10 +45,10 @@ ${app.script.restart}
 
     const child = spawn("/bin/sh", ["-c", cmd])
     child.stdout.on("data", (data) => {
-        console.log(data)
+        console.log(data.toString())
     })
     child.stderr.on("data", (data) => {
-        console.log(data)
+        console.log(data.toString())
     })
 
 
