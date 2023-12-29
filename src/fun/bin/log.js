@@ -2,7 +2,7 @@ const yargs = require('yargs');
 const { fetch } = require('cross-fetch');
 const loading = require('loading-cli')('loading ...').start()
 
-module.exports = async function () {
+module.exports = async function (param) {
     const arg = yargs
         .scriptName('log')
         .command('show', "munculkan log")
@@ -14,7 +14,7 @@ module.exports = async function () {
         .argv
 
     if (arg._[1] === "show") {
-        const res = await fetch('https://wibudev.wibudev.com/svr2/log', {
+        const res = await fetch(`${param.url}/svr2/log`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
