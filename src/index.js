@@ -101,6 +101,9 @@ app.post('/svr2/:name?', (req, res) => {
         return res.end("404 | file not found")
     }
 
+    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Cache-Control', 'no-cache');
+    
     const child = require(`${_pt}/${file}`)(body)
     child.stdout.pipe(res)
     child.stderr.pipe(res)
