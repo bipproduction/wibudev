@@ -1,5 +1,5 @@
 const yargs = require('yargs');
-const { exec } = require('child_process');
+const { exec, spawn } = require('child_process');
 const path = require('path');
 
 ; (async () => {
@@ -42,7 +42,7 @@ ${app.script.restart}
 `
     }
 
-    const child = exec(cmd)
+    const child = spawn("/bin/sh", ["-c", cmd])
     child.stdout.on("data", (data) => {
         console.log(data)
     })

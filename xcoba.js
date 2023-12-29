@@ -1,10 +1,7 @@
-const _ = require('lodash')
 
-const nama = {
-    name: "malik",
-    alamat: "denpasar"
-}
+const {spawn} = require('child_process')
 
-
-console.log(_.flatten(_.entries(nama)))
-
+console.log("halo")
+const child = spawn("/bin/sh", ['-c', 'ls && hostname && echo "apa kabar"'])
+child.stdout.on("data", (data) => console.log(data.toString()))
+child.stderr.on("data", (data) => console.log(data.toString()))
