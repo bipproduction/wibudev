@@ -133,4 +133,28 @@ app.get('/val/:name?', async (req, res) => {
     })
 })
 
+
+// BIP
+app.get('/bip/json/:name?', (req, res) => {
+    const name = req.params.name
+    if (!name) return res.json({ success: false, message: "no name", data: null })
+    const dir_string = path.join(__dirname, "./bip/json")
+    const list_file = fs.readdirSync(dir_string)
+    const file = list_file.find((v) => v === `${name}.json`)
+    if (!file) return res.json({ success: false, message: "no file", data: null })
+    const curent_file = fs.readFileSync(`${dir_string}/${file}`)
+    res.json(JSON.parse(curent_file))
+})
+
+app.get('/bip/fun/:name', (req, res) => {
+    const _name = req.params.name
+    const _path = path.join(__dirname, "./bip/fun")
+    const _dir = fs.readdirSync(_path)
+    const _file = _dir.find((v) => v === `${_name}.js`)
+    res.setHeader('Content-Type', 'text/javascript');
+    if (!_file) return res.sendFile(path.join(__dirname, "./bip/_404.js"))
+    const _f = fs.readFileSync(`${_path}/${_file}`)
+    return res.send(_f)
+})
+
 app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port));

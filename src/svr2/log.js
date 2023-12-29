@@ -1,6 +1,6 @@
 const { exec } = require('child_process')
 const path = require('path')
-let kill = true;
+let kill = false;
 module.exports = function (param) {
     const { name } = param
 
@@ -8,11 +8,10 @@ module.exports = function (param) {
     const app = list_app.find((v) => v.name === name)
 
     return function (stdout, stdkill, stdfun) {
-        kill = false
+
         stdout(JSON.stringify(app))
         if (kill) {
             setTimeout(() => {
-
                 kill = true
                 stdkill()
             }, 4000)

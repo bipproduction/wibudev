@@ -1,0 +1,4628 @@
+[
+  {
+    "id": 2,
+    "idProvinsi": 1,
+    "idKabkot": 2,
+    "value": 96093,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.136Z"
+  },
+  {
+    "id": 3,
+    "idProvinsi": 1,
+    "idKabkot": 3,
+    "value": 252989,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.137Z"
+  },
+  {
+    "id": 5,
+    "idProvinsi": 1,
+    "idKabkot": 5,
+    "value": 149423,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.139Z"
+  },
+  {
+    "id": 6,
+    "idProvinsi": 1,
+    "idKabkot": 6,
+    "value": 73552,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.140Z"
+  },
+  {
+    "id": 7,
+    "idProvinsi": 1,
+    "idKabkot": 7,
+    "value": 183415,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.140Z"
+  },
+  {
+    "id": 8,
+    "idProvinsi": 1,
+    "idKabkot": 8,
+    "value": 130691,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.141Z"
+  },
+  {
+    "id": 9,
+    "idProvinsi": 1,
+    "idKabkot": 9,
+    "value": 133450,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.142Z"
+  },
+  {
+    "id": 10,
+    "idProvinsi": 1,
+    "idKabkot": 10,
+    "value": 248576,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.142Z"
+  },
+  {
+    "id": 11,
+    "idProvinsi": 1,
+    "idKabkot": 11,
+    "value": 358714,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.144Z"
+  },
+  {
+    "id": 12,
+    "idProvinsi": 1,
+    "idKabkot": 12,
+    "value": 98587,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.144Z"
+  },
+  {
+    "id": 13,
+    "idProvinsi": 1,
+    "idKabkot": 13,
+    "value": 271263,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.145Z"
+  },
+  {
+    "id": 14,
+    "idProvinsi": 1,
+    "idKabkot": 14,
+    "value": 60012,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.146Z"
+  },
+  {
+    "id": 15,
+    "idProvinsi": 1,
+    "idKabkot": 15,
+    "value": 107393,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.147Z"
+  },
+  {
+    "id": 16,
+    "idProvinsi": 1,
+    "idKabkot": 16,
+    "value": 270932,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.147Z"
+  },
+  {
+    "id": 17,
+    "idProvinsi": 1,
+    "idKabkot": 17,
+    "value": 98815,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.148Z"
+  },
+  {
+    "id": 18,
+    "idProvinsi": 1,
+    "idKabkot": 18,
+    "value": 57908,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.149Z"
+  },
+  {
+    "id": 19,
+    "idProvinsi": 1,
+    "idKabkot": 19,
+    "value": 150477,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.150Z"
+  },
+  {
+    "id": 20,
+    "idProvinsi": 1,
+    "idKabkot": 20,
+    "value": 117279,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.151Z"
+  },
+  {
+    "id": 22,
+    "idProvinsi": 1,
+    "idKabkot": 22,
+    "value": 25696,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.152Z"
+  },
+  {
+    "id": 23,
+    "idProvinsi": 1,
+    "idKabkot": 23,
+    "value": 53172,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.153Z"
+  },
+  {
+    "id": 24,
+    "idProvinsi": 2,
+    "idKabkot": 24,
+    "value": 465869,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.154Z"
+  },
+  {
+    "id": 25,
+    "idProvinsi": 2,
+    "idKabkot": 25,
+    "value": 254833,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.155Z"
+  },
+  {
+    "id": 26,
+    "idProvinsi": 2,
+    "idKabkot": 26,
+    "value": 183033,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.156Z"
+  },
+  {
+    "id": 27,
+    "idProvinsi": 2,
+    "idKabkot": 27,
+    "value": 1173011,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.157Z"
+  },
+  {
+    "id": 28,
+    "idProvinsi": 2,
+    "idKabkot": 28,
+    "value": 115982,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.158Z"
+  },
+  {
+    "id": 29,
+    "idProvinsi": 2,
+    "idKabkot": 29,
+    "value": 248375,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.159Z"
+  },
+  {
+    "id": 30,
+    "idProvinsi": 2,
+    "idKabkot": 30,
+    "value": 293810,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.160Z"
+  },
+  {
+    "id": 31,
+    "idProvinsi": 2,
+    "idKabkot": 31,
+    "value": 183825,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.161Z"
+  },
+  {
+    "id": 32,
+    "idProvinsi": 2,
+    "idKabkot": 32,
+    "value": 228920,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.161Z"
+  },
+  {
+    "id": 33,
+    "idProvinsi": 2,
+    "idKabkot": 33,
+    "value": 641241,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.162Z"
+  },
+  {
+    "id": 34,
+    "idProvinsi": 2,
+    "idKabkot": 34,
+    "value": 271403,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.163Z"
+  },
+  {
+    "id": 35,
+    "idProvinsi": 2,
+    "idKabkot": 35,
+    "value": 78410,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.164Z"
+  },
+  {
+    "id": 36,
+    "idProvinsi": 2,
+    "idKabkot": 36,
+    "value": 54093,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.165Z"
+  },
+  {
+    "id": 37,
+    "idProvinsi": 2,
+    "idKabkot": 37,
+    "value": 217608,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.166Z"
+  },
+  {
+    "id": 39,
+    "idProvinsi": 2,
+    "idKabkot": 39,
+    "value": 145997,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.167Z"
+  },
+  {
+    "id": 40,
+    "idProvinsi": 2,
+    "idKabkot": 40,
+    "value": 148958,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.168Z"
+  },
+  {
+    "id": 41,
+    "idProvinsi": 2,
+    "idKabkot": 41,
+    "value": 30450,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.169Z"
+  },
+  {
+    "id": 42,
+    "idProvinsi": 2,
+    "idKabkot": 42,
+    "value": 81593,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.170Z"
+  },
+  {
+    "id": 43,
+    "idProvinsi": 2,
+    "idKabkot": 43,
+    "value": 392510,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.171Z"
+  },
+  {
+    "id": 44,
+    "idProvinsi": 2,
+    "idKabkot": 44,
+    "value": 644752,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.171Z"
+  },
+  {
+    "id": 45,
+    "idProvinsi": 2,
+    "idKabkot": 45,
+    "value": 177766,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.172Z"
+  },
+  {
+    "id": 46,
+    "idProvinsi": 2,
+    "idKabkot": 46,
+    "value": 212673,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.173Z"
+  },
+  {
+    "id": 47,
+    "idProvinsi": 2,
+    "idKabkot": 47,
+    "value": 182172,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.174Z"
+  },
+  {
+    "id": 48,
+    "idProvinsi": 2,
+    "idKabkot": 48,
+    "value": 123812,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.175Z"
+  },
+  {
+    "id": 49,
+    "idProvinsi": 2,
+    "idKabkot": 49,
+    "value": 179481,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.176Z"
+  },
+  {
+    "id": 50,
+    "idProvinsi": 2,
+    "idKabkot": 50,
+    "value": 76916,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.176Z"
+  },
+  {
+    "id": 51,
+    "idProvinsi": 2,
+    "idKabkot": 51,
+    "value": 1553949,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.178Z"
+  },
+  {
+    "id": 52,
+    "idProvinsi": 2,
+    "idKabkot": 52,
+    "value": 134658,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.178Z"
+  },
+  {
+    "id": 53,
+    "idProvinsi": 2,
+    "idKabkot": 53,
+    "value": 169242,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.179Z"
+  },
+  {
+    "id": 54,
+    "idProvinsi": 2,
+    "idKabkot": 54,
+    "value": 55657,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.180Z"
+  },
+  {
+    "id": 56,
+    "idProvinsi": 2,
+    "idKabkot": 56,
+    "value": 105182,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.182Z"
+  },
+  {
+    "id": 57,
+    "idProvinsi": 3,
+    "idKabkot": 57,
+    "value": 328291,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.183Z"
+  },
+  {
+    "id": 58,
+    "idProvinsi": 3,
+    "idKabkot": 58,
+    "value": 136113,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.184Z"
+  },
+  {
+    "id": 59,
+    "idProvinsi": 3,
+    "idKabkot": 59,
+    "value": 52666,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.184Z"
+  },
+  {
+    "id": 60,
+    "idProvinsi": 3,
+    "idKabkot": 60,
+    "value": 242222,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.185Z"
+  },
+  {
+    "id": 61,
+    "idProvinsi": 3,
+    "idKabkot": 61,
+    "value": 269037,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.186Z"
+  },
+  {
+    "id": 62,
+    "idProvinsi": 3,
+    "idKabkot": 62,
+    "value": 178993,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.187Z"
+  },
+  {
+    "id": 63,
+    "idProvinsi": 3,
+    "idKabkot": 63,
+    "value": 252909,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.188Z"
+  },
+  {
+    "id": 64,
+    "idProvinsi": 3,
+    "idKabkot": 64,
+    "value": 311439,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.189Z"
+  },
+  {
+    "id": 65,
+    "idProvinsi": 3,
+    "idKabkot": 65,
+    "value": 143845,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.190Z"
+  },
+  {
+    "id": 66,
+    "idProvinsi": 3,
+    "idKabkot": 66,
+    "value": 238523,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.191Z"
+  },
+  {
+    "id": 67,
+    "idProvinsi": 3,
+    "idKabkot": 67,
+    "value": 109639,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.192Z"
+  },
+  {
+    "id": 68,
+    "idProvinsi": 3,
+    "idKabkot": 68,
+    "value": 238768,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.193Z"
+  },
+  {
+    "id": 69,
+    "idProvinsi": 3,
+    "idKabkot": 69,
+    "value": 78976,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.194Z"
+  },
+  {
+    "id": 70,
+    "idProvinsi": 3,
+    "idKabkot": 70,
+    "value": 564135,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.195Z"
+  },
+  {
+    "id": 71,
+    "idProvinsi": 3,
+    "idKabkot": 71,
+    "value": 35985,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.196Z"
+  },
+  {
+    "id": 73,
+    "idProvinsi": 3,
+    "idKabkot": 73,
+    "value": 85114,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.198Z"
+  },
+  {
+    "id": 74,
+    "idProvinsi": 3,
+    "idKabkot": 74,
+    "value": 41435,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.198Z"
+  },
+  {
+    "id": 75,
+    "idProvinsi": 3,
+    "idKabkot": 75,
+    "value": 45655,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.199Z"
+  },
+  {
+    "id": 76,
+    "idProvinsi": 4,
+    "idKabkot": 76,
+    "value": 335598,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.200Z"
+  },
+  {
+    "id": 77,
+    "idProvinsi": 4,
+    "idKabkot": 77,
+    "value": 374409,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.201Z"
+  },
+  {
+    "id": 78,
+    "idProvinsi": 4,
+    "idKabkot": 78,
+    "value": 239220,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.202Z"
+  },
+  {
+    "id": 79,
+    "idProvinsi": 4,
+    "idKabkot": 79,
+    "value": 440188,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.203Z"
+  },
+  {
+    "id": 80,
+    "idProvinsi": 4,
+    "idKabkot": 80,
+    "value": 118102,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.204Z"
+  },
+  {
+    "id": 81,
+    "idProvinsi": 4,
+    "idKabkot": 81,
+    "value": 185338,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.205Z"
+  },
+  {
+    "id": 82,
+    "idProvinsi": 4,
+    "idKabkot": 82,
+    "value": 204220,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.206Z"
+  },
+  {
+    "id": 83,
+    "idProvinsi": 4,
+    "idKabkot": 83,
+    "value": 341847,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.207Z"
+  },
+  {
+    "id": 84,
+    "idProvinsi": 4,
+    "idKabkot": 84,
+    "value": 295381,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.207Z"
+  },
+  {
+    "id": 85,
+    "idProvinsi": 4,
+    "idKabkot": 85,
+    "value": 242821,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.208Z"
+  },
+  {
+    "id": 86,
+    "idProvinsi": 4,
+    "idKabkot": 86,
+    "value": 173630,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.209Z"
+  },
+  {
+    "id": 87,
+    "idProvinsi": 4,
+    "idKabkot": 87,
+    "value": 585423,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.210Z"
+  },
+  {
+    "id": 88,
+    "idProvinsi": 5,
+    "idKabkot": 88,
+    "value": 92710,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.211Z"
+  },
+  {
+    "id": 90,
+    "idProvinsi": 5,
+    "idKabkot": 90,
+    "value": 26333,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.212Z"
+  },
+  {
+    "id": 91,
+    "idProvinsi": 5,
+    "idKabkot": 91,
+    "value": 58790,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.213Z"
+  },
+  {
+    "id": 92,
+    "idProvinsi": 5,
+    "idKabkot": 92,
+    "value": 45253,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.214Z"
+  },
+  {
+    "id": 93,
+    "idProvinsi": 5,
+    "idKabkot": 93,
+    "value": 649374,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.215Z"
+  },
+  {
+    "id": 94,
+    "idProvinsi": 5,
+    "idKabkot": 94,
+    "value": 129724,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.215Z"
+  },
+  {
+    "id": 95,
+    "idProvinsi": 5,
+    "idKabkot": 95,
+    "value": 195597,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.216Z"
+  },
+  {
+    "id": 96,
+    "idProvinsi": 5,
+    "idKabkot": 96,
+    "value": 221984,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.217Z"
+  },
+  {
+    "id": 97,
+    "idProvinsi": 5,
+    "idKabkot": 97,
+    "value": 170935,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.218Z"
+  },
+  {
+    "id": 98,
+    "idProvinsi": 5,
+    "idKabkot": 98,
+    "value": 230986,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.219Z"
+  },
+  {
+    "id": 99,
+    "idProvinsi": 6,
+    "idKabkot": 99,
+    "value": 263943,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.219Z"
+  },
+  {
+    "id": 100,
+    "idProvinsi": 6,
+    "idKabkot": 100,
+    "value": 177258,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.220Z"
+  },
+  {
+    "id": 101,
+    "idProvinsi": 6,
+    "idKabkot": 101,
+    "value": 203204,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.221Z"
+  },
+  {
+    "id": 102,
+    "idProvinsi": 6,
+    "idKabkot": 102,
+    "value": 150648,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.222Z"
+  },
+  {
+    "id": 103,
+    "idProvinsi": 6,
+    "idKabkot": 103,
+    "value": 221586,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.223Z"
+  },
+  {
+    "id": 104,
+    "idProvinsi": 6,
+    "idKabkot": 104,
+    "value": 395398,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.224Z"
+  },
+  {
+    "id": 105,
+    "idProvinsi": 6,
+    "idKabkot": 105,
+    "value": 66976,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.225Z"
+  },
+  {
+    "id": 107,
+    "idProvinsi": 6,
+    "idKabkot": 107,
+    "value": 71229,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.227Z"
+  },
+  {
+    "id": 108,
+    "idProvinsi": 6,
+    "idKabkot": 108,
+    "value": 177077,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.228Z"
+  },
+  {
+    "id": 109,
+    "idProvinsi": 6,
+    "idKabkot": 109,
+    "value": 80384,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.229Z"
+  },
+  {
+    "id": 110,
+    "idProvinsi": 6,
+    "idKabkot": 110,
+    "value": 94866,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.229Z"
+  },
+  {
+    "id": 111,
+    "idProvinsi": 6,
+    "idKabkot": 111,
+    "value": 68129,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.230Z"
+  },
+  {
+    "id": 112,
+    "idProvinsi": 6,
+    "idKabkot": 112,
+    "value": 112447,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.231Z"
+  },
+  {
+    "id": 113,
+    "idProvinsi": 6,
+    "idKabkot": 113,
+    "value": 175840,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.232Z"
+  },
+  {
+    "id": 114,
+    "idProvinsi": 6,
+    "idKabkot": 114,
+    "value": 131615,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.233Z"
+  },
+  {
+    "id": 115,
+    "idProvinsi": 6,
+    "idKabkot": 115,
+    "value": 221784,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.233Z"
+  },
+  {
+    "id": 116,
+    "idProvinsi": 7,
+    "idKabkot": 116,
+    "value": 514175,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.234Z"
+  },
+  {
+    "id": 117,
+    "idProvinsi": 7,
+    "idKabkot": 117,
+    "value": 230972,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.235Z"
+  },
+  {
+    "id": 118,
+    "idProvinsi": 7,
+    "idKabkot": 118,
+    "value": 281261,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.236Z"
+  },
+  {
+    "id": 119,
+    "idProvinsi": 7,
+    "idKabkot": 119,
+    "value": 388214,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.237Z"
+  },
+  {
+    "id": 120,
+    "idProvinsi": 7,
+    "idKabkot": 120,
+    "value": 416172,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.238Z"
+  },
+  {
+    "id": 122,
+    "idProvinsi": 7,
+    "idKabkot": 122,
+    "value": 122233,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.239Z"
+  },
+  {
+    "id": 123,
+    "idProvinsi": 7,
+    "idKabkot": 123,
+    "value": 272539,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.240Z"
+  },
+  {
+    "id": 125,
+    "idProvinsi": 7,
+    "idKabkot": 125,
+    "value": 236328,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.242Z"
+  },
+  {
+    "id": 126,
+    "idProvinsi": 8,
+    "idKabkot": 126,
+    "value": 277610,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.242Z"
+  },
+  {
+    "id": 127,
+    "idProvinsi": 8,
+    "idKabkot": 127,
+    "value": 427470,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.243Z"
+  },
+  {
+    "id": 128,
+    "idProvinsi": 8,
+    "idKabkot": 128,
+    "value": 121333,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.244Z"
+  },
+  {
+    "id": 129,
+    "idProvinsi": 8,
+    "idKabkot": 129,
+    "value": 145784,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.245Z"
+  },
+  {
+    "id": 130,
+    "idProvinsi": 8,
+    "idKabkot": 130,
+    "value": 95558,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.246Z"
+  },
+  {
+    "id": 131,
+    "idProvinsi": 8,
+    "idKabkot": 131,
+    "value": 1092182,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.246Z"
+  },
+  {
+    "id": 132,
+    "idProvinsi": 8,
+    "idKabkot": 132,
+    "value": 123490,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.247Z"
+  },
+  {
+    "id": 133,
+    "idProvinsi": 8,
+    "idKabkot": 133,
+    "value": 194142,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.248Z"
+  },
+  {
+    "id": 134,
+    "idProvinsi": 8,
+    "idKabkot": 134,
+    "value": 123125,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.249Z"
+  },
+  {
+    "id": 135,
+    "idProvinsi": 8,
+    "idKabkot": 135,
+    "value": 120578,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.250Z"
+  },
+  {
+    "id": 136,
+    "idProvinsi": 8,
+    "idKabkot": 136,
+    "value": 117721,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.251Z"
+  },
+  {
+    "id": 137,
+    "idProvinsi": 8,
+    "idKabkot": 137,
+    "value": 113667,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.251Z"
+  },
+  {
+    "id": 138,
+    "idProvinsi": 8,
+    "idKabkot": 138,
+    "value": 79742,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.252Z"
+  },
+  {
+    "id": 139,
+    "idProvinsi": 8,
+    "idKabkot": 139,
+    "value": 135069,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.253Z"
+  },
+  {
+    "id": 140,
+    "idProvinsi": 8,
+    "idKabkot": 140,
+    "value": 194574,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.254Z"
+  },
+  {
+    "id": 142,
+    "idProvinsi": 9,
+    "idKabkot": 142,
+    "value": 877399,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.256Z"
+  },
+  {
+    "id": 143,
+    "idProvinsi": 9,
+    "idKabkot": 143,
+    "value": 721769,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.257Z"
+  },
+  {
+    "id": 144,
+    "idProvinsi": 9,
+    "idKabkot": 144,
+    "value": 406950,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.257Z"
+  },
+  {
+    "id": 145,
+    "idProvinsi": 9,
+    "idKabkot": 145,
+    "value": 147331,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.258Z"
+  },
+  {
+    "id": 146,
+    "idProvinsi": 9,
+    "idKabkot": 146,
+    "value": 299955,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.259Z"
+  },
+  {
+    "id": 147,
+    "idProvinsi": 9,
+    "idKabkot": 147,
+    "value": 100931,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.260Z"
+  },
+  {
+    "id": 148,
+    "idProvinsi": 10,
+    "idKabkot": 148,
+    "value": 273287,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.261Z"
+  },
+  {
+    "id": 149,
+    "idProvinsi": 10,
+    "idKabkot": 149,
+    "value": 387169,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.261Z"
+  },
+  {
+    "id": 150,
+    "idProvinsi": 10,
+    "idKabkot": 150,
+    "value": 272249,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.262Z"
+  },
+  {
+    "id": 151,
+    "idProvinsi": 10,
+    "idKabkot": 151,
+    "value": 190927,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.263Z"
+  },
+  {
+    "id": 152,
+    "idProvinsi": 10,
+    "idKabkot": 152,
+    "value": 301003,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.264Z"
+  },
+  {
+    "id": 153,
+    "idProvinsi": 10,
+    "idKabkot": 153,
+    "value": 699674,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.264Z"
+  },
+  {
+    "id": 154,
+    "idProvinsi": 10,
+    "idKabkot": 154,
+    "value": 112283,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.265Z"
+  },
+  {
+    "id": 155,
+    "idProvinsi": 11,
+    "idKabkot": 155,
+    "value": 900448,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.266Z"
+  },
+  {
+    "id": 156,
+    "idProvinsi": 11,
+    "idKabkot": 156,
+    "value": 843919,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.267Z"
+  },
+  {
+    "id": 157,
+    "idProvinsi": 11,
+    "idKabkot": 157,
+    "value": 1045390,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.268Z"
+  },
+  {
+    "id": 159,
+    "idProvinsi": 11,
+    "idKabkot": 159,
+    "value": 279884,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.270Z"
+  },
+  {
+    "id": 160,
+    "idProvinsi": 11,
+    "idKabkot": 160,
+    "value": 434565,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.270Z"
+  },
+  {
+    "id": 161,
+    "idProvinsi": 12,
+    "idKabkot": 161,
+    "value": 1187297,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.271Z"
+  },
+  {
+    "id": 162,
+    "idProvinsi": 12,
+    "idKabkot": 162,
+    "value": 894581,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.272Z"
+  },
+  {
+    "id": 163,
+    "idProvinsi": 12,
+    "idKabkot": 163,
+    "value": 2315890,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.273Z"
+  },
+  {
+    "id": 164,
+    "idProvinsi": 12,
+    "idKabkot": 164,
+    "value": 1142202,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.274Z"
+  },
+  {
+    "id": 165,
+    "idProvinsi": 12,
+    "idKabkot": 165,
+    "value": 1940898,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.275Z"
+  },
+  {
+    "id": 166,
+    "idProvinsi": 12,
+    "idKabkot": 166,
+    "value": 3390029,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.275Z"
+  },
+  {
+    "id": 167,
+    "idProvinsi": 12,
+    "idKabkot": 167,
+    "value": 857569,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.276Z"
+  },
+  {
+    "id": 168,
+    "idProvinsi": 12,
+    "idKabkot": 168,
+    "value": 1544726,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.277Z"
+  },
+  {
+    "id": 169,
+    "idProvinsi": 12,
+    "idKabkot": 169,
+    "value": 1548850,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.278Z"
+  },
+  {
+    "id": 170,
+    "idProvinsi": 12,
+    "idKabkot": 170,
+    "value": 1648985,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.278Z"
+  },
+  {
+    "id": 171,
+    "idProvinsi": 12,
+    "idKabkot": 171,
+    "value": 1246222,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.279Z"
+  },
+  {
+    "id": 172,
+    "idProvinsi": 12,
+    "idKabkot": 172,
+    "value": 1586279,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.280Z"
+  },
+  {
+    "id": 173,
+    "idProvinsi": 12,
+    "idKabkot": 173,
+    "value": 788363,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.281Z"
+  },
+  {
+    "id": 174,
+    "idProvinsi": 12,
+    "idKabkot": 174,
+    "value": 878066,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.282Z"
+  },
+  {
+    "id": 176,
+    "idProvinsi": 12,
+    "idKabkot": 176,
+    "value": 638793,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.283Z"
+  },
+  {
+    "id": 177,
+    "idProvinsi": 12,
+    "idKabkot": 177,
+    "value": 1063135,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.284Z"
+  },
+  {
+    "id": 178,
+    "idProvinsi": 12,
+    "idKabkot": 178,
+    "value": 1737251,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.285Z"
+  },
+  {
+    "id": 179,
+    "idProvinsi": 12,
+    "idKabkot": 179,
+    "value": 783583,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.285Z"
+  },
+  {
+    "id": 180,
+    "idProvinsi": 12,
+    "idKabkot": 180,
+    "value": 1228152,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.286Z"
+  },
+  {
+    "id": 181,
+    "idProvinsi": 12,
+    "idKabkot": 181,
+    "value": 1669055,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.287Z"
+  },
+  {
+    "id": 182,
+    "idProvinsi": 12,
+    "idKabkot": 182,
+    "value": 137442,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.288Z"
+  },
+  {
+    "id": 183,
+    "idProvinsi": 12,
+    "idKabkot": 183,
+    "value": 1614862,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.289Z"
+  },
+  {
+    "id": 184,
+    "idProvinsi": 12,
+    "idKabkot": 184,
+    "value": 707507,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.290Z"
+  },
+  {
+    "id": 185,
+    "idProvinsi": 12,
+    "idKabkot": 185,
+    "value": 370775,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.290Z"
+  },
+  {
+    "id": 186,
+    "idProvinsi": 12,
+    "idKabkot": 186,
+    "value": 221670,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.291Z"
+  },
+  {
+    "id": 187,
+    "idProvinsi": 12,
+    "idKabkot": 187,
+    "value": 1234932,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.292Z"
+  },
+  {
+    "id": 188,
+    "idProvinsi": 13,
+    "idKabkot": 188,
+    "value": 227694,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.293Z"
+  },
+  {
+    "id": 189,
+    "idProvinsi": 13,
+    "idKabkot": 189,
+    "value": 477869,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.293Z"
+  },
+  {
+    "id": 190,
+    "idProvinsi": 13,
+    "idKabkot": 190,
+    "value": 18562,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.294Z"
+  },
+  {
+    "id": 191,
+    "idProvinsi": 13,
+    "idKabkot": 191,
+    "value": 1711071,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.295Z"
+  },
+  {
+    "id": 193,
+    "idProvinsi": 13,
+    "idKabkot": 193,
+    "value": 1587929,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.296Z"
+  },
+  {
+    "id": 194,
+    "idProvinsi": 13,
+    "idKabkot": 194,
+    "value": 2144492,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.297Z"
+  },
+  {
+    "id": 195,
+    "idProvinsi": 13,
+    "idKabkot": 195,
+    "value": 1214169,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.298Z"
+  },
+  {
+    "id": 196,
+    "idProvinsi": 13,
+    "idKabkot": 196,
+    "value": 718010,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.299Z"
+  },
+  {
+    "id": 197,
+    "idProvinsi": 13,
+    "idKabkot": 197,
+    "value": 1273310,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.300Z"
+  },
+  {
+    "id": 198,
+    "idProvinsi": 13,
+    "idKabkot": 198,
+    "value": 559382,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.301Z"
+  },
+  {
+    "id": 199,
+    "idProvinsi": 13,
+    "idKabkot": 199,
+    "value": 657707,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.302Z"
+  },
+  {
+    "id": 200,
+    "idProvinsi": 13,
+    "idKabkot": 200,
+    "value": 750585,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.303Z"
+  },
+  {
+    "id": 201,
+    "idProvinsi": 13,
+    "idKabkot": 201,
+    "value": 1370186,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.304Z"
+  },
+  {
+    "id": 202,
+    "idProvinsi": 13,
+    "idKabkot": 202,
+    "value": 1391907,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.305Z"
+  },
+  {
+    "id": 203,
+    "idProvinsi": 13,
+    "idKabkot": 203,
+    "value": 818935,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.305Z"
+  },
+  {
+    "id": 204,
+    "idProvinsi": 13,
+    "idKabkot": 204,
+    "value": 1030572,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.306Z"
+  },
+  {
+    "id": 205,
+    "idProvinsi": 13,
+    "idKabkot": 205,
+    "value": 845037,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.307Z"
+  },
+  {
+    "id": 206,
+    "idProvinsi": 13,
+    "idKabkot": 206,
+    "value": 652743,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.308Z"
+  },
+  {
+    "id": 207,
+    "idProvinsi": 13,
+    "idKabkot": 207,
+    "value": 978548,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.309Z"
+  },
+  {
+    "id": 208,
+    "idProvinsi": 13,
+    "idKabkot": 208,
+    "value": 735821,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.309Z"
+  },
+  {
+    "id": 210,
+    "idProvinsi": 13,
+    "idKabkot": 210,
+    "value": 594757,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.311Z"
+  },
+  {
+    "id": 211,
+    "idProvinsi": 13,
+    "idKabkot": 211,
+    "value": 921440,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.312Z"
+  },
+  {
+    "id": 212,
+    "idProvinsi": 13,
+    "idKabkot": 212,
+    "value": 954777,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.312Z"
+  },
+  {
+    "id": 213,
+    "idProvinsi": 13,
+    "idKabkot": 213,
+    "value": 663152,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.313Z"
+  },
+  {
+    "id": 214,
+    "idProvinsi": 13,
+    "idKabkot": 214,
+    "value": 1044216,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.314Z"
+  },
+  {
+    "id": 215,
+    "idProvinsi": 13,
+    "idKabkot": 215,
+    "value": 702946,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.315Z"
+  },
+  {
+    "id": 216,
+    "idProvinsi": 13,
+    "idKabkot": 216,
+    "value": 569315,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.315Z"
+  },
+  {
+    "id": 217,
+    "idProvinsi": 13,
+    "idKabkot": 217,
+    "value": 453787,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.316Z"
+  },
+  {
+    "id": 218,
+    "idProvinsi": 13,
+    "idKabkot": 218,
+    "value": 735933,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.317Z"
+  },
+  {
+    "id": 219,
+    "idProvinsi": 13,
+    "idKabkot": 219,
+    "value": 706215,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.318Z"
+  },
+  {
+    "id": 220,
+    "idProvinsi": 13,
+    "idKabkot": 220,
+    "value": 629731,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.319Z"
+  },
+  {
+    "id": 221,
+    "idProvinsi": 13,
+    "idKabkot": 221,
+    "value": 1130734,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.320Z"
+  },
+  {
+    "id": 222,
+    "idProvinsi": 13,
+    "idKabkot": 222,
+    "value": 558825,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.320Z"
+  },
+  {
+    "id": 223,
+    "idProvinsi": 14,
+    "idKabkot": 223,
+    "value": 785769,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.321Z"
+  },
+  {
+    "id": 224,
+    "idProvinsi": 14,
+    "idKabkot": 224,
+    "value": 632760,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.322Z"
+  },
+  {
+    "id": 225,
+    "idProvinsi": 14,
+    "idKabkot": 225,
+    "value": 90608,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.323Z"
+  },
+  {
+    "id": 227,
+    "idProvinsi": 14,
+    "idKabkot": 227,
+    "value": 137767,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.325Z"
+  },
+  {
+    "id": 228,
+    "idProvinsi": 15,
+    "idKabkot": 228,
+    "value": 1175312,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.325Z"
+  },
+  {
+    "id": 229,
+    "idProvinsi": 15,
+    "idKabkot": 229,
+    "value": 404144,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.326Z"
+  },
+  {
+    "id": 230,
+    "idProvinsi": 15,
+    "idKabkot": 230,
+    "value": 197897,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.327Z"
+  },
+  {
+    "id": 231,
+    "idProvinsi": 15,
+    "idKabkot": 231,
+    "value": 639272,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.328Z"
+  },
+  {
+    "id": 232,
+    "idProvinsi": 15,
+    "idKabkot": 232,
+    "value": 534167,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.329Z"
+  },
+  {
+    "id": 233,
+    "idProvinsi": 15,
+    "idKabkot": 233,
+    "value": 300500,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.330Z"
+  },
+  {
+    "id": 234,
+    "idProvinsi": 15,
+    "idKabkot": 234,
+    "value": 724755,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.330Z"
+  },
+  {
+    "id": 235,
+    "idProvinsi": 15,
+    "idKabkot": 235,
+    "value": 276630,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.331Z"
+  },
+  {
+    "id": 236,
+    "idProvinsi": 15,
+    "idKabkot": 236,
+    "value": 740449,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.332Z"
+  },
+  {
+    "id": 237,
+    "idProvinsi": 15,
+    "idKabkot": 237,
+    "value": 1239785,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.333Z"
+  },
+  {
+    "id": 238,
+    "idProvinsi": 15,
+    "idKabkot": 238,
+    "value": 880739,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.333Z"
+  },
+  {
+    "id": 239,
+    "idProvinsi": 15,
+    "idKabkot": 239,
+    "value": 957977,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.334Z"
+  },
+  {
+    "id": 240,
+    "idProvinsi": 15,
+    "idKabkot": 240,
+    "value": 574992,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.335Z"
+  },
+  {
+    "id": 242,
+    "idProvinsi": 15,
+    "idKabkot": 242,
+    "value": 1828218,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.337Z"
+  },
+  {
+    "id": 243,
+    "idProvinsi": 15,
+    "idKabkot": 243,
+    "value": 936198,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.337Z"
+  },
+  {
+    "id": 245,
+    "idProvinsi": 15,
+    "idKabkot": 245,
+    "value": 985444,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.339Z"
+  },
+  {
+    "id": 246,
+    "idProvinsi": 15,
+    "idKabkot": 246,
+    "value": 764998,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.340Z"
+  },
+  {
+    "id": 247,
+    "idProvinsi": 15,
+    "idKabkot": 247,
+    "value": 549397,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.340Z"
+  },
+  {
+    "id": 248,
+    "idProvinsi": 15,
+    "idKabkot": 248,
+    "value": 496855,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.341Z"
+  },
+  {
+    "id": 249,
+    "idProvinsi": 15,
+    "idKabkot": 249,
+    "value": 1853362,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.342Z"
+  },
+  {
+    "id": 250,
+    "idProvinsi": 15,
+    "idKabkot": 250,
+    "value": 781218,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.343Z"
+  },
+  {
+    "id": 251,
+    "idProvinsi": 15,
+    "idKabkot": 251,
+    "value": 800484,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.343Z"
+  },
+  {
+    "id": 252,
+    "idProvinsi": 15,
+    "idKabkot": 252,
+    "value": 646315,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.344Z"
+  },
+  {
+    "id": 253,
+    "idProvinsi": 15,
+    "idKabkot": 253,
+    "value": 440250,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.345Z"
+  },
+  {
+    "id": 254,
+    "idProvinsi": 15,
+    "idKabkot": 254,
+    "value": 576860,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.346Z"
+  },
+  {
+    "id": 255,
+    "idProvinsi": 15,
+    "idKabkot": 255,
+    "value": 1095060,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.347Z"
+  },
+  {
+    "id": 256,
+    "idProvinsi": 15,
+    "idKabkot": 256,
+    "value": 709742,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.348Z"
+  },
+  {
+    "id": 257,
+    "idProvinsi": 15,
+    "idKabkot": 257,
+    "value": 796978,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.348Z"
+  },
+  {
+    "id": 258,
+    "idProvinsi": 15,
+    "idKabkot": 258,
+    "value": 615949,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.349Z"
+  },
+  {
+    "id": 259,
+    "idProvinsi": 15,
+    "idKabkot": 259,
+    "value": 1352114,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.350Z"
+  },
+  {
+    "id": 260,
+    "idProvinsi": 15,
+    "idKabkot": 260,
+    "value": 477917,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.351Z"
+  },
+  {
+    "id": 262,
+    "idProvinsi": 15,
+    "idKabkot": 262,
+    "value": 543219,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.353Z"
+  },
+  {
+    "id": 263,
+    "idProvinsi": 15,
+    "idKabkot": 263,
+    "value": 872723,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.354Z"
+  },
+  {
+    "id": 264,
+    "idProvinsi": 15,
+    "idKabkot": 264,
+    "value": 808689,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.355Z"
+  },
+  {
+    "id": 265,
+    "idProvinsi": 15,
+    "idKabkot": 265,
+    "value": 149473,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.356Z"
+  },
+  {
+    "id": 266,
+    "idProvinsi": 16,
+    "idKabkot": 266,
+    "value": 109265,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.357Z"
+  },
+  {
+    "id": 267,
+    "idProvinsi": 16,
+    "idKabkot": 267,
+    "value": 200121,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.357Z"
+  },
+  {
+    "id": 268,
+    "idProvinsi": 16,
+    "idKabkot": 268,
+    "value": 143062,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.358Z"
+  },
+  {
+    "id": 269,
+    "idProvinsi": 16,
+    "idKabkot": 269,
+    "value": 596366,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.359Z"
+  },
+  {
+    "id": 270,
+    "idProvinsi": 16,
+    "idKabkot": 270,
+    "value": 95380,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.360Z"
+  },
+  {
+    "id": 271,
+    "idProvinsi": 16,
+    "idKabkot": 271,
+    "value": 140893,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.361Z"
+  },
+  {
+    "id": 272,
+    "idProvinsi": 16,
+    "idKabkot": 272,
+    "value": 163487,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.361Z"
+  },
+  {
+    "id": 273,
+    "idProvinsi": 16,
+    "idKabkot": 273,
+    "value": 2026329,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.362Z"
+  },
+  {
+    "id": 274,
+    "idProvinsi": 17,
+    "idKabkot": 274,
+    "value": 347548,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.363Z"
+  },
+  {
+    "id": 275,
+    "idProvinsi": 17,
+    "idKabkot": 275,
+    "value": 169220,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.364Z"
+  },
+  {
+    "id": 276,
+    "idProvinsi": 17,
+    "idKabkot": 276,
+    "value": 536184,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.365Z"
+  },
+  {
+    "id": 277,
+    "idProvinsi": 17,
+    "idKabkot": 277,
+    "value": 343754,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.366Z"
+  },
+  {
+    "id": 279,
+    "idProvinsi": 17,
+    "idKabkot": 279,
+    "value": 334439,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.367Z"
+  },
+  {
+    "id": 280,
+    "idProvinsi": 17,
+    "idKabkot": 280,
+    "value": 144021,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.368Z"
+  },
+  {
+    "id": 281,
+    "idProvinsi": 17,
+    "idKabkot": 281,
+    "value": 324040,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.369Z"
+  },
+  {
+    "id": 282,
+    "idProvinsi": 17,
+    "idKabkot": 282,
+    "value": 434001,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.370Z"
+  },
+  {
+    "id": 283,
+    "idProvinsi": 18,
+    "idKabkot": 283,
+    "value": 338307,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.371Z"
+  },
+  {
+    "id": 284,
+    "idProvinsi": 18,
+    "idKabkot": 284,
+    "value": 156901,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.371Z"
+  },
+  {
+    "id": 285,
+    "idProvinsi": 18,
+    "idKabkot": 285,
+    "value": 447480,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.372Z"
+  },
+  {
+    "id": 286,
+    "idProvinsi": 18,
+    "idKabkot": 286,
+    "value": 651099,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.373Z"
+  },
+  {
+    "id": 287,
+    "idProvinsi": 18,
+    "idKabkot": 287,
+    "value": 818855,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.374Z"
+  },
+  {
+    "id": 288,
+    "idProvinsi": 18,
+    "idKabkot": 288,
+    "value": 156641,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.374Z"
+  },
+  {
+    "id": 289,
+    "idProvinsi": 18,
+    "idKabkot": 289,
+    "value": 334324,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.375Z"
+  },
+  {
+    "id": 290,
+    "idProvinsi": 18,
+    "idKabkot": 290,
+    "value": 86308,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.376Z"
+  },
+  {
+    "id": 291,
+    "idProvinsi": 18,
+    "idKabkot": 291,
+    "value": 95489,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.377Z"
+  },
+  {
+    "id": 292,
+    "idProvinsi": 18,
+    "idKabkot": 292,
+    "value": 273963,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.378Z"
+  },
+  {
+    "id": 293,
+    "idProvinsi": 19,
+    "idKabkot": 293,
+    "value": 122646,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.378Z"
+  },
+  {
+    "id": 294,
+    "idProvinsi": 19,
+    "idKabkot": 294,
+    "value": 132948,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.379Z"
+  },
+  {
+    "id": 296,
+    "idProvinsi": 19,
+    "idKabkot": 296,
+    "value": 170969,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.381Z"
+  },
+  {
+    "id": 297,
+    "idProvinsi": 19,
+    "idKabkot": 297,
+    "value": 239895,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.382Z"
+  },
+  {
+    "id": 298,
+    "idProvinsi": 19,
+    "idKabkot": 298,
+    "value": 79639,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.383Z"
+  },
+  {
+    "id": 299,
+    "idProvinsi": 19,
+    "idKabkot": 299,
+    "value": 117096,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.384Z"
+  },
+  {
+    "id": 300,
+    "idProvinsi": 19,
+    "idKabkot": 300,
+    "value": 182546,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.384Z"
+  },
+  {
+    "id": 301,
+    "idProvinsi": 19,
+    "idKabkot": 301,
+    "value": 148442,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.385Z"
+  },
+  {
+    "id": 302,
+    "idProvinsi": 19,
+    "idKabkot": 302,
+    "value": 156716,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.386Z"
+  },
+  {
+    "id": 303,
+    "idProvinsi": 19,
+    "idKabkot": 303,
+    "value": 99321,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.387Z"
+  },
+  {
+    "id": 304,
+    "idProvinsi": 19,
+    "idKabkot": 304,
+    "value": 103885,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.388Z"
+  },
+  {
+    "id": 305,
+    "idProvinsi": 19,
+    "idKabkot": 305,
+    "value": 84522,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.389Z"
+  },
+  {
+    "id": 306,
+    "idProvinsi": 19,
+    "idKabkot": 306,
+    "value": 189238,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.390Z"
+  },
+  {
+    "id": 307,
+    "idProvinsi": 19,
+    "idKabkot": 307,
+    "value": 84293,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.391Z"
+  },
+  {
+    "id": 308,
+    "idProvinsi": 19,
+    "idKabkot": 308,
+    "value": 157164,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.392Z"
+  },
+  {
+    "id": 309,
+    "idProvinsi": 19,
+    "idKabkot": 309,
+    "value": 48734,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.393Z"
+  },
+  {
+    "id": 310,
+    "idProvinsi": 19,
+    "idKabkot": 310,
+    "value": 141004,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.393Z"
+  },
+  {
+    "id": 311,
+    "idProvinsi": 19,
+    "idKabkot": 311,
+    "value": 277512,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.394Z"
+  },
+  {
+    "id": 313,
+    "idProvinsi": 19,
+    "idKabkot": 313,
+    "value": 271697,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.396Z"
+  },
+  {
+    "id": 314,
+    "idProvinsi": 19,
+    "idKabkot": 314,
+    "value": 396791,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.397Z"
+  },
+  {
+    "id": 315,
+    "idProvinsi": 20,
+    "idKabkot": 315,
+    "value": 195050,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.398Z"
+  },
+  {
+    "id": 316,
+    "idProvinsi": 20,
+    "idKabkot": 316,
+    "value": 313079,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.398Z"
+  },
+  {
+    "id": 317,
+    "idProvinsi": 20,
+    "idKabkot": 317,
+    "value": 365466,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.399Z"
+  },
+  {
+    "id": 318,
+    "idProvinsi": 20,
+    "idKabkot": 318,
+    "value": 259311,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.400Z"
+  },
+  {
+    "id": 319,
+    "idProvinsi": 20,
+    "idKabkot": 319,
+    "value": 163856,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.401Z"
+  },
+  {
+    "id": 320,
+    "idProvinsi": 20,
+    "idKabkot": 320,
+    "value": 180053,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.402Z"
+  },
+  {
+    "id": 321,
+    "idProvinsi": 20,
+    "idKabkot": 321,
+    "value": 249305,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.403Z"
+  },
+  {
+    "id": 322,
+    "idProvinsi": 20,
+    "idKabkot": 322,
+    "value": 135069,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.404Z"
+  },
+  {
+    "id": 323,
+    "idProvinsi": 20,
+    "idKabkot": 323,
+    "value": 130751,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.404Z"
+  },
+  {
+    "id": 324,
+    "idProvinsi": 20,
+    "idKabkot": 324,
+    "value": 79468,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.405Z"
+  },
+  {
+    "id": 325,
+    "idProvinsi": 20,
+    "idKabkot": 325,
+    "value": 423585,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.406Z"
+  },
+  {
+    "id": 326,
+    "idProvinsi": 20,
+    "idKabkot": 326,
+    "value": 146713,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.407Z"
+  },
+  {
+    "id": 327,
+    "idProvinsi": 20,
+    "idKabkot": 327,
+    "value": 373914,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.407Z"
+  },
+  {
+    "id": 328,
+    "idProvinsi": 20,
+    "idKabkot": 328,
+    "value": 237821,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.408Z"
+  },
+  {
+    "id": 330,
+    "idProvinsi": 21,
+    "idKabkot": 330,
+    "value": 386105,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.410Z"
+  },
+  {
+    "id": 331,
+    "idProvinsi": 21,
+    "idKabkot": 331,
+    "value": 220369,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.411Z"
+  },
+  {
+    "id": 332,
+    "idProvinsi": 21,
+    "idKabkot": 332,
+    "value": 132099,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.411Z"
+  },
+  {
+    "id": 333,
+    "idProvinsi": 21,
+    "idKabkot": 333,
+    "value": 164265,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.412Z"
+  },
+  {
+    "id": 334,
+    "idProvinsi": 21,
+    "idKabkot": 334,
+    "value": 184187,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.413Z"
+  },
+  {
+    "id": 335,
+    "idProvinsi": 21,
+    "idKabkot": 335,
+    "value": 159755,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.414Z"
+  },
+  {
+    "id": 336,
+    "idProvinsi": 21,
+    "idKabkot": 336,
+    "value": 171870,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.415Z"
+  },
+  {
+    "id": 337,
+    "idProvinsi": 21,
+    "idKabkot": 337,
+    "value": 220296,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.416Z"
+  },
+  {
+    "id": 338,
+    "idProvinsi": 21,
+    "idKabkot": 338,
+    "value": 89497,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.416Z"
+  },
+  {
+    "id": 339,
+    "idProvinsi": 21,
+    "idKabkot": 339,
+    "value": 463547,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.417Z"
+  },
+  {
+    "id": 340,
+    "idProvinsi": 21,
+    "idKabkot": 340,
+    "value": 177040,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.418Z"
+  },
+  {
+    "id": 341,
+    "idProvinsi": 21,
+    "idKabkot": 341,
+    "value": 162747,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.419Z"
+  },
+  {
+    "id": 342,
+    "idProvinsi": 21,
+    "idKabkot": 342,
+    "value": 247898,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.420Z"
+  },
+  {
+    "id": 343,
+    "idProvinsi": 22,
+    "idKabkot": 343,
+    "value": 252770,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.421Z"
+  },
+  {
+    "id": 344,
+    "idProvinsi": 22,
+    "idKabkot": 344,
+    "value": 80825,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.421Z"
+  },
+  {
+    "id": 345,
+    "idProvinsi": 22,
+    "idKabkot": 345,
+    "value": 96297,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.422Z"
+  },
+  {
+    "id": 347,
+    "idProvinsi": 22,
+    "idKabkot": 347,
+    "value": 87217,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.424Z"
+  },
+  {
+    "id": 348,
+    "idProvinsi": 22,
+    "idKabkot": 348,
+    "value": 36951,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.425Z"
+  },
+  {
+    "id": 349,
+    "idProvinsi": 22,
+    "idKabkot": 349,
+    "value": 62132,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.425Z"
+  },
+  {
+    "id": 350,
+    "idProvinsi": 22,
+    "idKabkot": 350,
+    "value": 75245,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.426Z"
+  },
+  {
+    "id": 351,
+    "idProvinsi": 22,
+    "idKabkot": 351,
+    "value": 80905,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.427Z"
+  },
+  {
+    "id": 352,
+    "idProvinsi": 22,
+    "idKabkot": 352,
+    "value": 63311,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.428Z"
+  },
+  {
+    "id": 353,
+    "idProvinsi": 22,
+    "idKabkot": 353,
+    "value": 70786,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.429Z"
+  },
+  {
+    "id": 354,
+    "idProvinsi": 22,
+    "idKabkot": 354,
+    "value": 175103,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.429Z"
+  },
+  {
+    "id": 355,
+    "idProvinsi": 22,
+    "idKabkot": 355,
+    "value": 197800,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.430Z"
+  },
+  {
+    "id": 356,
+    "idProvinsi": 23,
+    "idKabkot": 356,
+    "value": 514477,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.431Z"
+  },
+  {
+    "id": 357,
+    "idProvinsi": 23,
+    "idKabkot": 357,
+    "value": 178568,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.432Z"
+  },
+  {
+    "id": 358,
+    "idProvinsi": 23,
+    "idKabkot": 358,
+    "value": 119646,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.434Z"
+  },
+  {
+    "id": 359,
+    "idProvinsi": 23,
+    "idKabkot": 359,
+    "value": 287600,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.434Z"
+  },
+  {
+    "id": 360,
+    "idProvinsi": 23,
+    "idKabkot": 360,
+    "value": 128091,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.435Z"
+  },
+  {
+    "id": 362,
+    "idProvinsi": 23,
+    "idKabkot": 362,
+    "value": 579740,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.437Z"
+  },
+  {
+    "id": 363,
+    "idProvinsi": 23,
+    "idKabkot": 363,
+    "value": 126550,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.438Z"
+  },
+  {
+    "id": 365,
+    "idProvinsi": 23,
+    "idKabkot": 365,
+    "value": 13135,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.439Z"
+  },
+  {
+    "id": 366,
+    "idProvinsi": 24,
+    "idKabkot": 366,
+    "value": 78967,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.440Z"
+  },
+  {
+    "id": 367,
+    "idProvinsi": 24,
+    "idKabkot": 367,
+    "value": 100086,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.441Z"
+  },
+  {
+    "id": 368,
+    "idProvinsi": 24,
+    "idKabkot": 368,
+    "value": 40693,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.441Z"
+  },
+  {
+    "id": 369,
+    "idProvinsi": 24,
+    "idKabkot": 369,
+    "value": 120735,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.442Z"
+  },
+  {
+    "id": 370,
+    "idProvinsi": 24,
+    "idKabkot": 370,
+    "value": 59201,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.443Z"
+  },
+  {
+    "id": 371,
+    "idProvinsi": 25,
+    "idKabkot": 371,
+    "value": 44566,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.444Z"
+  },
+  {
+    "id": 372,
+    "idProvinsi": 25,
+    "idKabkot": 372,
+    "value": 164800,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.445Z"
+  },
+  {
+    "id": 373,
+    "idProvinsi": 25,
+    "idKabkot": 373,
+    "value": 235840,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.445Z"
+  },
+  {
+    "id": 374,
+    "idProvinsi": 25,
+    "idKabkot": 374,
+    "value": 93167,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.446Z"
+  },
+  {
+    "id": 375,
+    "idProvinsi": 25,
+    "idKabkot": 375,
+    "value": 65149,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.447Z"
+  },
+  {
+    "id": 376,
+    "idProvinsi": 25,
+    "idKabkot": 376,
+    "value": 162362,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.448Z"
+  },
+  {
+    "id": 377,
+    "idProvinsi": 25,
+    "idKabkot": 377,
+    "value": 147459,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.449Z"
+  },
+  {
+    "id": 378,
+    "idProvinsi": 25,
+    "idKabkot": 378,
+    "value": 76956,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.450Z"
+  },
+  {
+    "id": 379,
+    "idProvinsi": 25,
+    "idKabkot": 379,
+    "value": 54594,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.451Z"
+  },
+  {
+    "id": 380,
+    "idProvinsi": 25,
+    "idKabkot": 380,
+    "value": 49727,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.452Z"
+  },
+  {
+    "id": 382,
+    "idProvinsi": 25,
+    "idKabkot": 382,
+    "value": 317831,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.453Z"
+  },
+  {
+    "id": 383,
+    "idProvinsi": 25,
+    "idKabkot": 383,
+    "value": 147525,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.454Z"
+  },
+  {
+    "id": 384,
+    "idProvinsi": 25,
+    "idKabkot": 384,
+    "value": 67823,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.455Z"
+  },
+  {
+    "id": 385,
+    "idProvinsi": 25,
+    "idKabkot": 385,
+    "value": 81091,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.456Z"
+  },
+  {
+    "id": 386,
+    "idProvinsi": 26,
+    "idKabkot": 386,
+    "value": 245694,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.457Z"
+  },
+  {
+    "id": 387,
+    "idProvinsi": 26,
+    "idKabkot": 387,
+    "value": 89962,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.457Z"
+  },
+  {
+    "id": 388,
+    "idProvinsi": 26,
+    "idKabkot": 388,
+    "value": 100299,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.458Z"
+  },
+  {
+    "id": 389,
+    "idProvinsi": 26,
+    "idKabkot": 389,
+    "value": 90714,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.459Z"
+  },
+  {
+    "id": 390,
+    "idProvinsi": 26,
+    "idKabkot": 390,
+    "value": 75609,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.460Z"
+  },
+  {
+    "id": 391,
+    "idProvinsi": 26,
+    "idKabkot": 391,
+    "value": 122638,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.461Z"
+  },
+  {
+    "id": 392,
+    "idProvinsi": 26,
+    "idKabkot": 392,
+    "value": 158870,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.462Z"
+  },
+  {
+    "id": 393,
+    "idProvinsi": 26,
+    "idKabkot": 393,
+    "value": 234119,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.463Z"
+  },
+  {
+    "id": 394,
+    "idProvinsi": 26,
+    "idKabkot": 394,
+    "value": 162511,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.464Z"
+  },
+  {
+    "id": 395,
+    "idProvinsi": 26,
+    "idKabkot": 395,
+    "value": 186031,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.464Z"
+  },
+  {
+    "id": 396,
+    "idProvinsi": 26,
+    "idKabkot": 396,
+    "value": 138632,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.465Z"
+  },
+  {
+    "id": 397,
+    "idProvinsi": 26,
+    "idKabkot": 397,
+    "value": 88796,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.466Z"
+  },
+  {
+    "id": 399,
+    "idProvinsi": 27,
+    "idKabkot": 399,
+    "value": 87533,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.467Z"
+  },
+  {
+    "id": 400,
+    "idProvinsi": 27,
+    "idKabkot": 400,
+    "value": 76806,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.468Z"
+  },
+  {
+    "id": 401,
+    "idProvinsi": 27,
+    "idKabkot": 401,
+    "value": 43817,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.469Z"
+  },
+  {
+    "id": 402,
+    "idProvinsi": 27,
+    "idKabkot": 402,
+    "value": 283230,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.470Z"
+  },
+  {
+    "id": 403,
+    "idProvinsi": 27,
+    "idKabkot": 403,
+    "value": 100289,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.471Z"
+  },
+  {
+    "id": 404,
+    "idProvinsi": 27,
+    "idKabkot": 404,
+    "value": 228363,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.471Z"
+  },
+  {
+    "id": 405,
+    "idProvinsi": 27,
+    "idKabkot": 405,
+    "value": 118498,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.472Z"
+  },
+  {
+    "id": 406,
+    "idProvinsi": 27,
+    "idKabkot": 406,
+    "value": 167969,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.473Z"
+  },
+  {
+    "id": 407,
+    "idProvinsi": 27,
+    "idKabkot": 407,
+    "value": 84092,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.474Z"
+  },
+  {
+    "id": 408,
+    "idProvinsi": 27,
+    "idKabkot": 408,
+    "value": 103959,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.474Z"
+  },
+  {
+    "id": 409,
+    "idProvinsi": 27,
+    "idKabkot": 409,
+    "value": 303668,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.475Z"
+  },
+  {
+    "id": 410,
+    "idProvinsi": 27,
+    "idKabkot": 410,
+    "value": 105859,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.476Z"
+  },
+  {
+    "id": 411,
+    "idProvinsi": 27,
+    "idKabkot": 411,
+    "value": 147235,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.477Z"
+  },
+  {
+    "id": 412,
+    "idProvinsi": 27,
+    "idKabkot": 412,
+    "value": 87945,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.477Z"
+  },
+  {
+    "id": 413,
+    "idProvinsi": 27,
+    "idKabkot": 413,
+    "value": 285043,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.478Z"
+  },
+  {
+    "id": 414,
+    "idProvinsi": 27,
+    "idKabkot": 414,
+    "value": 125984,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.479Z"
+  },
+  {
+    "id": 416,
+    "idProvinsi": 27,
+    "idKabkot": 416,
+    "value": 189482,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.481Z"
+  },
+  {
+    "id": 417,
+    "idProvinsi": 27,
+    "idKabkot": 417,
+    "value": 469879,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.482Z"
+  },
+  {
+    "id": 418,
+    "idProvinsi": 27,
+    "idKabkot": 418,
+    "value": 165402,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.483Z"
+  },
+  {
+    "id": 419,
+    "idProvinsi": 27,
+    "idKabkot": 419,
+    "value": 510643,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.483Z"
+  },
+  {
+    "id": 420,
+    "idProvinsi": 27,
+    "idKabkot": 420,
+    "value": 233426,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.484Z"
+  },
+  {
+    "id": 421,
+    "idProvinsi": 27,
+    "idKabkot": 421,
+    "value": 212163,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.485Z"
+  },
+  {
+    "id": 422,
+    "idProvinsi": 27,
+    "idKabkot": 422,
+    "value": 118440,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.486Z"
+  },
+  {
+    "id": 423,
+    "idProvinsi": 28,
+    "idKabkot": 423,
+    "value": 157982,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.486Z"
+  },
+  {
+    "id": 424,
+    "idProvinsi": 28,
+    "idKabkot": 424,
+    "value": 249047,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.487Z"
+  },
+  {
+    "id": 425,
+    "idProvinsi": 28,
+    "idKabkot": 425,
+    "value": 198098,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.488Z"
+  },
+  {
+    "id": 426,
+    "idProvinsi": 28,
+    "idKabkot": 426,
+    "value": 248997,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.489Z"
+  },
+  {
+    "id": 427,
+    "idProvinsi": 28,
+    "idKabkot": 427,
+    "value": 139457,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.490Z"
+  },
+  {
+    "id": 428,
+    "idProvinsi": 28,
+    "idKabkot": 428,
+    "value": 223530,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.490Z"
+  },
+  {
+    "id": 429,
+    "idProvinsi": 28,
+    "idKabkot": 429,
+    "value": 167347,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.491Z"
+  },
+  {
+    "id": 430,
+    "idProvinsi": 28,
+    "idKabkot": 430,
+    "value": 201292,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.492Z"
+  },
+  {
+    "id": 431,
+    "idProvinsi": 28,
+    "idKabkot": 431,
+    "value": 179154,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.493Z"
+  },
+  {
+    "id": 433,
+    "idProvinsi": 28,
+    "idKabkot": 433,
+    "value": 92492,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.494Z"
+  },
+  {
+    "id": 434,
+    "idProvinsi": 28,
+    "idKabkot": 434,
+    "value": 110438,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.495Z"
+  },
+  {
+    "id": 435,
+    "idProvinsi": 28,
+    "idKabkot": 435,
+    "value": 141089,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.496Z"
+  },
+  {
+    "id": 436,
+    "idProvinsi": 28,
+    "idKabkot": 436,
+    "value": 157161,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.496Z"
+  },
+  {
+    "id": 437,
+    "idProvinsi": 28,
+    "idKabkot": 437,
+    "value": 132471,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.497Z"
+  },
+  {
+    "id": 438,
+    "idProvinsi": 28,
+    "idKabkot": 438,
+    "value": 51293,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.498Z"
+  },
+  {
+    "id": 439,
+    "idProvinsi": 28,
+    "idKabkot": 439,
+    "value": 68560,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.499Z"
+  },
+  {
+    "id": 440,
+    "idProvinsi": 29,
+    "idKabkot": 440,
+    "value": 56934,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.499Z"
+  },
+  {
+    "id": 441,
+    "idProvinsi": 29,
+    "idKabkot": 441,
+    "value": 67597,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.500Z"
+  },
+  {
+    "id": 442,
+    "idProvinsi": 29,
+    "idKabkot": 442,
+    "value": 187160,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.501Z"
+  },
+  {
+    "id": 443,
+    "idProvinsi": 29,
+    "idKabkot": 443,
+    "value": 93183,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.502Z"
+  },
+  {
+    "id": 444,
+    "idProvinsi": 29,
+    "idKabkot": 444,
+    "value": 71159,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.502Z"
+  },
+  {
+    "id": 445,
+    "idProvinsi": 29,
+    "idKabkot": 445,
+    "value": 81413,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.503Z"
+  },
+  {
+    "id": 446,
+    "idProvinsi": 30,
+    "idKabkot": 446,
+    "value": 77007,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.504Z"
+  },
+  {
+    "id": 447,
+    "idProvinsi": 30,
+    "idKabkot": 447,
+    "value": 42948,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.505Z"
+  },
+  {
+    "id": 448,
+    "idProvinsi": 30,
+    "idKabkot": 448,
+    "value": 23720,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.506Z"
+  },
+  {
+    "id": 450,
+    "idProvinsi": 30,
+    "idKabkot": 450,
+    "value": 204670,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.507Z"
+  },
+  {
+    "id": 451,
+    "idProvinsi": 30,
+    "idKabkot": 451,
+    "value": 93974,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.508Z"
+  },
+  {
+    "id": 452,
+    "idProvinsi": 31,
+    "idKabkot": 452,
+    "value": 85517,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.509Z"
+  },
+  {
+    "id": 453,
+    "idProvinsi": 31,
+    "idKabkot": 453,
+    "value": 46831,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.509Z"
+  },
+  {
+    "id": 454,
+    "idProvinsi": 31,
+    "idKabkot": 454,
+    "value": 291803,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.510Z"
+  },
+  {
+    "id": 455,
+    "idProvinsi": 31,
+    "idKabkot": 455,
+    "value": 54002,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.511Z"
+  },
+  {
+    "id": 456,
+    "idProvinsi": 31,
+    "idKabkot": 456,
+    "value": 88114,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.512Z"
+  },
+  {
+    "id": 457,
+    "idProvinsi": 31,
+    "idKabkot": 457,
+    "value": 85440,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.513Z"
+  },
+  {
+    "id": 458,
+    "idProvinsi": 31,
+    "idKabkot": 458,
+    "value": 135540,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.513Z"
+  },
+  {
+    "id": 459,
+    "idProvinsi": 31,
+    "idKabkot": 459,
+    "value": 63857,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.514Z"
+  },
+  {
+    "id": 460,
+    "idProvinsi": 31,
+    "idKabkot": 460,
+    "value": 244009,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.515Z"
+  },
+  {
+    "id": 461,
+    "idProvinsi": 31,
+    "idKabkot": 461,
+    "value": 81802,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.515Z"
+  },
+  {
+    "id": 462,
+    "idProvinsi": 31,
+    "idKabkot": 462,
+    "value": 60745,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.516Z"
+  },
+  {
+    "id": 463,
+    "idProvinsi": 32,
+    "idKabkot": 463,
+    "value": 38074,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.517Z"
+  },
+  {
+    "id": 464,
+    "idProvinsi": 32,
+    "idKabkot": 464,
+    "value": 32149,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.518Z"
+  },
+  {
+    "id": 465,
+    "idProvinsi": 32,
+    "idKabkot": 465,
+    "value": 74816,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.518Z"
+  },
+  {
+    "id": 467,
+    "idProvinsi": 32,
+    "idKabkot": 467,
+    "value": 48412,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.520Z"
+  },
+  {
+    "id": 468,
+    "idProvinsi": 32,
+    "idKabkot": 468,
+    "value": 105568,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.521Z"
+  },
+  {
+    "id": 469,
+    "idProvinsi": 32,
+    "idKabkot": 469,
+    "value": 134590,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.521Z"
+  },
+  {
+    "id": 470,
+    "idProvinsi": 32,
+    "idKabkot": 470,
+    "value": 54121,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.522Z"
+  },
+  {
+    "id": 471,
+    "idProvinsi": 32,
+    "idKabkot": 471,
+    "value": 105681,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.523Z"
+  },
+  {
+    "id": 472,
+    "idProvinsi": 32,
+    "idKabkot": 472,
+    "value": 62655,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.524Z"
+  },
+  {
+    "id": 473,
+    "idProvinsi": 33,
+    "idKabkot": 473,
+    "value": 45387,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.524Z"
+  },
+  {
+    "id": 474,
+    "idProvinsi": 33,
+    "idKabkot": 474,
+    "value": 60725,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.525Z"
+  },
+  {
+    "id": 475,
+    "idProvinsi": 33,
+    "idKabkot": 475,
+    "value": 18887,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.526Z"
+  },
+  {
+    "id": 476,
+    "idProvinsi": 33,
+    "idKabkot": 476,
+    "value": 34130,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.527Z"
+  },
+  {
+    "id": 477,
+    "idProvinsi": 33,
+    "idKabkot": 477,
+    "value": 11550,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.527Z"
+  },
+  {
+    "id": 478,
+    "idProvinsi": 33,
+    "idKabkot": 478,
+    "value": 11898,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.528Z"
+  },
+  {
+    "id": 479,
+    "idProvinsi": 33,
+    "idKabkot": 479,
+    "value": 6780,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.529Z"
+  },
+  {
+    "id": 480,
+    "idProvinsi": 33,
+    "idKabkot": 480,
+    "value": 10491,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.530Z"
+  },
+  {
+    "id": 1,
+    "idProvinsi": 1,
+    "idKabkot": 1,
+    "value": 123472,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.134Z"
+  },
+  {
+    "id": 4,
+    "idProvinsi": 1,
+    "idKabkot": 4,
+    "value": 57194,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.138Z"
+  },
+  {
+    "id": 21,
+    "idProvinsi": 1,
+    "idKabkot": 21,
+    "value": 116501,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.151Z"
+  },
+  {
+    "id": 38,
+    "idProvinsi": 2,
+    "idKabkot": 38,
+    "value": 87382,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.166Z"
+  },
+  {
+    "id": 55,
+    "idProvinsi": 2,
+    "idKabkot": 55,
+    "value": 103688,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.181Z"
+  },
+  {
+    "id": 72,
+    "idProvinsi": 3,
+    "idKabkot": 72,
+    "value": 58666,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.197Z"
+  },
+  {
+    "id": 89,
+    "idProvinsi": 5,
+    "idKabkot": 89,
+    "value": 147073,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.211Z"
+  },
+  {
+    "id": 106,
+    "idProvinsi": 6,
+    "idKabkot": 106,
+    "value": 104290,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.226Z"
+  },
+  {
+    "id": 121,
+    "idProvinsi": 7,
+    "idKabkot": 121,
+    "value": 261686,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.238Z"
+  },
+  {
+    "id": 124,
+    "idProvinsi": 7,
+    "idKabkot": 124,
+    "value": 474069,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.241Z"
+  },
+  {
+    "id": 141,
+    "idProvinsi": 9,
+    "idKabkot": 141,
+    "value": 672383,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.255Z"
+  },
+  {
+    "id": 158,
+    "idProvinsi": 11,
+    "idKabkot": 158,
+    "value": 2016695,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.269Z"
+  },
+  {
+    "id": 175,
+    "idProvinsi": 12,
+    "idKabkot": 175,
+    "value": 294365,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.282Z"
+  },
+  {
+    "id": 192,
+    "idProvinsi": 13,
+    "idKabkot": 192,
+    "value": 749748,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.296Z"
+  },
+  {
+    "id": 209,
+    "idProvinsi": 13,
+    "idKabkot": 209,
+    "value": 902433,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.310Z"
+  },
+  {
+    "id": 226,
+    "idProvinsi": 14,
+    "idKabkot": 226,
+    "value": 215639,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.324Z"
+  },
+  {
+    "id": 241,
+    "idProvinsi": 15,
+    "idKabkot": 241,
+    "value": 885018,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.336Z"
+  },
+  {
+    "id": 244,
+    "idProvinsi": 15,
+    "idKabkot": 244,
+    "value": 1174015,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.338Z"
+  },
+  {
+    "id": 261,
+    "idProvinsi": 15,
+    "idKabkot": 261,
+    "value": 810498,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.352Z"
+  },
+  {
+    "id": 278,
+    "idProvinsi": 17,
+    "idKabkot": 278,
+    "value": 213415,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.366Z"
+  },
+  {
+    "id": 295,
+    "idProvinsi": 19,
+    "idKabkot": 295,
+    "value": 168773,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.380Z"
+  },
+  {
+    "id": 312,
+    "idProvinsi": 19,
+    "idKabkot": 312,
+    "value": 154349,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.395Z"
+  },
+  {
+    "id": 329,
+    "idProvinsi": 21,
+    "idKabkot": 329,
+    "value": 222092,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.409Z"
+  },
+  {
+    "id": 346,
+    "idProvinsi": 22,
+    "idKabkot": 346,
+    "value": 99093,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.423Z"
+  },
+  {
+    "id": 361,
+    "idProvinsi": 23,
+    "idKabkot": 361,
+    "value": 493839,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.436Z"
+  },
+  {
+    "id": 364,
+    "idProvinsi": 23,
+    "idKabkot": 364,
+    "value": 25821,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.438Z"
+  },
+  {
+    "id": 381,
+    "idProvinsi": 25,
+    "idKabkot": 381,
+    "value": 51169,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.452Z"
+  },
+  {
+    "id": 398,
+    "idProvinsi": 26,
+    "idKabkot": 398,
+    "value": 102857,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.467Z"
+  },
+  {
+    "id": 415,
+    "idProvinsi": 27,
+    "idKabkot": 415,
+    "value": 254256,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.480Z"
+  },
+  {
+    "id": 432,
+    "idProvinsi": 28,
+    "idKabkot": 432,
+    "value": 890149,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.493Z"
+  },
+  {
+    "id": 449,
+    "idProvinsi": 30,
+    "idKabkot": 449,
+    "value": 40941,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.506Z"
+  },
+  {
+    "id": 466,
+    "idProvinsi": 32,
+    "idKabkot": 466,
+    "value": 51169,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.519Z"
+  },
+  {
+    "id": 481,
+    "idProvinsi": 33,
+    "idKabkot": 481,
+    "value": 118409,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.531Z"
+  },
+  {
+    "id": 482,
+    "idProvinsi": 34,
+    "idKabkot": 482,
+    "value": 54071,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.531Z"
+  },
+  {
+    "id": 483,
+    "idProvinsi": 34,
+    "idKabkot": 483,
+    "value": 39884,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.532Z"
+  },
+  {
+    "id": 484,
+    "idProvinsi": 34,
+    "idKabkot": 484,
+    "value": 127845,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.533Z"
+  },
+  {
+    "id": 485,
+    "idProvinsi": 34,
+    "idKabkot": 485,
+    "value": 24573,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.533Z"
+  },
+  {
+    "id": 486,
+    "idProvinsi": 34,
+    "idKabkot": 486,
+    "value": 29128,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.534Z"
+  },
+  {
+    "id": 487,
+    "idProvinsi": 34,
+    "idKabkot": 487,
+    "value": 51331,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.535Z"
+  },
+  {
+    "id": 488,
+    "idProvinsi": 34,
+    "idKabkot": 488,
+    "value": 26786,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.536Z"
+  },
+  {
+    "id": 489,
+    "idProvinsi": 35,
+    "idKabkot": 489,
+    "value": 159878,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.536Z"
+  },
+  {
+    "id": 490,
+    "idProvinsi": 35,
+    "idKabkot": 490,
+    "value": 126772,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.537Z"
+  },
+  {
+    "id": 491,
+    "idProvinsi": 35,
+    "idKabkot": 491,
+    "value": 26436,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.538Z"
+  },
+  {
+    "id": 492,
+    "idProvinsi": 35,
+    "idKabkot": 492,
+    "value": 68224,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.539Z"
+  },
+  {
+    "id": 493,
+    "idProvinsi": 35,
+    "idKabkot": 493,
+    "value": 61300,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.540Z"
+  },
+  {
+    "id": 494,
+    "idProvinsi": 35,
+    "idKabkot": 494,
+    "value": 165402,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.540Z"
+  },
+  {
+    "id": 495,
+    "idProvinsi": 36,
+    "idKabkot": 495,
+    "value": 61052,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.541Z"
+  },
+  {
+    "id": 496,
+    "idProvinsi": 36,
+    "idKabkot": 496,
+    "value": 232661,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.542Z"
+  },
+  {
+    "id": 497,
+    "idProvinsi": 36,
+    "idKabkot": 497,
+    "value": 33261,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.543Z"
+  },
+  {
+    "id": 498,
+    "idProvinsi": 36,
+    "idKabkot": 498,
+    "value": 21406,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.543Z"
+  },
+  {
+    "id": 499,
+    "idProvinsi": 36,
+    "idKabkot": 499,
+    "value": 34544,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.544Z"
+  },
+  {
+    "id": 500,
+    "idProvinsi": 36,
+    "idKabkot": 500,
+    "value": 87598,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.545Z"
+  },
+  {
+    "id": 501,
+    "idProvinsi": 36,
+    "idKabkot": 501,
+    "value": 35747,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.546Z"
+  },
+  {
+    "id": 502,
+    "idProvinsi": 36,
+    "idKabkot": 502,
+    "value": 45470,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.546Z"
+  },
+  {
+    "id": 503,
+    "idProvinsi": 37,
+    "idKabkot": 503,
+    "value": 59160,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.547Z"
+  },
+  {
+    "id": 504,
+    "idProvinsi": 37,
+    "idKabkot": 504,
+    "value": 109850,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.548Z"
+  },
+  {
+    "id": 505,
+    "idProvinsi": 37,
+    "idKabkot": 505,
+    "value": 59814,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.549Z"
+  },
+  {
+    "id": 506,
+    "idProvinsi": 37,
+    "idKabkot": 506,
+    "value": 48704,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.550Z"
+  },
+  {
+    "id": 507,
+    "idProvinsi": 38,
+    "idKabkot": 507,
+    "value": 74863,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.550Z"
+  },
+  {
+    "id": 508,
+    "idProvinsi": 38,
+    "idKabkot": 508,
+    "value": 96818,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.551Z"
+  },
+  {
+    "id": 509,
+    "idProvinsi": 38,
+    "idKabkot": 509,
+    "value": 27758,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.552Z"
+  },
+  {
+    "id": 510,
+    "idProvinsi": 38,
+    "idKabkot": 510,
+    "value": 29446,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.552Z"
+  },
+  {
+    "id": 511,
+    "idProvinsi": 38,
+    "idKabkot": 511,
+    "value": 62138,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.553Z"
+  },
+  {
+    "id": 512,
+    "idProvinsi": 38,
+    "idKabkot": 512,
+    "value": 23647,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.554Z"
+  },
+  {
+    "id": 513,
+    "idProvinsi": 38,
+    "idKabkot": 513,
+    "value": 15417,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.555Z"
+  },
+  {
+    "id": 514,
+    "idProvinsi": 38,
+    "idKabkot": 514,
+    "value": 146333,
+    "isActive": true,
+    "createdAt": "2023-11-21T14:23:47.238Z",
+    "updatedAt": "2023-11-21T14:27:01.555Z"
+  }
+]

@@ -22,3 +22,8 @@ default   io_3003	     surya-ai_3009    test-ninox_3008	      wa-server_3001  wi
 grp_3006  raven-stone2_3000  test-hipmi_3007  test-raven-stone3_3005  webhook_3002`
 
 rubah variable string diatas menjadi json
+
+
+tanggal start dan datanngal end
+nilai akhir disetiap tanggal
+jokowi effect, paslong , 

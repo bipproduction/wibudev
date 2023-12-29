@@ -133,8 +133,8 @@ contoh --positive 50 --negative 40 --neutral 10 --file jokowi.csv -- lock-aud 10
 `)
 }
 
-async function emotion_generator() {
-    const list_audience = await fetch('https://wibudev.wibudev.com/assets/list-audience').then((v) => v.json()).then((v) => v)
+module.exports = async function (p) {
+    const list_audience = await fetch(`${p.url}/bip/json/audience`).then((v) => v.json()).then((v) => v)
 
     const require = {
         "--positive": null,
@@ -191,5 +191,4 @@ async function emotion_generator() {
     console.log(`success file tersimpan dengan nama manipulate_${sub['--file']}`.green)
 }
 
-emotion_generator()
 
