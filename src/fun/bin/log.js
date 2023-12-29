@@ -5,7 +5,6 @@ const loading = require('loading-cli')('loading ...').start()
 module.exports = async function (param) {
     const arg = yargs
         .scriptName('log')
-        .command('show', "munculkan log")
         .option('name', {
             alias: "n",
             string: true,
@@ -13,7 +12,7 @@ module.exports = async function (param) {
         })
         .argv
 
-    if (arg._[1] === "show") {
+    if (arg.name && typeof arg.name === "string") {
         const res = await fetch(`${param.url}/svr2/log`, {
             method: "POST",
             headers: {
