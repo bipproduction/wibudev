@@ -24,7 +24,7 @@ module.exports = function (param) {
         const tm = setTimeout(() => {
             child.kill();
             clearTimeout(tm);
-        }, 4000);
+        }, 2000);
     } else {
         child = spawn('echo', ['proses sedang berjalan']);
     }
