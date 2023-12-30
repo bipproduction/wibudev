@@ -12,7 +12,6 @@ module.exports = async function (param) {
         })
         .argv
 
-    console.log(arg._[1])
     if (arg._[1] !== "start" && arg._[1] !== "stop") {
         return console.log("require command start | stop")
     }
