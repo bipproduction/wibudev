@@ -92,7 +92,7 @@ app.post('/svr/:param?', async (req, res) => {
 })
 
 
-app.post('/svr2/:name?', (req, res) => {
+app.post('/svr2/:name?', async (req, res) => {
     const name = req.params.name ?? null
     const body = req.body
     const _pt = path.join(__dirname, "./svr2")
@@ -105,10 +105,9 @@ app.post('/svr2/:name?', (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
     res.setHeader('Cache-Control', 'no-cache');
 
-    const child = require(`${_pt}/${file}`)(body)
-    child.stdout.pipe(res)
+    const child = await (require(`${_pt}/${file}`))(body)
     child.stderr.pipe(res)
-
+    child.stdout.pipe(res)
 })
 
 

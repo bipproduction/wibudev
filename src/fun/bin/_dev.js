@@ -51,7 +51,6 @@ module.exports = async function (param) {
         loading.stop()
         const res = await fetch('https://wibudev.wibudev.com/val/runing-app')
 
-        
         const data = (await res.json()).data
         console.log(columnify(data.map((v, k) => ({ no: k + 1, name: v.name, status: v.pm2_env.status }))))
         return
