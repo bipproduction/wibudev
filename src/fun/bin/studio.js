@@ -1,4 +1,5 @@
 const yargs = require('yargs')
+const loading = require('loading-cli')('studio loading ...').start()
 module.exports = async function (param) {
 
     const arg = yargs
@@ -13,11 +14,12 @@ module.exports = async function (param) {
         .argv
 
     if (arg._[1] !== "start" && arg._[1] !== "stop") {
+        loading.stop()
         return console.log("require command start | stop")
     }
 
     if (arg.name && typeof arg.name === "string") {
-
+        loading.stop()
         const res = await fetch(`${param.url}/svr2/studio`, {
             method: "POST",
             headers: {
@@ -37,6 +39,7 @@ module.exports = async function (param) {
         return
     }
 
+    loading.stop()
     yargs.showHelp()
 
 
