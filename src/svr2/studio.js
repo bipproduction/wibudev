@@ -36,7 +36,8 @@ module.exports = async function (param) {
     }
 
     if (param['stop']) {
-        return spawn("/bin/bash", ["-c", `pm2 stop ${app.name}_${app.studio_port}`])
+        spawn("/bin/bash", ["-c", `pm2 stop ${app.name}_${app.studio_port}`])
+        return spawn("echo", ['success'])
     }
 
 
