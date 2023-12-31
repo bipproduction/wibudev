@@ -26,12 +26,12 @@ module.exports = async function (param) {
             const pt = path.join(__dirname, `./../../../${app.name}`)
             if (!fs.existsSync(pt)) return spawn("echo", ['project not found'])
             spawn("/bin/bash", ['-c', `cd ${pt} && pm2 start "npx prisma studio --port ${app.studio_port}" --name "${app.name}_${app.studio_port}" `])
-            return spawn("echo", [`echo "http://${ip}:${app.studio_port}"'`])
+            return spawn("echo", [`"http://${ip}:${app.studio_port}"'`])
         }
 
         if (run_app && app) {
             spawn("/bin/bash", ["-c", `pm2 restart "${app.name}_${app.studio_port}"`])
-            return spawn("echo", [`echo "http://${ip}:${app.studio_port}"`])
+            return spawn("echo", [`"http://${ip}:${app.studio_port}"`])
         }
     }
 
