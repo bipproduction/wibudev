@@ -5,6 +5,7 @@ const fs = require('fs')
 var child = null;
 var waktu = null;
 var tm = null;
+const ip = require('ip').address()
 
 module.exports = async function (param) {
 
@@ -24,11 +25,11 @@ module.exports = async function (param) {
         if (!run_app && app) {
             const pt = path.join(__dirname, `./../../../${app.name}`)
             if (!fs.existsSync(pt)) return spawn("echo", ['project not found'])
-            return spawn("/bin/bash", ['-c', `cd ${pt} && pm2 start "npx prisma studio --port ${app.studio_port}" --name "${app.name}_${app.studio_port}"`])
+            return spawn("/bin/bash", ['-c', `cd ${pt} && pm2 start "npx prisma studio --port ${app.studio_port}" --name "${app.name}_${app.studio_port}" && echo "http://${ip}:${app.studio_port}"`])
         }
 
         if (run_app && app) {
-            return spawn("/bin/bash", ["-c", `pm2 restart "${app.name}_${app.studio_port}"`])
+            return spawn("/bin/bash", ["-c", `pm2 restart "${app.name}_${app.studio_port}" && echo "http://${ip}:${app.studio_port}"`])
         }
     }
 
