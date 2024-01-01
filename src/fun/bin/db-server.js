@@ -4,12 +4,15 @@ const { box } = require('teeti')
 require('colors')
 const { execSync } = require('child_process')
 const loading = require('loading-cli')('loading ...').start()
+const _ = require('lodash')
+
 module.exports = async function (param) {
-    const arg = yargs
+    let arg = yargs
         .command("list", "melihat list yang tersedia di server")
         .scriptName("db-server")
         .command("export", "export database dari posgre dan ditempatkan pada list")
         .command("download", "mendownload hasil dari export")
+        .command('db-name ', 'melihat nama database jika ada')
         .option("db-name", {
             description: "nama database",
             alias: "d",
@@ -18,6 +21,11 @@ module.exports = async function (param) {
         .option("file-name", {
             description: "nama file contoh [hipmi]",
             alias: "f",
+            string: true
+        })
+        .option('app-name', {
+            alias: "a",
+            description: "nama app",
             string: true
         })
         .parse()
@@ -78,6 +86,15 @@ module.exports = async function (param) {
         if (!arg.fileName) return console.log(box("require file-name"))
         execSync(`curl ${param.url}/db-download/${arg.fileName} --output ${arg.fileName}`, { stdio: "inherit" })
         console.log(box(`file save as ${arg.fileName}`).green)
+        return
+    }
+
+    if (arg._[1] === "db-name") {
+        loading.stop()
+        yargs.demandOption("app-name").parse()
+        const res = await fetch(`${param.url}/val/${arg._[1]}?appName=${arg.appName}`)
+        console.log(await res.text())
+
         return
     }
 

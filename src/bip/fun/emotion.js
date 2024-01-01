@@ -177,7 +177,6 @@ module.exports = async function (p) {
 
     const _total = _.sum([_positive, _negative, _neutral])
 
-
     const _per = {
         positive: _.round((_positive / _total) * 100, 2),
         negative: _.round((_negative / _total) * 100, 2),

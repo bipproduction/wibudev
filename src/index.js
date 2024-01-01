@@ -123,11 +123,12 @@ app.get('/db-download/:name?', (req, res) => {
 
 app.get('/val/:name?', async (req, res) => {
     const name = req.params.name
+    const q = req.query
     if (!name || name === "") return res.json({ success: false, message: 404, data: null })
     const _pt = path.join(__dirname, "./val")
     const ada = fs.existsSync(`${_pt}/${name}.js`)
     if (!ada) return res.json({ success: false, message: "no file", data: null })
-    const fl = await (require(`${_pt}/${name}.js`)())
+    const fl = await (require(`${_pt}/${name}.js`)(q))
     return res.json({
         success: true,
         message: "success",
