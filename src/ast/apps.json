@@ -130,5 +130,17 @@
             "start": "pm2 start \"yarn start --port 3010\" --name chat_3010",
             "restart": "pm2 restart chat_3010"
         }
+    },
+    {
+        "id": "ninox-fox_3011",
+        "name": "ninox-fox",
+        "port": "3011",
+        "type": "nextjs",
+        "branch": "build",
+        "studio_port": "5011",
+        "script": {
+            "start": "pm2 start \"yarn start --port 3011\" --name ninox-fox_3011",
+            "restart": "pm2 restart ninox-fox_3011"
+        }
     }
 ]
