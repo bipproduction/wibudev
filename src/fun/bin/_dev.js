@@ -6,57 +6,49 @@ const { box } = require('teeti')
 const { execSync } = require('child_process')
 // const pm2_app = require("../../models/pm2_app")
 require('colors')
-const loading = require('loading-cli')('loading ...').start()
+const loading = require('loading-cli')('loading ...').stop()
 
 module.exports = async function (param) {
+
     const apps = param.apps.map((v) => ({ ..._.omit(v, ['script']) }))
 
-    const arg = yargs
+    yargs
         .scriptName("_dev")
-        .command("list-app", "ini list app")
-        .command('set-host', "set developer")
-        .command('list-server', 'melihat list server')
-        .command('runing-app', 'melihat app yang sedang berjalan')
-        .option('host-name', {
-            alias: "h",
-            string: true
-        })
+        .command("list-app", "ini list app", yargs => yargs, arg => console.log(columnify(apps).gray))
+        .command('set-host', "set developer", yargs => yargs
+            .option("host-name", {
+                alias: "h",
+                string: true,
+                desc: "nama dev",
+                demandOption: true
+            }), arg => setHost(arg, param))
+        .command('list-server', 'melihat list server', yargs => yargs, listServer)
+        .command('runing-app', 'melihat app yang sedang berjalan', yargs => yargs, runningApp)
         .version("1.0.0")
-        .argv
+        .demandCommand(1, "minimal masukkan satu command")
+        .recommendCommands()
+        .help()
+        .epilog("gunakan $0 <command> --help untuk melihat property option")
+        .parse(process.argv.slice(3))
 
-    if (arg._[1] === "list-app") {
-        loading.stop()
-        console.log(columnify(apps).gray)
-        return
-    }
-
-    if (arg._[1] === "set-host") {
-        loading.stop()
-        if (!arg.hostName) return console.log(box("require host-name").yellow)
-        const res = await fetch(`${param.url_pro}/config?host_name=${arg.hostName}`)
-        const data = await res.json()
-        console.log(box(data.host_name).green)
-        return
-    }
-
-    if (arg._[1] === "list-server") {
-        loading.stop()
-        const res = await fetch('https://wibudev.wibudev.com/val/list-server')
-        const data = await res.json()
-        console.log(columnify(_.sortBy(data.data, "port")))
-        return
-    }
-
-    if (arg._[1] === "runing-app") {
-        loading.stop()
-        const res = await fetch('https://wibudev.wibudev.com/val/runing-app')
-
-        const data = (await res.json()).data
-        console.log(columnify(data.map((v, k) => ({ no: k + 1, name: v.name, status: v.pm2_env.status }))))
-        return
-    }
-
-    loading.stop()
-    yargs.showHelp()
 }
+
+async function setHost(arg, param) {
+    const res = await fetch(`${param.url_pro}/config?host_name=${arg.hostName}`)
+    const data = await res.json()
+    console.log(box(data.host_name).green)
+}
+
+async function listServer(arg) {
+    const res = await fetch('https://wibudev.wibudev.com/val/list-server')
+    const data = await res.json()
+    console.log(columnify(_.sortBy(data.data, "port")))
+}
+
+async function runningApp(arg) {
+    const res = await fetch('https://wibudev.wibudev.com/val/runing-app')
+    const data = (await res.json()).data
+    console.log(columnify(data.map((v, k) => ({ no: k + 1, name: v.name, status: v.pm2_env.status }))))
+}
+
 
