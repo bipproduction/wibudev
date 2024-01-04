@@ -2,7 +2,6 @@ const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 const _ = require('lodash')
 const yargs = require('yargs')
-const columnify = require('columnify')
 const { execSync, exec, spawn } = require('child_process')
 const path = require('path')
 require('colors')
@@ -13,7 +12,7 @@ module.exports = async function (param) {
     loading.stop()
     yargs
         .scriptName("raven")
-        .command("lp", "menampilkan list paslon", yargs => yargs, listPaslon)
+        // .command("lp", "menampilkan list paslon", yargs => yargs, listPaslon)
         .command("cal", "menampilkan calendar", yargs => yargs
             .option({
                 "month": {
@@ -27,7 +26,7 @@ module.exports = async function (param) {
                     desc: "date"
                 }
             }), (arg) => cal(arg, param))
-        .command("mpe", `manipulate paslon emotion`, yargs => yargs
+        .command("mpe", `manipulate paslon emotion, mengkopi dari tanggal source lalu dimanipulasi dan di terapkan ke tanggal target`, yargs => yargs
             .options({
                 "from": {
                     alias: "f",
@@ -76,7 +75,7 @@ module.exports = async function (param) {
             .epilog("negative, positive, neutral total harus bernilai 100")
             , arg => mpe(arg, param)
         )
-        .command("mpeh", "manipulate paslon by time", yargs => yargs
+        .command("mpeh", "manipulate paslon by time, atau berdasarkan jam, dan tanggal bebas", yargs => yargs
             .options({
                 "date-from": {
                     alias: "d",
@@ -194,88 +193,88 @@ async function mpeh(arg, param) {
     console.log(text)
 }
 
-async function generate(file_json, param) {
-    const list_audience = await fetch(`https://wibudev.wibudev.com/bip/json/audience`).then((v) => v.json()).then((v) => v)
+// async function generate(file_json, param) {
+//     const list_audience = await fetch(`https://wibudev.wibudev.com/bip/json/audience`).then((v) => v.json()).then((v) => v)
 
-    const hasil = []
-    for (let fj of file_json) {
-        const gen = perhitungan(param, fj, list_audience)
-        hasil.push(gen)
-    }
+//     const hasil = []
+//     for (let fj of file_json) {
+//         const gen = perhitungan(param, fj, list_audience)
+//         hasil.push(gen)
+//     }
 
-    const _positive = +_.sum([_.sumBy(hasil, (v) => v.confidence), _.sumBy(hasil, (v) => v.supportive), _.sumBy(hasil, (v) => v.positive)])
-    const _negative = +_.sum([_.sumBy(hasil, (v) => v.unsupportive), _.sumBy(hasil, (v) => v.uncomfortable), _.sumBy(hasil, (v) => v.negative), _.sumBy(hasil, (v) => v.dissapproval)])
-    const _neutral = +_.sum([_.sumBy(hasil, (v) => v.undecided)])
+//     const _positive = +_.sum([_.sumBy(hasil, (v) => v.confidence), _.sumBy(hasil, (v) => v.supportive), _.sumBy(hasil, (v) => v.positive)])
+//     const _negative = +_.sum([_.sumBy(hasil, (v) => v.unsupportive), _.sumBy(hasil, (v) => v.uncomfortable), _.sumBy(hasil, (v) => v.negative), _.sumBy(hasil, (v) => v.dissapproval)])
+//     const _neutral = +_.sum([_.sumBy(hasil, (v) => v.undecided)])
 
-    const _total = _.sum([_positive, _negative, _neutral])
+//     const _total = _.sum([_positive, _negative, _neutral])
 
-    const _per = {
-        positive: _.round((_positive / _total) * 100, 2),
-        negative: _.round((_negative / _total) * 100, 2),
-        neutral: _.round((_neutral / _total) * 100, 2)
-    }
+//     const _per = {
+//         positive: _.round((_positive / _total) * 100, 2),
+//         negative: _.round((_negative / _total) * 100, 2),
+//         neutral: _.round((_neutral / _total) * 100, 2)
+//     }
 
-    return hasil
-}
+//     return hasil
+// }
 
-function perhitungan(param, data, list_audience) {
+// function perhitungan(param, data, list_audience) {
 
-    const total = list_audience.find((v) => +v.idProvinsi === +data.idProvinsi && +v.idKabkot === +data.idKabkot).value
-    const result = {}
-    result.positive = (param.positive / 100) * total;
-    result.negative = (param.negative / 100) * total;
-    result.neutral = (param.neutral / 100) * total;
+//     const total = list_audience.find((v) => +v.idProvinsi === +data.idProvinsi && +v.idKabkot === +data.idKabkot).value
+//     const result = {}
+//     result.positive = (param.positive / 100) * total;
+//     result.negative = (param.negative / 100) * total;
+//     result.neutral = (param.neutral / 100) * total;
 
-    function acak3() {
-        var ttl = 100;
-        const nil1 = _.random(1, ttl);
-        ttl -= nil1;
-        const nil2 = _.random(1, ttl);
-        const nil3 = ttl - nil2;
-        const hasil = [nil1, nil2, nil3];
-        const isNegativeOrZero = _.some(hasil, value => value <= 5);
-        if (isNegativeOrZero) return acak3()
-        return hasil
-    }
+//     function acak3() {
+//         var ttl = 100;
+//         const nil1 = _.random(1, ttl);
+//         ttl -= nil1;
+//         const nil2 = _.random(1, ttl);
+//         const nil3 = ttl - nil2;
+//         const hasil = [nil1, nil2, nil3];
+//         const isNegativeOrZero = _.some(hasil, value => value <= 5);
+//         if (isNegativeOrZero) return acak3()
+//         return hasil
+//     }
 
-    function acak4() {
-        var ttl = 100;
-        const nil1 = _.random(1, ttl);
-        ttl -= nil1;
-        const nil2 = _.random(1, ttl);
-        ttl -= nil2;
-        const nil3 = _.random(1, ttl);
-        const nil4 = ttl - nil3
-        const hasil = [nil1, nil2, nil3, nil4];
-        const isNegativeOrZero = _.some(hasil, value => value <= 5);
-        if (isNegativeOrZero) return acak4()
-        return hasil
-    }
+//     function acak4() {
+//         var ttl = 100;
+//         const nil1 = _.random(1, ttl);
+//         ttl -= nil1;
+//         const nil2 = _.random(1, ttl);
+//         ttl -= nil2;
+//         const nil3 = _.random(1, ttl);
+//         const nil4 = ttl - nil3
+//         const hasil = [nil1, nil2, nil3, nil4];
+//         const isNegativeOrZero = _.some(hasil, value => value <= 5);
+//         if (isNegativeOrZero) return acak4()
+//         return hasil
+//     }
 
-    const acak_positive = acak3()
-    const acak_negative = acak4()
+//     const acak_positive = acak3()
+//     const acak_negative = acak4()
 
-    const nil_positive = {
-        "confidence": _.round((acak_positive[0] / 100) * result.positive),
-        "supportive": _.round((acak_positive[1] / 100) * result.positive),
-        "positive": _.round((acak_positive[2] / 100) * result.positive),
-    }
+//     const nil_positive = {
+//         "confidence": _.round((acak_positive[0] / 100) * result.positive),
+//         "supportive": _.round((acak_positive[1] / 100) * result.positive),
+//         "positive": _.round((acak_positive[2] / 100) * result.positive),
+//     }
 
-    const nil_negative = {
-        "unsupportive": _.round((acak_negative[0] / 100) * result.negative),
-        "uncomfortable": _.round((acak_negative[1] / 100) * result.negative),
-        "negative": _.round((acak_negative[2] / 100) * result.negative),
-        "dissapproval": _.round((acak_negative[3] / 100) * result.negative),
-    }
+//     const nil_negative = {
+//         "unsupportive": _.round((acak_negative[0] / 100) * result.negative),
+//         "uncomfortable": _.round((acak_negative[1] / 100) * result.negative),
+//         "negative": _.round((acak_negative[2] / 100) * result.negative),
+//         "dissapproval": _.round((acak_negative[3] / 100) * result.negative),
+//     }
 
-    const nil_neutral = {
-        "undecided": _.round(_.random((94 / 100) * _.round(result.neutral), (99 / 100) * _.round(result.neutral)))
-    }
+//     const nil_neutral = {
+//         "undecided": _.round(_.random((94 / 100) * _.round(result.neutral), (99 / 100) * _.round(result.neutral)))
+//     }
 
-    var hasil_nil = { ...nil_positive, ...nil_neutral, ...nil_negative }
+//     var hasil_nil = { ...nil_positive, ...nil_neutral, ...nil_negative }
 
-    return {
-        ...data,
-        ...hasil_nil
-    }
-}
+//     return {
+//         ...data,
+//         ...hasil_nil
+//     }
+// }
