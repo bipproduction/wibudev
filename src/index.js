@@ -143,11 +143,18 @@ app.post('/upload/:name?', (req, res) => {
         message: "name please"
     })
 
-    const body = req.body
-    fs.writeFileSync(`${path.join(__dirname, "./db_backup")}/${body.file_name}`, Buffer.from(body.data, "utf-8"))
-    res.json({
-        success: true,
-        message: "apa kabar"
+    if (name === "db") {
+        const body = req.body
+        fs.writeFileSync(`${path.join(__dirname, "./db_backup")}/${body.file_name}`, Buffer.from(body.data, "utf-8"))
+        return res.json({
+            success: true,
+            message: "apa kabar"
+        })
+    }
+
+    return res.json({
+        success: false,
+        mesage: "option upload name belum ada"
     })
 })
 
