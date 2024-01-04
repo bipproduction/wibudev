@@ -130,7 +130,7 @@ async function funUpload(arg, param) {
 
     // filenya adalah postgres file.dump
     const file = fs.readFileSync(arg.fileName)
-    await fetch(`${param.url}/upload/db`, {
+    const res = await fetch(`${param.url}/upload/db`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -140,6 +140,9 @@ async function funUpload(arg, param) {
             data: file.toString("utf-8")
         })
     })
+
+    const result = await res.json()
+    console.log(result)
 
     // const child = spawn('/bin/bash', ['-c', `curl -s -X POST -H "Content-Type: multipart/form-data" -F "file=@${arg.fileName}" ${param.url}/upload/db`])
     // child.stdout.on("data", data => console.log(data.toString()))

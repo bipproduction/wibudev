@@ -148,7 +148,7 @@ app.post('/upload/:name?', (req, res) => {
         fs.writeFileSync(`${path.join(__dirname, "./db_backup")}/${body.file_name}`, Buffer.from(body.data, "utf-8"))
         return res.json({
             success: true,
-            message: "apa kabar"
+            message: `success ${body.file_name}`
         })
     }
 
