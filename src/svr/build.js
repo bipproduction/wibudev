@@ -2,7 +2,6 @@ const yargs = require('yargs');
 const { exec, spawn } = require('child_process');
 const path = require('path');
 
-
 ; (async () => {
     const arg = yargs
         .option("name", {
