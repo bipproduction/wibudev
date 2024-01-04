@@ -11,7 +11,7 @@ module.exports = async function (param) {
     yargs(hideBin(process.argv))
         .command([...com])
         .version("1.0.0")
-        .epilog("Beberapa Menu Masih Dalam Pengembangran".gray)
+        .epilog("$0 <command> --help untuk melihat propery options".gray)
         .showHelp()
 
 }

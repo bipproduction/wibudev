@@ -136,6 +136,21 @@ app.get('/val/:name?', async (req, res) => {
     })
 })
 
+app.post('/upload/:name?', (req, res) => {
+    const name = req.params.name
+    if (!name) return res.json({
+        success: false,
+        message: "name please"
+    })
+
+    const body = req.body
+    fs.writeFileSync(`${path.join(__dirname, "./db_backup")}/${body.file_name}`, Buffer.from(body.data, "utf-8"))
+    res.json({
+        success: true,
+        message: "apa kabar"
+    })
+})
+
 
 // BIP
 app.get('/bip/json/:name?', (req, res) => {

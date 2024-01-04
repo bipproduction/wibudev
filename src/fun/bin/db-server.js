@@ -2,9 +2,11 @@ const yargs = require('yargs')
 const { fetch } = require('cross-fetch');
 const { box } = require('teeti')
 require('colors')
-const { execSync } = require('child_process')
+const { execSync, spawn } = require('child_process')
 const loading = require('loading-cli')('loading ...').stop()
 const _ = require('lodash')
+const fs = require('fs')
+require('colors')
 
 module.exports = async function (param) {
     yargs
@@ -53,6 +55,18 @@ module.exports = async function (param) {
                 })
                 .example("$0 -a raven_stone2"),
             argv => funDbName(argv, param)
+        )
+        .command(
+            "upload",
+            "upload file dump dari local ke server",
+            yargs => yargs
+                .option("file-name", {
+                    alias: "f",
+                    desc: "nama filenya",
+                    string: true,
+                    demandOption: true
+                }),
+            argv => funUpload(argv, param)
         )
         .recommendCommands()
         .demandCommand(1, "minimal masukkan satu command")
@@ -108,4 +122,26 @@ async function funDownload(arg, param) {
 async function funDbName(arg, param) {
     const res = await fetch(`${param.url}/val/${arg._[1]}?appName=${arg.appName}`)
     console.log(await res.text())
+}
+
+async function funUpload(arg, param) {
+    const ada_file = fs.existsSync(arg.fileName)
+    if (!ada_file) return console.log(`FILE <${arg.fileName}> GK ADA MONYOG!`.yellow)
+
+    // filenya adalah postgres file.dump
+    const file = fs.readFileSync(arg.fileName)
+    await fetch(`${param.url}/upload/db`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            file_name: arg.fileName,
+            data: file.toString("utf-8")
+        })
+    })
+
+    // const child = spawn('/bin/bash', ['-c', `curl -s -X POST -H "Content-Type: multipart/form-data" -F "file=@${arg.fileName}" ${param.url}/upload/db`])
+    // child.stdout.on("data", data => console.log(data.toString()))
+    // child.stderr.on('data', data => console.log(data.toString()))
 }
