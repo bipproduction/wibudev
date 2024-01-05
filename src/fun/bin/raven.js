@@ -196,6 +196,7 @@ module.exports = async function (param) {
         .showHelpOnFail()
         .recommendCommands()
         .demandCommand(1, 'pilih salah satu command yang tersedia')
+        .epilog("require package yargs columnify loading-cli")
         .help()
         .parse(process.argv.splice(3))
 
