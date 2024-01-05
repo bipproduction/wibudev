@@ -126,6 +126,64 @@ yargs
         })
         .example(`$0 mpeh -d "2023-12-23" -D "2023-12-23" -P 1 -p 20 -n 20 -l 60 -h 15 -H 18`)
         .epilog("negative, positive, neutral total harus bernilai 100"), manipulatePaslonEmotionByHour)
+    .command(
+        "cp",
+        "copy data",
+        yargs => yargs
+            .options({
+                "paslonA": {
+                    alias: "p",
+                    desc: "paslon id A source",
+                    number: true,
+                    demandOption: true
+                },
+                "paslonB": {
+                    alias: "P",
+                    desc: "paslon id B target",
+                    number: true,
+                    demandOption: true
+                },
+                "dateA": {
+                    alias: "d",
+                    desc: "tanggal A source",
+                    string: true,
+                    demandOption: true
+                },
+                "dateB": {
+                    alias: "D",
+                    desc: "tanggal B target",
+                    string: true,
+                    demandOption: true
+                }
+            }),
+        funCopy
+    )
+    .command(
+        "del",
+        "delete paslon enotion",
+        yargs => yargs
+            .options({
+                "date": {
+                    alias: "d",
+                    desc: "tangga",
+                    string: true,
+                    demandOption: true
+                },
+                "paslonId": {
+                    alias: "p",
+                    desc: "paslon id",
+                    string: true,
+                    demandOption: true
+                },
+                "time": {
+                    alias: "t",
+                    desc: "[00] jam nya , jika null maka sesuai tanggal",
+                    default: null,
+                    string: true
+                }
+            }),
+        funDel
+    )
     .showHelpOnFail()
     .recommendCommands()
     .demandCommand(1, 'pilih salah satu command yang tersedia')
@@ -238,6 +296,51 @@ async function manipulatePaslonEmotion(arg) {
     console.log("success".green)
 }
 
+async function funCopy(arg) {
+    console.log(arg.a)
+    const data = await prisma.paslonEmotion.findMany({
+        where: {
+            dateEmotion: new Date(`${arg.d}`),
+            idPaslon: +arg.p,
+        }
+    })
+
+    const result = data.map((v) => ({
+        ..._.omit(v, ['id', 'dateEmotion', 'idPaslon']),
+        dateEmotion: new Date(arg.D),
+        idPaslon: +arg.P
+    }))
+
+    await prisma.paslonEmotion.deleteMany({ where: { dateEmotion: new Date(arg.D), idPaslon: +arg.P } })
+    await prisma.paslonEmotion.createMany({ data: result })
+    loading.stop()
+    console.log("success".green)
+}
+
+async function funDel(arg) {
+    if (arg.t) {
+        console.log("delete with time")
+        const del = await prisma.paslonEmotion.deleteMany({
+            where: {
+                dateEmotion: new Date(arg.d),
+                idPaslon: +arg.p,
+                timeEmotion: new Date(`${arg.d}T${arg.t}:00:00.000Z`),
+            }
+        })
+
+        console.log(del)
+    } else {
+        console.log("delete without time")
+        const del = await prisma.paslonEmotion.deleteMany({
+            where: {
+                dateEmotion: new Date(arg.d),
+                idPaslon: +arg.p
+            }
+        })
+        console.log(del)
+    }
+}
+
 async function generate(file_json, param) {
     const list_audience = await fetch(`https://wibudev.wibudev.com/bip/json/audience`).then((v) => v.json()).then((v) => v)
 
@@ -323,3 +426,5 @@ function perhitungan(param, data, list_audience) {
         ...hasil_nil
     }
 }
+
+

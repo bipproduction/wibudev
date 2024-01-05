@@ -128,6 +128,64 @@ module.exports = async function (param) {
             })
             .example(`$0 mpeh -d "2023-12-23" -D "2023-12-23" -P 1 -p 20 -n 20 -l 60 -h 15 -H 18`)
             .epilog("negative, positive, neutral total harus bernilai 100"), (arg) => mpeh(arg, param))
+        .command(
+            "cp",
+            "copy data",
+            yargs => yargs
+                .options({
+                    "paslonA": {
+                        alias: "p",
+                        desc: "paslon id A source",
+                        number: true,
+                        demandOption: true
+                    },
+                    "paslonB": {
+                        alias: "P",
+                        desc: "paslon id B target",
+                        number: true,
+                        demandOption: true
+                    },
+                    "dateA": {
+                        alias: "d",
+                        desc: "tanggal A source",
+                        string: true,
+                        demandOption: true
+                    },
+                    "dateB": {
+                        alias: "D",
+                        desc: "tanggal B target",
+                        string: true,
+                        demandOption: true
+                    }
+                })
+                .example('$0 cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27'),
+            argv => funCopy(argv, param)
+        )
+        .command(
+            "del",
+            "delete paslon enotion",
+            yargs => yargs
+                .options({
+                    "date": {
+                        alias: "d",
+                        desc: "tangga",
+                        string: true,
+                        demandOption: true
+                    },
+                    "paslonId": {
+                        alias: "p",
+                        desc: "paslon id",
+                        string: true,
+                        demandOption: true
+                    },
+                    "time": {
+                        alias: "t",
+                        desc: "[00] jam nya , jika null maka sesuai tanggal",
+                        default: null,
+                        string: true
+                    }
+                }),
+            argv => funDel(argv, param))
         .showHelpOnFail()
         .recommendCommands()
         .demandCommand(1, 'pilih salah satu command yang tersedia')
@@ -141,9 +199,6 @@ async function cal(arg, param) {
     execSync('cal', { stdio: "inherit" })
 }
 
-async function listPaslon(arg, param) {
-
-}
 
 async function mpe(arg, param) {
     loading.stop()
@@ -191,6 +246,50 @@ async function mpeh(arg, param) {
 
     const text = await res.text()
     console.log(text)
+}
+
+async function funCopy(arg, param) {
+    loading.stop()
+    const res = await fetch(`${param.url}/svr/raven`, {
+        method: "POST",
+        body: JSON.stringify({
+            "cp": "",
+            "-p": arg.p,
+            "-P": arg.P,
+            "-d": arg.d,
+            "-D": arg.D
+        }),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+
+    const text = await res.text()
+    console.log(text)
+}
+
+async function funDel(argv, param) {
+    const res = await permintaan({
+        "del": "",
+        "-d": argv.d,
+        "-p": argv.p,
+        "-t": argv.t
+    }, param)
+
+    console.log(res)
+}
+
+async function permintaan(body, param) {
+    const res = await fetch(`${param.url}/svr/raven`, {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+
+    const text = await res.text()
+    return text
 }
 
 // async function generate(file_json, param) {
