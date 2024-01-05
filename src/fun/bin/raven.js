@@ -77,7 +77,8 @@ module.exports = async function (param) {
                     default: true
                 }
             })
-            .example(`$0 mpe -f "2023-12-23" -t "2024-01-01" -P 1 -p 10 -n 10 -l 80`)
+            .example(`[test] $0 mpe -f "2023-12-23" -t "2024-01-01" -P 1 -p 10 -n 10 -l 80`)
+            .example(`[build] tambahkan T false`)
             .epilog("negative, positive, neutral total harus bernilai 100")
             , arg => mpe(arg, param)
         )
@@ -138,7 +139,8 @@ module.exports = async function (param) {
                     default: true
                 }
             })
-            .example(`$0 mpeh -d "2023-12-23" -D "2023-12-23" -P 1 -p 20 -n 20 -l 60 -h 15 -H 18`)
+            .example(`[test] $0 mpeh -d "2023-12-23" -D "2023-12-23" -P 1 -p 20 -n 20 -l 60 -h 15 -H 18`)
+            .example(`[build] tambahkan T false`)
             .epilog("negative, positive, neutral total harus bernilai 100"), (arg) => mpeh(arg, param))
         .command(
             "cp",
@@ -209,7 +211,10 @@ module.exports = async function (param) {
                         desc: "default pada app branch test ?? build",
                         default: true
                     }
-                }),
+                })
+                .example(`[test] $0 del -d 2023-12-22 -p 1`)
+                .example(`[del by time / jam] $0 del -d 2023-12-22 -p 1 -t 10 `)
+                .example(`[build] tambahkan T false`),
             argv => funDel(argv, param))
         .showHelpOnFail()
         .recommendCommands()
