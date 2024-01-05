@@ -164,7 +164,8 @@ module.exports = async function (param) {
                         default: true
                     }
                 })
-                .example('$0 cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27'),
+                .example('[build branch] $0 cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27')
+                .example(`[test branch] raven cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27 -t false`),
             argv => funCopy(argv, param)
         )
         .command(
