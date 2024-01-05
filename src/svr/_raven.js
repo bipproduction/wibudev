@@ -1,3 +1,4 @@
+require('child_process').execSync(`package_name="yargs" && [ ! -d "node_modules/$package_name" ] && yarn add "$package_name"`)
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 const _ = require('lodash')
@@ -303,7 +304,7 @@ async function manipulatePaslonEmotion(arg) {
 }
 
 async function funCopy(arg) {
-    
+
     const data = await prisma.paslonEmotion.findMany({
         where: {
             dateEmotion: new Date(`${arg.d}`),
