@@ -1,5 +1,4 @@
-const { PrismaClient } = require('@prisma/client')
-const prisma = new PrismaClient()
+
 const _ = require('lodash')
 const yargs = require('yargs')
 const { execSync, exec, spawn } = require('child_process')
