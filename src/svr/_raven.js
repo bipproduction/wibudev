@@ -154,6 +154,12 @@ yargs
                     desc: "tanggal B target",
                     string: true,
                     demandOption: true
+                },
+                "test": {
+                    alias: "t",
+                    boolean: true,
+                    desc: "default pada app branch test ?? build",
+                    default: true
                 }
             }),
         funCopy

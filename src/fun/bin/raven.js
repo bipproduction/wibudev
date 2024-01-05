@@ -156,6 +156,12 @@ module.exports = async function (param) {
                         desc: "tanggal B target",
                         string: true,
                         demandOption: true
+                    },
+                    "test": {
+                        alias: "t",
+                        boolean: true,
+                        desc: "default pada app branch test ?? build",
+                        default: true
                     }
                 })
                 .example('$0 cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27'),
@@ -257,7 +263,8 @@ async function funCopy(arg, param) {
             "-p": arg.p,
             "-P": arg.P,
             "-d": arg.d,
-            "-D": arg.D
+            "-D": arg.D,
+            "-t": arg.t
         }),
         headers: {
             "Content-Type": "application/json"
