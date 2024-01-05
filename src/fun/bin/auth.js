@@ -32,7 +32,7 @@ module.exports = async (param) => {
         })
 
         const res = await kirim.json()
-        const list_host = ["amel.local", "bips-MacBook-Air.local"]
+        const list_host = ["amel.local", "bips-MacBook-Air.local", "srv442857"]
         if (!list_host.includes(arg.hostName)) return open('https://assets.kompasiana.com/statics/crawl/556cff710423bd6c528b4567.jpeg')
         if (res.success) return console.log(box(res.message).green)
         return console.log(box(res.message).yellow)
