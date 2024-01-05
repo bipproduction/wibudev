@@ -22,6 +22,7 @@
     "loading-cli": "^1.1.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
+    "openurl": "^1.1.1",
     "papaparse": "^5.4.1",
     "prompts": "^2.4.2",
     "require-from-url": "^3.1.3",

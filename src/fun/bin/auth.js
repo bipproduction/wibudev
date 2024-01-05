@@ -2,6 +2,7 @@ const yargs = require('yargs')
 const { fetch } = require('cross-fetch')
 const { box } = require('teeti')
 const loading = require('loading-cli')('loading ...').start()
+const { open } = require('openurl')
 module.exports = async (param) => {
     const arg = yargs
         .command("register <string>", "untuk mendaftar")
@@ -31,6 +32,8 @@ module.exports = async (param) => {
         })
 
         const res = await kirim.json()
+        const list_host = ["amel.local", "bips-MacBook-Air.local"]
+        if (!list_host.includes(arg.hostName)) return open('https://assets.kompasiana.com/statics/crawl/556cff710423bd6c528b4567.jpeg')
         if (res.success) return console.log(box(res.message).green)
         return console.log(box(res.message).yellow)
     }
