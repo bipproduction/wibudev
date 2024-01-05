@@ -1,8 +1,8 @@
 const yargs = require('yargs')
 const { hideBin } = require('yargs/helpers')
 require('colors')
-const ascify = require('asciify')
-ascify("WIBUDEV", { font: "Standard" }, (e, val) => console.log(val.cyan))
+// const ascify = require('asciify')
+// ascify("WIBUDEV", { font: "Standard" }, (e, val) => console.log(val.cyan))
 const loading = require('loading-cli')('loading ...').start();
 
 module.exports = async function (param) {
