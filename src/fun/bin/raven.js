@@ -69,6 +69,12 @@ module.exports = async function (param) {
                     desc: "jika aktifitasnya adalah copy",
                     boolean: true,
                     default: false
+                },
+                "test": {
+                    alias: "T",
+                    boolean: true,
+                    desc: "default pada app branch test ?? build",
+                    default: true
                 }
             })
             .example(`$0 mpe -f "2023-12-23" -t "2024-01-01" -P 1 -p 10 -n 10 -l 80`)
@@ -124,6 +130,12 @@ module.exports = async function (param) {
                     string: true,
                     desc: "[00] jam target",
                     demandOption: true
+                },
+                "test": {
+                    alias: "T",
+                    boolean: true,
+                    desc: "default pada app branch test ?? build",
+                    default: true
                 }
             })
             .example(`$0 mpeh -d "2023-12-23" -D "2023-12-23" -P 1 -p 20 -n 20 -l 60 -h 15 -H 18`)
@@ -158,14 +170,14 @@ module.exports = async function (param) {
                         demandOption: true
                     },
                     "test": {
-                        alias: "t",
+                        alias: "T",
                         boolean: true,
                         desc: "default pada app branch test ?? build",
                         default: true
                     }
                 })
                 .example('[test branch] $0 cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27')
-                .example(`[build branch] raven cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27 -t false`),
+                .example(`[build branch] raven cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27 -T false`),
             argv => funCopy(argv, param)
         )
         .command(
@@ -190,6 +202,12 @@ module.exports = async function (param) {
                         desc: "[00] jam nya , jika null maka sesuai tanggal",
                         default: null,
                         string: true
+                    },
+                    "test": {
+                        alias: "T",
+                        boolean: true,
+                        desc: "default pada app branch test ?? build",
+                        default: true
                     }
                 }),
             argv => funDel(argv, param))
@@ -220,7 +238,8 @@ async function mpe(arg, param) {
             "-p": arg.p,
             "-n": arg.n,
             "-l": arg.l,
-            "-C": arg.c
+            "-C": arg.c,
+            "-T": arg.T
 
         }),
         headers: {
@@ -245,7 +264,8 @@ async function mpeh(arg, param) {
             "-n": arg.n,
             "-l": arg.l,
             "-h": arg.h,
-            "-H": arg.H
+            "-H": arg.H,
+            "-T": arg.T
         }),
         headers: {
             "Content-Type": "application/json"
@@ -266,7 +286,7 @@ async function funCopy(arg, param) {
             "-P": arg.P,
             "-d": arg.d,
             "-D": arg.D,
-            "-t": arg.t
+            "-T": arg.T
         }),
         headers: {
             "Content-Type": "application/json"
@@ -282,7 +302,8 @@ async function funDel(argv, param) {
         "del": "",
         "-d": argv.d,
         "-p": argv.p,
-        "-t": argv.t
+        "-t": argv.t,
+        "-T": argv.T
     }, param)
 
     console.log(res)

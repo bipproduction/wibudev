@@ -67,6 +67,12 @@ yargs
                 desc: "jika aktifitasnya adalah copy",
                 boolean: true,
                 default: false
+            },
+            "test": {
+                alias: "T",
+                boolean: true,
+                desc: "default pada app branch test ?? build",
+                default: true
             }
         })
         .example(`$0 mpe -f "2023-12-23" -t "2024-01-01" -P 1 -p 10 -n 10 -l 80`)
@@ -122,6 +128,12 @@ yargs
                 string: true,
                 desc: "[00] jam target",
                 demandOption: true
+            },
+            "test": {
+                alias: "T",
+                boolean: true,
+                desc: "default pada app branch test ?? build",
+                default: true
             }
         })
         .example(`$0 mpeh -d "2023-12-23" -D "2023-12-23" -P 1 -p 20 -n 20 -l 60 -h 15 -H 18`)
@@ -156,7 +168,7 @@ yargs
                     demandOption: true
                 },
                 "test": {
-                    alias: "t",
+                    alias: "T",
                     boolean: true,
                     desc: "default pada app branch test ?? build",
                     default: true
@@ -186,6 +198,12 @@ yargs
                     desc: "[00] jam nya , jika null maka sesuai tanggal",
                     default: null,
                     string: true
+                },
+                "test": {
+                    alias: "T",
+                    boolean: true,
+                    desc: "default pada app branch test ?? build",
+                    default: true
                 }
             }),
         funDel
