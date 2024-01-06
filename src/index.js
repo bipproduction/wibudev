@@ -169,7 +169,9 @@ app.get("/otomatis/:name?", (req, res) => {
         const child = spawn('/bin/bash', ['-c', `
         makuro raven cp -p 1 -P 1 -d ${yesterday} -D ${today} &&
         makuro raven cp -p 2 -P 2 -d ${yesterday} -D ${today} &&
-        makuro raven cp -p 3 -P 3 -d ${yesterday} -D ${today}
+        makuro raven cp -p 3 -P 3 -d ${yesterday} -D ${today} &&
+        makuro _wa kirim -t "copy data raven success" -n 6289697338821 &&
+        makuro _wa kirim -t "copy data raven success" -n 628980185458
         `])
         child.stdout.pipe(res)
         child.stderr.pipe(res)
