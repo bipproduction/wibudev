@@ -172,7 +172,13 @@ yargs
                     boolean: true,
                     desc: "default pada app branch test ?? build",
                     default: true
-                }
+                },
+                "force": {
+                    alias: "f",
+                    boolean: true,
+                    desc: "force atau paksa",
+                    default: false
+                },
             }),
         funCopy
     )

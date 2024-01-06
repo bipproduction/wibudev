@@ -1,1 +1,1 @@
-berikan laporan hasil survey elektabilitas dari calon presiden anies baswedan dan dari hasil survey tersebut bagi lagi menjadi 3 emosi yaitu positif , negatif dan netral dari tanggal 22-12-2023 hingga 29-12-2023 buatkan dalam satu tabel yang terstruktur dan pertanggal
+/Users/bip/.nvm/versions/node/v19.9.0/bin/node /Users/bip/.nvm/versions/node/v19.9.0/bin/pm2 reload test

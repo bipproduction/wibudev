@@ -7,6 +7,7 @@ const path = require('path')
 const fs = require('fs')
 const _ = require('lodash');
 const { exec, spawn } = require('child_process');
+const moment = require('moment')
 
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
@@ -156,6 +157,23 @@ app.post('/upload/:name?', (req, res) => {
         success: false,
         mesage: "option upload name belum ada"
     })
+})
+
+app.get("/otomatis/:name?", (req, res) => {
+    const name = req.params.name
+    if (!name) return res.json({ success: false, message: "require name" })
+    if (name === "copy-paslon") {
+        const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD")
+        const today = moment().format("YYYY-MM-DD")
+
+        const child = spawn('/bin/bash', ['-c', `
+        makuro raven cp -p 1 -P 1 -d ${yesterday} -D ${today} &&
+        makuro raven cp -p 2 -P 2 -d ${yesterday} -D ${today} &&
+        makuro raven cp -p 3 -P 3 -d ${yesterday} -D ${today}
+        `])
+        child.stdout.pipe(res)
+        child.stderr.pipe(res)
+    }
 })
 
 

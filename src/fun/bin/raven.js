@@ -175,7 +175,13 @@ module.exports = async function (param) {
                         boolean: true,
                         desc: "default pada app branch test ?? build",
                         default: true
-                    }
+                    },
+                    "force": {
+                        alias: "f",
+                        boolean: true,
+                        desc: "force atau paksa",
+                        default: false
+                    },
                 })
                 .example('[test branch] $0 cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27')
                 .example(`[build branch] raven cp -p 1 -P 2 -d 2023-12-26 -D 2023-12-27 -T false`),
@@ -290,7 +296,8 @@ async function funCopy(arg, param) {
             "-P": arg.P,
             "-d": arg.d,
             "-D": arg.D,
-            "-T": arg.T
+            "-T": arg.T,
+            "-f": arg.f
         }),
         headers: {
             "Content-Type": "application/json"
