@@ -7,8 +7,10 @@ const { execSync } = require('child_process')
 const { fetch } = require('cross-fetch')
 const qr = require('qrcode-terminal')
 const { address } = require('ip')
+const loading = require('loading-cli')('loading ...').start()
 
 module.exports = async function (param) {
+    loading.stop()
     const is_flutter = fs.existsSync('pubspec.yaml')
     if (!is_flutter) return console.log("bukan flutter project, pastikan berada pada flutter project".yellow)
     yargs
@@ -18,6 +20,21 @@ module.exports = async function (param) {
             "build android",
             yargs => yargs,
             argv => build(argv, param)
+        )
+        .command(
+            "install-package",
+            "install keperluan package",
+            yargs => yargs
+                .options({
+                    "package": {
+                        alias: "p",
+                        string: true,
+                        default: 'a',
+                        choices: ['a', 'b'],
+                        demandOption: true
+                    }
+                }),
+            argv => funInstallPackage(argv)
         )
         .command(
             "download-apk",
@@ -168,4 +185,19 @@ flutter_launcher_icons:
     execSync('dart run flutter_launcher_icons --file flutter_launcher_icons.yaml', { stdio: "inherit" })
     return console.log("++ success")
 
+}
+
+async function funInstallPackage(argv) {
+    loading.start()
+    const package = {
+        "a": ["get", "get_storage", "flutter_card_swiper", "logger"]
+    }
+
+    if (argv.p === "a") {
+        execSync(`flutter pub add ${package.a.join(" ")}`)
+        loading.stop()
+        return console.log("SUCCESS".green)
+    }
+
+    loading.stop()
 }
