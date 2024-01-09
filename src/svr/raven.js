@@ -1,6 +1,7 @@
 const { spawn } = require('child_process')
 const path = require('path')
 const arg = process.argv.splice(2)
+console.log(arg)
 
 const yargs = require("yargs")
 const argv = yargs.parse(arg)

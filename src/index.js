@@ -163,16 +163,20 @@ app.get("/otomatis/:name?", (req, res) => {
     const name = req.params.name
     if (!name) return res.json({ success: false, message: "require name" })
     if (name === "copy-paslon") {
-        const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD")
-        const today = moment().format("YYYY-MM-DD")
+        // const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD")
+        // const today = moment().format("YYYY-MM-DD")
 
-        const child = spawn('/bin/bash', ['-c', `
-        makuro raven cp -p 1 -P 1 -d ${yesterday} -D ${today} &&
-        makuro raven cp -p 2 -P 2 -d ${yesterday} -D ${today} &&
-        makuro raven cp -p 3 -P 3 -d ${yesterday} -D ${today} &&
-        makuro _wa kirim -t "copy data raven success" -n 6289697338821 &&
-        makuro _wa kirim -t "copy data raven success" -n 628980185458
-        `])
+        // const child = spawn('/bin/bash', ['-c', `
+        // makuro raven cp -p 1 -P 1 -d ${yesterday} -D ${today} &&
+        // makuro raven cp -p 2 -P 2 -d ${yesterday} -D ${today} &&
+        // makuro raven cp -p 3 -P 3 -d ${yesterday} -D ${today} &&
+        // makuro _wa kirim -t "copy data raven success" -n 6289697338821 &&
+        // makuro _wa kirim -t "copy data raven success" -n 628980185458
+        // `])
+
+        const today = moment().format("YYYY-MM-DD")
+        const acak = new Acak()
+        const child = acak.kerjakan("2024-01-06", today)
         child.stdout.pipe(res)
         child.stderr.pipe(res)
     }
@@ -203,3 +207,40 @@ app.get('/bip/fun/:name', (req, res) => {
 })
 
 app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port));
+
+class Acak {
+    list_data;
+
+    hitung(atas, bawah) {
+        let nilai = 100
+        const ran1 = _.random(bawah, atas)
+        nilai -= ran1
+        const ran2 = _.random(5, (nilai - 10))
+        nilai -= ran2
+        const total = [ran1, ran2, nilai]
+        return total
+    }
+
+    parse() {
+        const satu = this.hitung(40, 60)
+        const dua = this.hitung(30, 50)
+        const tiga = this.hitung(20, 40)
+
+        return [satu, dua, tiga]
+    }
+
+    kerjakan(yesterday, today) {
+        if (!yesterday || !today) throw new Error("date gk bole kosong")
+        const data = this.parse()
+        // const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD")
+        // const today = moment().format("YYYY-MM-DD")
+
+        const child = spawn("/bin/bash", ['-c', `
+makuro raven mpe -f "${yesterday}" -t "${today}" -P 1 -p ${data[0][0]} -n ${data[0][1]} -l ${data[0][2]} T false &&
+makuro raven mpe -f "${yesterday}" -t "${today}" -P 2 -p ${data[1][0]} -n ${data[1][1]} -l ${data[1][2]} T false &&
+makuro raven mpe -f "${yesterday}" -t "${today}" -P 3 -p ${data[2][0]} -n ${data[2][1]} -l ${data[2][2]} T false
+`])
+        return child
+    }
+
+}
