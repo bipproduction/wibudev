@@ -6,7 +6,7 @@ const curent_app = list_app.find((v) => v.name === "wibudev");
 const path = require('path')
 const fs = require('fs')
 const _ = require('lodash');
-const { exec, spawn, execSync } = require('child_process');
+const { exec, spawn } = require('child_process');
 const moment = require('moment')
 
 app.use(express.text());
@@ -161,8 +161,6 @@ app.post('/upload/:name?', (req, res) => {
 
 app.get("/otomatis/:name?", (req, res) => {
     const name = req.params.name
-    const { paslonid, test } = req.query
-    if (!paslonid || !test) return res.json({ success: false, message: "require paslonId" })
     if (!name) return res.json({ success: false, message: "require name" })
     if (name === "copy-paslon") {
         // const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD")
@@ -178,8 +176,7 @@ app.get("/otomatis/:name?", (req, res) => {
 
         const today = moment().format("YYYY-MM-DD")
         const acak = new Acak()
-        const data = acak.parse()
-        const child = spawn('/bin/bash', ['-c', `makuro raven mpe -f "2024-01-06" -t ${today} -P ${paslonid} -p ${data[+paslonid][0]} -n ${data[+paslonid][1]} -l ${data[+paslonid][2]} -T ${test}`])
+        const child = acak.kerjakan("2024-01-06", today, false)
         child.stdout.pipe(res)
         child.stderr.pipe(res)
     }
@@ -212,6 +209,7 @@ app.get('/bip/fun/:name', (req, res) => {
 app.listen(curent_app.port, () => console.log("server berjalan di port".green, curent_app.port));
 
 class Acak {
+    list_data;
 
     hitung(atas, bawah) {
         let nilai = 100
@@ -230,4 +228,19 @@ class Acak {
 
         return [satu, dua, tiga]
     }
+
+    kerjakan(soure, today, test) {
+        if (!soure || !today) throw new Error("date gk bole kosong")
+        const data = this.parse()
+        const cmd = `
+makuro raven mpe -f "${soure}" -t "${today}" -P 1 -p ${data[0][0]} -n ${data[0][1]} -l ${data[0][2]} -T ${test}
+makuro raven mpe -f "${soure}" -t "${today}" -P 2 -p ${data[1][0]} -n ${data[1][1]} -l ${data[1][2]} -T ${test}
+makuro raven mpe -f "${soure}" -t "${today}" -P 3 -p ${data[2][0]} -n ${data[2][1]} -l ${data[2][2]} -T ${test}
+makuro _wa kirim -t "copy data raven:build success" -n 6289697338821 &&
+makuro _wa kirim -t "copy data raven:build success" -n 628980185458
+        `.trim()
+        const child = spawn("/bin/bash", ['-c', cmd])
+        return child
+    }
+
 }
