@@ -320,7 +320,7 @@ async function manipulatePaslonEmotion(arg) {
     const gen = await generate(file_json, param)
     const result = (arg.c ? file_json : gen).map((v) => ({ ..._.omit(v, ["id", "date"]), dateEmotion: new Date(arg.to) }))
 
-    await prisma.paslonEmotion.deleteMany({ where: { dateEmotion: new Date(arg.to) } })
+    await prisma.paslonEmotion.deleteMany({ where: { dateEmotion: new Date(arg.to), idPaslon: arg.paslonId } })
     await prisma.paslonEmotion.createMany({ data: result })
     loading.stop()
     console.log("success".green)
