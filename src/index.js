@@ -229,17 +229,19 @@ class Acak {
         return [satu, dua, tiga]
     }
 
-    kerjakan(yesterday, today) {
-        if (!yesterday || !today) throw new Error("date gk bole kosong")
+    kerjakan(soure, today) {
+        if (!soure || !today) throw new Error("date gk bole kosong")
         const data = this.parse()
         // const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD")
         // const today = moment().format("YYYY-MM-DD")
+        const cmd = `
+makuro raven mpe -f "${soure}" -t "${today}" -P 1 -p ${data[0][0]} -n ${data[0][1]} -l ${data[0][2]} -T false &&
+makuro raven mpe -f "${soure}" -t "${today}" -P 2 -p ${data[1][0]} -n ${data[1][1]} -l ${data[1][2]} -T false &&
+makuro raven mpe -f "${soure}" -t "${today}" -P 3 -p ${data[2][0]} -n ${data[2][1]} -l ${data[2][2]} -T false
+        `.trim()
 
-        const child = spawn("/bin/bash", ['-c', `
-makuro raven mpe -f "${yesterday}" -t "${today}" -P 1 -p ${data[0][0]} -n ${data[0][1]} -l ${data[0][2]} -T false &&
-makuro raven mpe -f "${yesterday}" -t "${today}" -P 2 -p ${data[1][0]} -n ${data[1][1]} -l ${data[1][2]} -T false &&
-makuro raven mpe -f "${yesterday}" -t "${today}" -P 3 -p ${data[2][0]} -n ${data[2][1]} -l ${data[2][2]} -T false
-`])
+        console.log(cmd)
+        const child = spawn("/bin/bash", ['-c', cmd])
         return child
     }
 
