@@ -24,6 +24,12 @@ module.exports = async function (param) {
             }), arg => setHost(arg, param))
         .command('list-server', 'melihat list server', yargs => yargs, listServer)
         .command('runing-app', 'melihat app yang sedang berjalan', yargs => yargs, runningApp)
+        .command(
+            "set-dev",
+            "set mode developer",
+            yargs => yargs,
+            funSetModeDev
+        )
         .version("1.0.0")
         .demandCommand(1, "minimal masukkan satu command")
         .recommendCommands()
@@ -49,6 +55,11 @@ async function runningApp(arg) {
     const res = await fetch('https://wibudev.wibudev.com/val/runing-app')
     const data = (await res.json()).data
     console.log(columnify(data.map((v, k) => ({ no: k + 1, name: v.name, status: v.pm2_env.status }))))
+}
+
+async function funSetModeDev(yargs) {
+    const hostname = execSync('hostname').toString().trim()
+    execSync(`makuro _dev set-host --host-name ${hostname}`, { stdio: "inherit" })
 }
 
 

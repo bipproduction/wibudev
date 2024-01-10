@@ -49,6 +49,26 @@ module.exports = async function (param) {
                     }
                 }),
             argv => funDownloadApk(argv, param))
+        .command(
+            "web-view",
+            "create web view",
+            yargs => yargs
+                .options({
+                    "name": {
+                        alias: "n",
+                        desc: "nama app",
+                        string: true,
+                        demandOption: true
+                    },
+                    "url": {
+                        alias: "u",
+                        desc: "nama url ex: https://....com",
+                        string: true,
+                        demandOption: true
+                    }
+                }),
+            funCreateWebView
+        )
         .help()
         .recommendCommands()
         .demandCommand(1)
@@ -200,4 +220,108 @@ async function funInstallPackage(argv) {
     }
 
     loading.stop()
+}
+
+async function funCreateWebView(argv) {
+    if (argv.name === "" || argv.url === "") return console.log("nama dan url tidak boleh kosong")
+
+    // cek di project flutter
+    const ada_project = fs.existsSync('./pubspec.yaml')
+    if (!ada_project) {
+        execSync(`
+flutter create ${argv.name} 
+cd ${argv.name}
+flutter pub add webview_universal
+        `.trim())
+    }
+
+
+    // cek package
+    const pubspeck = fs.readFileSync('./pubspec.yaml')
+    const ada_package = pubspeck.includes('webview_universal')
+    if (!ada_package) execSync('flutter pub add webview_universal')
+
+    let main = `
+import 'dart:async';
+import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
+import 'package:webview_universal/webview_universal.dart';
+
+void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.landscapeLeft,
+  //   DeviceOrientation.landscapeRight,
+  // ]);
+
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'HIPMI',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHome(),
+    );
+  }
+}
+
+class MyHome extends StatefulWidget {
+  const MyHome({super.key});
+
+  @override
+  State<MyHome> createState() => _MyHomeState();
+}
+
+class _MyHomeState extends State<MyHome> {
+  WebViewController webViewController = WebViewController();
+  bool isConnected = false;
+
+  @override
+  void initState() {
+    super.initState();
+    task();
+    
+  }
+
+  Future<void> task() async {
+    await webViewController.init(
+      context: context,
+      uri: Uri.parse("${argv.url}"),
+      setState: (void Function() fn) {},
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Stack(
+          children: [
+            // Text("Halo Ini Ada Dimana"),
+            // Text(webViewController.is_init.toString()),
+            webViewController.is_init 
+                ? WebView(
+                    controller: webViewController,
+                  )
+                : const Text("loading ...")
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+`.trim()
+    fs.writeFileSync('./lib/main.dart', main)
+    console.log("success!")
 }
