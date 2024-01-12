@@ -8,7 +8,7 @@ const stringSession = new StringSession(session);
 const client = new TelegramClient(stringSession, apiId, apiHash, { connectionRetries: 5, baseLogger: new Logger("error") })
 client.logger.setLevel(12)
 const fs = require('fs')
-const loading = require('loading-cli')('loading ...')
+
 
 module.exports = async function (param) {
 
@@ -77,20 +77,22 @@ async function funMsg(argv) {
 
 async function funFile(argv) {
     try {
+
         if (!fs.existsSync(argv.f)) return console.log("no file ")
         await client.connect()
         const kirim = await client.sendFile(argv.n, {
             file: argv.f, progressCallback: (v) => {
-                loading.text = v
+                console.clear()
+                console.log(v.toString())
             }
         })
-        loading.stop()
+
         console.log(kirim.file.name, "success")
     } catch (error) {
         console.log(error.message)
     } finally {
         await client.disconnect()
-        loading.stop()
+
     }
 
 }
