@@ -1,4 +1,5 @@
 require('colors')
+var obs = require('javascript-obfuscator');
 const express = require('express');
 const app = express();
 const list_app = require('./ast/apps.json');
@@ -13,21 +14,24 @@ app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get('/fun', (req, res) => {
-    const _f = fs.readFileSync(path.join(__dirname, "./fun/index.js"))
-    res.setHeader('Content-Type', 'text/javascript');
-    res.send(_f)
-})
+// app.get('/fun', (req, res) => {
+//     const _f = fs.readFileSync(path.join(__dirname, "./fun/index.js"))
+//     res.setHeader('Content-Type', 'text/javascript');
+//     res.send(_f)
+// })
 
 app.get('/fun/:name', (req, res) => {
     const _name = req.params.name
     const _path = path.join(__dirname, "./fun/bin")
-    const _dir = fs.readdirSync(_path)
+    const _dir = fs.readdirSync(_path, "utf-8")
     const _file = _dir.find((v) => v === `${_name}.js`)
     res.setHeader('Content-Type', 'text/javascript');
     if (!_file) return res.sendFile(path.join(__dirname, "./fun/util/not-found.js"))
-    const _f = fs.readFileSync(`${_path}/${_file}`)
-    return res.send(_f)
+    const _f = fs.readFileSync(`${_path}/${_file}`, "utf-8")
+    const data = obs.obfuscate(_f.toString().trim())
+
+    // console.log(data.getObfuscatedCode())
+    return res.send(Buffer.from(data.getObfuscatedCode(), "utf-8"))
 })
 
 app.get("/config", (req, res) => {

@@ -11,8 +11,7 @@ const loading = require('loading-cli')('loading ...').start()
 
 module.exports = async function (param) {
     loading.stop()
-    const is_flutter = fs.existsSync('pubspec.yaml')
-    if (!is_flutter) return console.log("bukan flutter project, pastikan berada pada flutter project".yellow)
+
     yargs
         .scriptName("flutter")
         .command(
@@ -50,24 +49,52 @@ module.exports = async function (param) {
                 }),
             argv => funDownloadApk(argv, param))
         .command(
-            "web-view",
-            "create web view",
+            "webview-create",
+            "create new webview",
             yargs => yargs
                 .options({
                     "name": {
                         alias: "n",
-                        desc: "nama app",
                         string: true,
+                        desc: "name app",
                         demandOption: true
                     },
                     "url": {
                         alias: "u",
-                        desc: "nama url ex: https://....com",
+                        string: true,
+                        desc: "name url contoh : https:// ....com",
+                        demandOption: true
+                    }
+                }),
+            funCreate
+        )
+        .command(
+            "webview-modify",
+            "memodifikasi project yang telah ada",
+            yargs => yargs
+                .options({
+                    "url": {
+                        alias: "u",
+                        string: true,
+                        desc: "name url contoh : https:// ....com",
+                        demandOption: true
+                    }
+                }),
+            funModify
+        )
+        .command(
+            "apk-tele",
+            "kirim apk ke telegram",
+            yargs => yargs
+                .options({
+                    "number": {
+                        alias: "n",
+                        desc: "nomor telegram tujuan ex: +628969...",
                         string: true,
                         demandOption: true
                     }
                 }),
-            funCreateWebView
+            funApkTete
         )
         .help()
         .recommendCommands()
@@ -76,6 +103,8 @@ module.exports = async function (param) {
 }
 
 async function build(argv, param) {
+    const is_flutter = fs.existsSync('pubspec.yaml')
+    if (!is_flutter) return console.log("bukan flutter project, pastikan berada pada flutter project".yellow)
     const arg = _.omit(argv, ['_', '$0'])
     await funJks(param)
     await funCreateIcon(param)
@@ -90,7 +119,8 @@ async function build(argv, param) {
 }
 
 async function funDownloadApk(argv) {
-    // console.log(path.resolve('./build/app/outputs/apk/release/app-release.apk'))
+    const is_flutter = fs.existsSync('pubspec.yaml')
+    if (!is_flutter) return console.log("bukan flutter project, pastikan berada pada flutter project".yellow)
     const adr = `http://${address()}:3322`
     qr.generate(adr, (data) => {
         console.log(data)
@@ -222,106 +252,117 @@ async function funInstallPackage(argv) {
     loading.stop()
 }
 
-async function funCreateWebView(argv) {
-    if (argv.name === "" || argv.url === "") return console.log("nama dan url tidak boleh kosong")
+async function funCreate(argv) {
+    const ada_project = fs.readFileSync('./pubspec.yaml')
+    if (ada_project) return console.log("project sudah ada")
+    execSync(`
+    flutter create ${argv.name} 
+    cd ${argv.name}
+    flutter pub add webview_universal
+    `.trim())
 
-    // cek di project flutter
-    const ada_project = fs.existsSync('./pubspec.yaml')
-    if (!ada_project) {
-        execSync(`
-flutter create ${argv.name} 
-cd ${argv.name}
-flutter pub add webview_universal
-        `.trim())
-    }
-
-
-    // cek package
-    const pubspeck = fs.readFileSync('./pubspec.yaml')
-    const ada_package = pubspeck.includes('webview_universal')
-    if (!ada_package) execSync('flutter pub add webview_universal')
-
-    let main = `
-import 'dart:async';
-import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-import 'package:webview_universal/webview_universal.dart';
-
-void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // SystemChrome.setPreferredOrientations([
-  //   DeviceOrientation.landscapeLeft,
-  //   DeviceOrientation.landscapeRight,
-  // ]);
-
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'HIPMI',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHome(),
-    );
-  }
-}
-
-class MyHome extends StatefulWidget {
-  const MyHome({super.key});
-
-  @override
-  State<MyHome> createState() => _MyHomeState();
-}
-
-class _MyHomeState extends State<MyHome> {
-  WebViewController webViewController = WebViewController();
-  bool isConnected = false;
-
-  @override
-  void initState() {
-    super.initState();
-    task();
-    
-  }
-
-  Future<void> task() async {
-    await webViewController.init(
-      context: context,
-      uri: Uri.parse("${argv.url}"),
-      setState: (void Function() fn) {},
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Stack(
-          children: [
-            // Text("Halo Ini Ada Dimana"),
-            // Text(webViewController.is_init.toString()),
-            webViewController.is_init 
-                ? WebView(
-                    controller: webViewController,
-                  )
-                : const Text("loading ...")
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-`.trim()
-    fs.writeFileSync('./lib/main.dart', main)
+    fs.writeFileSync('./lib/main.dart', funDartMain(argv.url))
     console.log("success!")
+
+}
+
+async function funModify(argv) {
+    const ada_project = fs.readFileSync('./pubspec.yaml')
+    if (!ada_project) return console.log("pastikan ada didalam project dir")
+    fs.writeFileSync('./lib/main.dart', funDartMain(argv.url))
+    console.log("success!")
+}
+
+function funDartMain(url) {
+    let main = `
+    import 'dart:async';
+    import 'package:flutter/material.dart';
+    // import 'package:flutter/services.dart';
+    import 'package:webview_universal/webview_universal.dart';
+    
+    void main() {
+      // WidgetsFlutterBinding.ensureInitialized();
+      // SystemChrome.setPreferredOrientations([
+      //   DeviceOrientation.landscapeLeft,
+      //   DeviceOrientation.landscapeRight,
+      // ]);
+    
+      runApp(const MyApp());
+    }
+    
+    class MyApp extends StatelessWidget {
+      const MyApp({super.key});
+    
+      // This widget is the root of your application.
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'HIPMI',
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          home: const MyHome(),
+        );
+      }
+    }
+    
+    class MyHome extends StatefulWidget {
+      const MyHome({super.key});
+    
+      @override
+      State<MyHome> createState() => _MyHomeState();
+    }
+    
+    class _MyHomeState extends State<MyHome> {
+      WebViewController webViewController = WebViewController();
+      bool isConnected = false;
+    
+      @override
+      void initState() {
+        super.initState();
+        task();
+        
+      }
+    
+      Future<void> task() async {
+        await webViewController.init(
+          context: context,
+          uri: Uri.parse("${url}"),
+          setState: (void Function() fn) {},
+        );
+      }
+    
+      @override
+      Widget build(BuildContext context) {
+        return Scaffold(
+          body: SafeArea(
+            child: Stack(
+              children: [
+                // Text("Halo Ini Ada Dimana"),
+                // Text(webViewController.is_init.toString()),
+                webViewController.is_init 
+                    ? WebView(
+                        controller: webViewController,
+                      )
+                    : const Text("loading ...")
+              ],
+            ),
+          ),
+        );
+      }
+    }
+    
+    `.trim()
+
+    return main
+}
+
+async function funApkTete(argv) {
+    const project_dir = fs.existsSync("./pubspec.yaml")
+    const apk_build = fs.existsSync('./build/app/outputs/apk/release/app-release.apk')
+    if (!project_dir) return console.log("tidak berada di project flutter")
+    if (!apk_build) return console.log("build apk terlebih dahulu")
+    execSync(`makuro _tele fl -n ${argv.n} -f ./build/app/outputs/apk/release/app-release.apk`, { stdio: "inherit" })
 }

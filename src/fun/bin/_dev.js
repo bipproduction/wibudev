@@ -30,6 +30,12 @@ module.exports = async function (param) {
             yargs => yargs,
             funSetModeDev
         )
+        .command(
+            "set-pro",
+            "set ke mode production",
+            yargs => yargs,
+            funSetPro
+        )
         .version("1.0.0")
         .demandCommand(1, "minimal masukkan satu command")
         .recommendCommands()
@@ -60,6 +66,10 @@ async function runningApp(arg) {
 async function funSetModeDev(yargs) {
     const hostname = execSync('hostname').toString().trim()
     execSync(`makuro _dev set-host --host-name ${hostname}`, { stdio: "inherit" })
+}
+
+async function funSetPro(argv) {
+    execSync(`makuro _dev set-host --host-name makuro`, { stdio: "inherit" })
 }
 
 
