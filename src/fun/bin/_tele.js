@@ -85,6 +85,8 @@ async function funFile(argv) {
                 process.stdout.cursorTo(0)
                 process.stdout.clearLine(1)
                 console.log(v.toString())
+                process.stdout.cursorTo(0)
+                process.stdout.clearLine(1)
             }
         })
 
