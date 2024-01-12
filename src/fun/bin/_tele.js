@@ -82,12 +82,9 @@ async function funFile(argv) {
         await client.connect()
         const kirim = await client.sendFile(argv.n, {
             file: argv.f, progressCallback: (v) => {
-                process.stdout.write(v.toString())
-                process.stdout.cursorTo(0)
-                process.stdout.clearLine(1)
-                // console.log(v.toString())
-                // process.stdout.cursorTo(0)
-                // process.stdout.clearLine(1)
+                console.clear()
+                console.log("upload ... (", v.toString().substring(0, 5), ")")
+
             }
         })
 
