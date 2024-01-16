@@ -27,3 +27,6 @@ rubah variable string diatas menjadi json
 tanggal start dan datanngal end
 nilai akhir disetiap tanggal
 jokowi effect, paslong , 
+
+
+confidence, supportive,	positive, undecided, unsupportive, uncomfortable, negative, dissapproval

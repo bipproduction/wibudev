@@ -11,8 +11,10 @@ module.exports = async function (param) {
     loading.stop()
     yargs
         .scriptName("raven")
-        // .command("lp", "menampilkan list paslon", yargs => yargs, listPaslon)
-        .command("cal", "menampilkan calendar", yargs => yargs
+        .command(
+            "cal", 
+            "menampilkan calendar", 
+            yargs => yargs
             .option({
                 "month": {
                     alias: "m",
@@ -25,7 +27,10 @@ module.exports = async function (param) {
                     desc: "date"
                 }
             }), (arg) => cal(arg, param))
-        .command("mpe", `manipulate paslon emotion, mengkopi dari tanggal source lalu dimanipulasi dan di terapkan ke tanggal target`, yargs => yargs
+        .command(
+            "mpe", 
+            `manipulate paslon emotion, mengkopi dari tanggal source lalu dimanipulasi dan di terapkan ke tanggal target`, 
+            yargs => yargs
             .options({
                 "from": {
                     alias: "f",
@@ -81,7 +86,10 @@ module.exports = async function (param) {
             .epilog("negative, positive, neutral total harus bernilai 100")
             , arg => mpe(arg, param)
         )
-        .command("mpeh", "manipulate paslon by time, atau berdasarkan jam, dan tanggal bebas", yargs => yargs
+        .command(
+            "mpeh", 
+            "manipulate paslon by time, atau berdasarkan jam, dan tanggal bebas", 
+            yargs => yargs
             .options({
                 "date-from": {
                     alias: "d",
