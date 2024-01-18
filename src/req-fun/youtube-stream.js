@@ -57,7 +57,13 @@ module.exports = async function (param) {
     const ffmpegProcess = spawn(ffmpegCommand, ffmpegArgs);
     stream.pipe(ffmpegProcess.stdin);
     ffmpegProcess.stdout.on("data", (data) => {
-        const log = `[${moment().diff(waktu_mulai, "hours")}] start: ${waktu_mulai.format("YYYY-MM-DD HH:mm:ss")}  now: ${moment().format("YYYY-MM-DD HH:mm:ss")}`
+        const log = `
+[${moment().diff(waktu_mulai, "days")}]  hari
+[${moment().diff(waktu_mulai, "hours")}]  jam
+[${moment().diff(waktu_mulai, "minutes")}]  menit
+
+start:  ${waktu_mulai.format("YYYY-MM-DD HH:mm:ss")}  
+now:    ${moment().format("YYYY-MM-DD HH:mm:ss")}`
         up(box(log).cyan)
     })
     ffmpegProcess.stderr.on("data", data => {
