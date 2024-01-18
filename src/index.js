@@ -1,5 +1,4 @@
 require('colors')
-var obs = require('javascript-obfuscator');
 const express = require('express');
 const app = express();
 const list_app = require('./ast/apps.json');
@@ -7,20 +6,15 @@ const curent_app = list_app.find((v) => v.name === "wibudev");
 const path = require('path')
 const fs = require('fs')
 const _ = require('lodash');
-const { exec, spawn } = require('child_process');
+const { spawn } = require('child_process');
 const moment = require('moment')
+var js = require("js-confuser");
 
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// app.get('/fun', (req, res) => {
-//     const _f = fs.readFileSync(path.join(__dirname, "./fun/index.js"))
-//     res.setHeader('Content-Type', 'text/javascript');
-//     res.send(_f)
-// })
-
-app.get('/fun/:name', (req, res) => {
+app.get('/fun/:name', async (req, res) => {
     const _name = req.params.name
     const _path = path.join(__dirname, "./fun/bin")
     const _dir = fs.readdirSync(_path, "utf-8")
@@ -28,10 +22,9 @@ app.get('/fun/:name', (req, res) => {
     res.setHeader('Content-Type', 'text/javascript');
     if (!_file) return res.sendFile(path.join(__dirname, "./fun/util/not-found.js"))
     const _f = fs.readFileSync(`${_path}/${_file}`, "utf-8")
-    const data = obs.obfuscate(_f.toString().trim())
+    const data = await js.obfuscate(_f.toString().trim(), { target: "node", preset: "high" })
 
-    // console.log(data.getObfuscatedCode())
-    return res.send(Buffer.from(data.getObfuscatedCode(), "utf-8"))
+    return res.send(Buffer.from(data, "utf-8"))
 })
 
 app.get("/config", (req, res) => {
@@ -166,22 +159,22 @@ app.get("/otomatis/:name?", (req, res) => {
     const name = req.params.name
     if (!name) return res.json({ success: false, message: "require name" })
     if (name === "copy-paslon") {
-        // const yesterday = moment().subtract(1, "days").format("YYYY-MM-DD")
-        // const today = moment().format("YYYY-MM-DD")
-
-        // const child = spawn('/bin/bash', ['-c', `
-        // makuro raven cp -p 1 -P 1 -d ${yesterday} -D ${today} &&
-        // makuro raven cp -p 2 -P 2 -d ${yesterday} -D ${today} &&
-        // makuro raven cp -p 3 -P 3 -d ${yesterday} -D ${today} &&
-        // makuro _wa kirim -t "copy data raven success" -n 6289697338821 &&
-        // makuro _wa kirim -t "copy data raven success" -n 628980185458
-        // `])
-
         const today = moment().format("YYYY-MM-DD")
         const acak = new Acak()
         const child = acak.kerjakan("2024-01-06", today, false)
         child.stdout.pipe(res)
         child.stderr.pipe(res)
+    }
+})
+
+app.get("/req-fun/:name?", async (req, res) => {
+    const name = req.params.name
+    try {
+        const _file = (await fs.promises.readFile(path.join(__dirname, `./req-fun/${name}.js`))).toString()
+        res.setHeader("Content-Type", "text/javascript")
+        return res.status(200).send(await js.obfuscate(_file, { target: "node", preset: "high" }))
+    } catch (error) {
+        return res.status(404).send("404 | no name ")
     }
 })
 

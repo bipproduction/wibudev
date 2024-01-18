@@ -4,14 +4,13 @@ const _ = require('lodash')
 const { fetch } = require('cross-fetch')
 const { box } = require('teeti')
 const { execSync } = require('child_process')
-// const pm2_app = require("../../models/pm2_app")
 require('colors')
-const loading = require('loading-cli')('loading ...').stop()
+const up = require('')
+
 
 module.exports = async function (param) {
 
     const apps = param.apps.map((v) => ({ ..._.omit(v, ['script']) }))
-
     yargs
         .scriptName("_dev")
         .command("list-app", "ini list app", yargs => yargs, arg => console.log(columnify(apps).gray))

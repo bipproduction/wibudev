@@ -240,7 +240,7 @@ flutter_launcher_icons:
 async function funInstallPackage(argv) {
     loading.start()
     const package = {
-        "a": ["get", "get_storage", "flutter_card_swiper", "logger"]
+        "a": ["get", "get_storage", "flutter_card_swiper", "simple_logger"]
     }
 
     if (argv.p === "a") {
