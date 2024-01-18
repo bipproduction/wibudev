@@ -5,8 +5,6 @@ const { fetch } = require('cross-fetch')
 const { box } = require('teeti')
 const { execSync } = require('child_process')
 require('colors')
-const up = require('')
-
 
 module.exports = async function (param) {
 
