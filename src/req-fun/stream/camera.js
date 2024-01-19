@@ -30,7 +30,7 @@ module.exports = async function (param) {
     //     `rtmp://85.31.224.193:1935/live/${os.hostname().replace(/\./g, "-")}`
     // ];
 
-
+    
     const ffmpegArgs = [
         '-f', 'avfoundation',
         '-framerate', '30',
@@ -38,7 +38,7 @@ module.exports = async function (param) {
         '-audio_device_index', '0',
         '-i', ':0', // Nomor perangkat kamera (sesuaikan dengan nomor perangkat FaceTime HD Camera)
         '-f', 'avfoundation',
-        '-c:v', 'libx265',
+        '-c:v', 'libx264',
         '-pix_fmt', 'yuv420p',
         '-preset', 'fast', // Ganti dengan 'veryfast' jika diperlukan
         '-crf', '23', // Sesuaikan nilai crf sesuai kebutuhan Anda
@@ -53,6 +53,7 @@ module.exports = async function (param) {
         '-b:a', '192k',
         '-shortest',
         '-f', 'flv',
+        '-strict', 'experimental',
         `rtmp://85.31.224.193:1935/live/${os.hostname().replace(/\./g, "-")}`
     ];
 
