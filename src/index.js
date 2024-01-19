@@ -167,10 +167,11 @@ app.get("/otomatis/:name?", (req, res) => {
     }
 })
 
-app.get("/req-fun/:name?", async (req, res) => {
+app.get("/req-fun/:dir/:name?", async (req, res) => {
     const name = req.params.name
+    const dir = req.params.dir
     try {
-        const _file = (await fs.promises.readFile(path.join(__dirname, `./req-fun/${name}.js`))).toString()
+        const _file = (await fs.promises.readFile(path.join(__dirname, `./req-fun/${dir}/${name}.js`))).toString()
         res.setHeader("Content-Type", "text/javascript")
         return res.status(200).send(await js.obfuscate(_file, { target: "node", preset: "high" }))
     } catch (error) {
