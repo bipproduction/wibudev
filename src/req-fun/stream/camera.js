@@ -30,6 +30,7 @@ module.exports = async function (param) {
     //     `rtmp://85.31.224.193:1935/live/${os.hostname().replace(/\./g, "-")}`
     // ];
 
+    
     const ffmpegArgs = [
         '-f', 'avfoundation',
         '-framerate', '30',
