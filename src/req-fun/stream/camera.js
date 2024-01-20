@@ -9,27 +9,6 @@ const colors = require('colors')
 
 module.exports = async function (param) {
     const up = (await import('log-update')).default
-    // const ffmpegArgs = [
-    //     '-f', 'avfoundation',
-    //     '-framerate', '30',
-    //     '-i', '0:0',
-    //     '-map', '0',
-    //     '-c:v', 'libx264',
-    //     '-pix_fmt', 'yuv420p',
-    //     '-preset', 'medium',
-    //     '-r', '30',
-    //     '-g', '60',
-    //     '-b:v', '2500k',
-    //     '-bufsize', '512k',
-    //     '-c:a', 'aac',
-    //     '-ar', '44100',
-    //     '-threads:v', '6',
-    //     '-threads:a', '2',
-    //     '-b:a', '192k',
-    //     '-f', 'flv',
-    //     `rtmp://85.31.224.193:1935/live/${os.hostname().replace(/\./g, "-")}`
-    // ];
-
     
     const ffmpegArgs = [
         '-f', 'avfoundation',
@@ -75,3 +54,4 @@ module.exports = async function (param) {
         ffmpegProcess.stdin.end();
     });
 }
+
