@@ -154,5 +154,17 @@
             "start": "pm2 start \"yarn start --port 3012\" --name noc_3012",
             "restart": "pm2 restart noc"
         }
+    },
+    {
+        "id": "stream_3013",
+        "name": "stream",
+        "port": "3013",
+        "type": "node",
+        "branch": "main",
+        "studio_port": "5013",
+        "script": {
+            "start": "pm2 start \"node .\" --name stream_3013",
+            "restart": "pm2 restart stream_3013"
+        }
     }
 ]

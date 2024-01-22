@@ -1,6 +1,7 @@
 const yargs = require('yargs');
-const { exec, spawn } = require('child_process');
+const { spawn } = require('child_process');
 const path = require('path');
+require('colors');
 
 ; (async () => {
     const arg = yargs
@@ -47,7 +48,7 @@ ${app.script.restart}
         console.log(data.toString())
     })
     child.stderr.on("data", (data) => {
-        console.log(data.toString())
+        console.log(data.toString().red)
     })
 
 })()
