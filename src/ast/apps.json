@@ -166,5 +166,17 @@
             "start": "pm2 start \"node .\" --name stream_3013",
             "restart": "pm2 restart stream_3013"
         }
+    },
+    {
+        "id": "makuro-ai_3011",
+        "name": "makuro-ai",
+        "port": "3014",
+        "type": "node",
+        "branch": "main",
+        "studio_port": "5014",
+        "script": {
+            "start": "pm2 start \"node . start -p 3014\" --name makuro-ai_3014",
+            "restart": "pm2 restart makuro-ai_3014"
+        }
     }
 ]

@@ -1,7 +1,7 @@
 
 const _ = require('lodash')
 const yargs = require('yargs')
-const { execSync, exec, spawn } = require('child_process')
+const { execSync } = require('child_process')
 const path = require('path')
 require('colors')
 const loading = require('loading-cli')('raven ...').start()
