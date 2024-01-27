@@ -178,5 +178,17 @@
             "start": "pm2 start \"node . start -p 3014\" --name makuro-ai_3014",
             "restart": "pm2 restart makuro-ai_3014"
         }
+    },
+    {
+        "id": "makuro-server_3015",
+        "name": "makuro-server",
+        "port": "3015",
+        "type": "node",
+        "branch": "main",
+        "studio_port": "5015",
+        "script": {
+            "start": "pm2 start \"node . start -p 3015\" --name makuro-server_3015",
+            "restart": "pm2 restart makuro-server_3015"
+        }
     }
 ]
