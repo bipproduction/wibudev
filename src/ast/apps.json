@@ -202,5 +202,6 @@
             "start": "pm2 start \"node . start -p 3016\" --name tele-server_3016",
             "restart": "pm2 restart tele-server_3015"
         }
+        
     }
 ]
