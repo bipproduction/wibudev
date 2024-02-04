@@ -190,5 +190,17 @@
             "start": "pm2 start \"node . start -p 3015\" --name makuro-server_3015",
             "restart": "pm2 restart makuro-server_3015"
         }
+    },
+    {
+        "id": "tele-server_3016",
+        "name": "tele-server",
+        "port": "3016",
+        "type": "node",
+        "branch": "main",
+        "studio_port": "5016",
+        "script": {
+            "start": "pm2 start \"node . start -p 3016\" --name tele-server_3016",
+            "restart": "pm2 restart tele-server_3015"
+        }
     }
 ]
