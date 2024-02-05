@@ -202,6 +202,17 @@
             "start": "pm2 start \"node . start -p 3016\" --name tele-server_3016",
             "restart": "pm2 restart tele-server_3015"
         }
-        
+    },
+    {
+        "id": "content-generator_3017",
+        "name": "content-generator",
+        "port": "3017",
+        "type": "node",
+        "branch": "main",
+        "studio_port": "5017",
+        "script": {
+            "start": "pm2 start \"node . start -p 3017\" --name content-generator_3017",
+            "restart": "pm2 restart content-generator_3017"
+        }
     }
 ]
