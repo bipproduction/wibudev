@@ -7,7 +7,7 @@
         "branch": "main",
         "studio_port": "5003",
         "script": {
-            "start": "pm2 start \"node index.js --port 3003\" --name io_3003",
+            "start": "pm2 start \"node index.js start --port 3003\" --name io_3003",
             "restart": "pm2 restart io_3003"
         }
     },
