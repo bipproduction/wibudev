@@ -214,5 +214,17 @@
             "start": "pm2 start \"node . start -p 3017\" --name content-generator_3017",
             "restart": "pm2 restart content-generator_3017"
         }
+    },
+    {
+        "id": "makuro-config_3019",
+        "name": "makuro-config",
+        "port": "3019",
+        "type": "node",
+        "branch": "main",
+        "studio_port": "5019",
+        "script": {
+            "start": "pm2 start \"node . start -p 3019\" --name makuro-config_3019",
+            "restart": "pm2 restart makuro-config_3019"
+        }
     }
 ]
