@@ -152,7 +152,7 @@
         "studio_port": "5012",
         "script": {
             "start": "pm2 start \"yarn start --port 3012\" --name noc_3012",
-            "restart": "pm2 restart noc"
+            "restart": "pm2 restart noc_3012"
         }
     },
     {
@@ -225,6 +225,30 @@
         "script": {
             "start": "pm2 start \"node . start -p 3019\" --name makuro-config_3019",
             "restart": "pm2 restart makuro-config_3019"
+        }
+    },
+    {
+        "id": "display_3020",
+        "name": "display",
+        "port": "3020",
+        "type": "nextjs",
+        "branch": "join",
+        "studio_port": "5020",
+        "script": {
+            "start": "pm2 start \"yarn start --port 3020\" --name display_3020",
+            "restart": "pm2 restart display_3020"
+        }
+    },
+    {
+        "id": "test2-ninox_3023",
+        "name": "test2-ninox",
+        "port": "3023",
+        "type": "nextjs",
+        "branch": "test2",
+        "studio_port": "5023",
+        "script": {
+            "start": "pm2 start \"yarn start --port 3023\" --name test2-ninox_3023",
+            "restart": "pm2 restart test2-ninox_3023"
         }
     }
 ]
